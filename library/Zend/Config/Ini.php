@@ -179,7 +179,6 @@ class Zend_Config_Ini extends Zend_Config
              * @see Zend_Config_Exception
              */
             require_once 'Zend/Config/Exception.php';
-            throw new Zend_Config_Exception($this->_loadFileErrorStr);
         }
 
         return $iniArray;

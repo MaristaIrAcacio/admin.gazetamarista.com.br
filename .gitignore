@@ -1,9 +1,2 @@
 # General
-.idea
-.env
-/hot
 /node_modules
-/application/tmp/*
-
-# Assets generated
-common/default/
