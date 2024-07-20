@@ -68,7 +68,7 @@ class ErrorController extends Zend_Controller_Action
             && $errors->exception->getMessage() != "Invalid controller specified (includes)"
             && $errors->exception->getMessage() != "Invalid controller specified (wp)"
             && $errors->exception->getMessage() != "Invalid controller specified (cms)"
-            && $errors->exception->getMessage() != "Invalid controller specified (clickweb-logo.jpg)"
+            && $errors->exception->getMessage() != "Invalid controller specified (gazetamarista-logo.jpg)"
             && $errors->exception->getMessage() != "Invalid controller specified (css)"
             && $errors->exception->getMessage() != "Invalid controller specified (xmlrpc.php)"
             && $errors->exception->getMessage() != "Invalid controller specified (wp-content)"
@@ -91,7 +91,6 @@ class ErrorController extends Zend_Controller_Action
                 // Salva no banco de dados
                 try {
                     $session = new Zend_Session_Namespace("loginadmin");
-                    $model = new Admin_Model_Erros();
                     
                     $data = array();
                     $data['data_execucao'] = date("Y-m-d H:i:s");
@@ -102,8 +101,8 @@ class ErrorController extends Zend_Controller_Action
                     $data['trace'] = $errors->exception->getTraceAsString();
                     $data['ip'] = $_SERVER ['REMOTE_ADDR'];
                     
-                    $model->insert($data);
-                    
+                    dd($errors->exception->getTraceAsString());
+
                     // Session do tempo da ultima requisição de erro
                     $_SESSION['last_error_request'] = time();
                 } catch (Exception $e) {

@@ -65,26 +65,8 @@ class Admin_UsuariosController extends gazetamarista_Controller_Action {
 	 */
 	public function doAfterInsert($id) {
 	    if($this->_request->getParam("idperfil", 0) == 2) {
-            // Dispara e-mail para o usuário 'criador'
-            try {
-                $dataenvio = array(
-                    'nome'  => $this->_request->getParam("nome", ""),
-                    'email' => $this->_request->getParam("email", ""),
-                    'login' => $this->_request->getParam("login", ""),
-                    'senha' => $this->_request->getParam("senha", "")
-                );
-
-                // ENVIO DE E-MAIL REFATORADO
-                $mail = new Default_Model_Emails();
-                $mail->enviarEmail("novousuario", " - Novo acesso de criatório", $dataenvio);
-
                 $data_update = array('sendmail' => date("Y-m-d H:i:s"));
 				$this->_model->update($data_update, array('idusuario = ?' => $id));
-
-            } catch (Exception $e) {
-                // Erro envio
-                //throw new Zend_Controller_Action_Exception($e->getMessage(), $e->getCode());
-            }
         }
     }
 	
@@ -138,20 +120,6 @@ class Admin_UsuariosController extends gazetamarista_Controller_Action {
 	public function loginAction() {
 		// Desabilita o layout
 		$this->_helper->layout->disableLayout();
-
-        // Pega o JSON no site da gazetamarista
-        $url = 'http://gazetamarista.com.br/json_admin.php';
-        $data = file_get_contents($url);
-        $characters = json_decode($data);
-
-		// Busca as configurações
-        $config = Zend_Registry::get("config");
-
-        // Mostra na View
-        $this->view->path 	    = $config->gazetamarista->config->basepath;
-        $this->view->texto 	    = $characters->texto;
-        $this->view->botao 	    = $characters->botao;
-        $this->view->botao_link = $characters->botao_link;
 
 		// Captura o domínio atual
 		if( APPLICATION_ENV == 'development' ){
@@ -259,7 +227,7 @@ class Admin_UsuariosController extends gazetamarista_Controller_Action {
 						
 					// remove coluna da senha
 					unset($usuario_row['senha']);
-						
+
 					// Adiciona as informações à sessão
 					$this->session->logged_usuario = $usuario_row;
 

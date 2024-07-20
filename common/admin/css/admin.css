@@ -297,6 +297,7 @@ ul.off-canvas-list > li ul li.active > a:before { content: ''; width:5px; height
 	width: 100px;
 	height: 100px;
 	margin: 0;
+	object-fit: cover;
 }
 
 .logo-usuario .titulo-usuario {

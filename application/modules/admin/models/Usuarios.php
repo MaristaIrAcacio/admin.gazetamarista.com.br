@@ -96,12 +96,11 @@ class Admin_Model_Usuarios extends gazetamarista_Db_Table {
 	public function init() {
 		// Adiciona os campos ao model
 		$this->setCampo("avatar", "Imagem de Perfil");
-		$this->setCampo("nomeCompleto", "Nome Completo");
-		$this->setCampo("nome", "Nome");
+		$this->setCampo("nome", "Nome Completo");
 		$this->setCampo("email", "E-mail");
 		$this->setCampo("login", "Login");
 		$this->setCampo("senha", "Senha", "Informe somente para alterar a senha atual");
-		$this->setCampo("idperfil", "Perfil");
+		$this->setCampo("idperfil", "Cargo");
 		$this->setCampo("serie", "Série");
 		$this->setCampo("turma", "Turma");
 		$this->setCampo("instagram", "Instagram");
@@ -113,7 +112,6 @@ class Admin_Model_Usuarios extends gazetamarista_Db_Table {
 
 		// Seta a visibilidade
 		$this->setVisibility("avatar", TRUE, TRUE, FALSE, FALSE);
-		$this->setVisibility("nomeCompleto", TRUE, TRUE, TRUE, FALSE);
 		$this->setVisibility("nome", TRUE, TRUE, TRUE, TRUE);
 		$this->setVisibility("email", TRUE, TRUE, TRUE, TRUE);
 		$this->setVisibility("login", TRUE, TRUE, TRUE, TRUE);

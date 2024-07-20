@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.36, created on 2024-07-19 22:53:25
+/* Smarty version 3.1.36, created on 2024-07-20 08:44:29
   from 'c:\xampp-7.4\htdocs\admin.gazetamarista.com.br\application\modules\admin\views\usuarios\form.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.36',
-  'unifunc' => 'content_669b18952d0208_79903740',
+  'unifunc' => 'content_669ba31d7b4237_00208669',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '61c3a6ca22bbaa74ec5306427e8538c335198ec6' => 
     array (
       0 => 'c:\\xampp-7.4\\htdocs\\admin.gazetamarista.com.br\\application\\modules\\admin\\views\\usuarios\\form.tpl',
-      1 => 1721440398,
+      1 => 1721475123,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_669b18952d0208_79903740 (Smarty_Internal_Template $_smarty_tpl) {
+function content_669ba31d7b4237_00208669 (Smarty_Internal_Template $_smarty_tpl) {
 ?><div class="row">
 	<div class="small-12 columns buttons-bar">
 		<ul class="stack-for-small button-group">
@@ -77,8 +77,6 @@ function content_669b18952d0208_79903740 (Smarty_Internal_Template $_smarty_tpl)
 
 					<?php echo $_smarty_tpl->tpl_vars['form']->value->getElement('avatar');?>
 
-					<?php echo $_smarty_tpl->tpl_vars['form']->value->getElement('nomeCompleto');?>
-
 					<?php echo $_smarty_tpl->tpl_vars['form']->value->getElement('nome');?>
 
 					<?php echo $_smarty_tpl->tpl_vars['form']->value->getElement('email');?>
@@ -98,6 +96,8 @@ function content_669b18952d0208_79903740 (Smarty_Internal_Template $_smarty_tpl)
 					<?php echo $_smarty_tpl->tpl_vars['form']->value->getElement('likedin');?>
 
 
+					<hr>
+					<h5 class="title-model">Autenticação</h5>
 					<?php echo $_smarty_tpl->tpl_vars['form']->value->getElement('login');?>
 
 					<?php echo $_smarty_tpl->tpl_vars['form']->value->getElement('senha');?>

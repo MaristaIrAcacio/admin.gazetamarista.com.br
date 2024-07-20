@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.36, created on 2024-07-19 22:53:25
+/* Smarty version 3.1.36, created on 2024-07-20 09:54:11
   from 'c:\xampp-7.4\htdocs\admin.gazetamarista.com.br\application\layouts\admin.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.36',
-  'unifunc' => 'content_669b189558fc50_21489311',
+  'unifunc' => 'content_669bb3730ee137_68518047',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     'aeb6434befb196bbedb8e9c0e3e80ccb5735fab8' => 
     array (
       0 => 'c:\\xampp-7.4\\htdocs\\admin.gazetamarista.com.br\\application\\layouts\\admin.tpl',
-      1 => 1721439640,
+      1 => 1721476787,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_669b189558fc50_21489311 (Smarty_Internal_Template $_smarty_tpl) {
+function content_669bb3730ee137_68518047 (Smarty_Internal_Template $_smarty_tpl) {
 ?><!doctype html>
 <!--[if IE 8 ]><html class="no-js ie8 oldie lt-ie9" lang="pt"><![endif]-->
 <!--[if IE 9 ]><html class="no-js ie9 lt-ie10" lang="pt"><![endif]-->
@@ -181,10 +181,23 @@ common/default/js/ie8.js" type="text/javascript"><?php echo '</script'; ?>
 					<div class="medium-2 columns show-for-medium-up menu-navegacao-off-left">
 						<div class="icon-bar vertical one-up">
 
-							<a href="#" class="logo-usuario small-9 medium-5 large-6 columns left small-only-text-center title-project">
-								<img src="<?php echo $_smarty_tpl->tpl_vars['basePath']->value;?>
+							<a class="logo-usuario small-9 medium-5 large-6 columns left small-only-text-center title-project">
+								
+								<?php if ($_smarty_tpl->tpl_vars['logged_usuario']->value["avatar"]) {?>
+									<img src="<?php echo $_smarty_tpl->tpl_vars['basePath']->value;?>
+/common/uploads/usuarios/<?php echo $_smarty_tpl->tpl_vars['logged_usuario']->value["avatar"];?>
+" alt="Usuário"/>
+								<?php } else { ?>
+									<img src="<?php echo $_smarty_tpl->tpl_vars['basePath']->value;?>
 /common/uploads/usuarios/default.png" alt="Usuário"/>
-								<h1 class="titulo-usuario">Vitor Gabriel</h1>
+								<?php }?>
+
+								<?php if ($_smarty_tpl->tpl_vars['logged_usuario']->value["nome"]) {?>
+									<h1 class="titulo-usuario"><?php echo implode(' ',array_slice(explode(' ',$_smarty_tpl->tpl_vars['logged_usuario']->value["nome"]),0,2));?>
+</h1>
+								<?php } else { ?>
+									<h1 class="titulo-usuario">Usuário Anônimo</h1>
+								<?php }?>
 							</a>
 
 							<?php echo $_smarty_tpl->tpl_vars['this']->value->navigation()->menu();?>

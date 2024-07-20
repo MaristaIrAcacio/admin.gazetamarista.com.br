@@ -20,6 +20,17 @@ class Admin_IndexController extends gazetamarista_Controller_Action {
 
 		// Action
         $this->action		= $this->_request->getParam("action", "");
+
+		// Retorna os dados do usuário
+		$idUsuario = $this->session->logged_usuario['idusuario'];
+
+		$select = (new Admin_Model_Usuarios())->select()
+			->where("idusuario = ?", $idUsuario);
+
+		$usuario = (new Admin_Model_Usuarios())->fetchRow($select);
+
+		$this->view->usuario 	= $usuario;
+
 	}
 
 	/**
@@ -82,6 +93,7 @@ class Admin_IndexController extends gazetamarista_Controller_Action {
 		// $this->view->emails 	= $emails;
 		// $this->view->blogs 	= $blogs;
 		// $this->view->servicos 	= $servicos;
+
 	}
 
 	/**

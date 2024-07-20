@@ -144,17 +144,8 @@
 									{assign var="conteudo_campo" value=$this->GetColumnValue($row, $column)}
 									{if $_model->getVisibility($column, 'list')}
 										<td>
-											{if $conteudo_campo|truncate:10:false == "31/12/1969" || $conteudo_campo == "30/11/-0001 00:00:00" || $conteudo_campo == "30/11/-0001"}
-												-
-											{else}
-												{if $column == 'cor_recebe' || $column == 'cor_pedido'}
-													{if !empty($conteudo_campo) && $conteudo_campo != '--'}
-														<span style="float:left; border:solid 1px #ccc; width:35px; height:20px; background-color:#{$conteudo_campo};"></span>
-													{/if}
-												{else}
+											
 													{$conteudo_campo|strip_tags|truncate:200:"..."}
-												{/if}
-											{/if}
 										</td>
 									{/if}
 								{/foreach}

@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.36, created on 2024-07-19 22:49:24
+/* Smarty version 3.1.36, created on 2024-07-20 09:54:10
   from 'c:\xampp-7.4\htdocs\admin.gazetamarista.com.br\application\layouts\list.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.36',
-  'unifunc' => 'content_669b17a4c5e0b3_64934428',
+  'unifunc' => 'content_669bb372b31553_54071968',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '771b5374a717950599edbd42efe9dc0e0ba4c07c' => 
     array (
       0 => 'c:\\xampp-7.4\\htdocs\\admin.gazetamarista.com.br\\application\\layouts\\list.tpl',
-      1 => 1721433141,
+      1 => 1721480011,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_669b17a4c5e0b3_64934428 (Smarty_Internal_Template $_smarty_tpl) {
+function content_669bb372b31553_54071968 (Smarty_Internal_Template $_smarty_tpl) {
 $_smarty_tpl->_checkPlugins(array(0=>array('file'=>'C:\\xampp-7.4\\htdocs\\admin.gazetamarista.com.br\\library\\gazetamarista\\Library\\Smarty\\plugins\\modifier.truncate.php','function'=>'smarty_modifier_truncate',),));
 ?>
 <div class="row">	
@@ -229,19 +229,9 @@ $_smarty_tpl->tpl_vars['value']->do_else = false;
 									<?php $_smarty_tpl->_assignInScope('conteudo_campo', $_smarty_tpl->tpl_vars['this']->value->GetColumnValue($_smarty_tpl->tpl_vars['row']->value,$_smarty_tpl->tpl_vars['column']->value));?>
 									<?php if ($_smarty_tpl->tpl_vars['_model']->value->getVisibility($_smarty_tpl->tpl_vars['column']->value,'list')) {?>
 										<td>
-											<?php if (smarty_modifier_truncate($_smarty_tpl->tpl_vars['conteudo_campo']->value,10,false) == "31/12/1969" || $_smarty_tpl->tpl_vars['conteudo_campo']->value == "30/11/-0001 00:00:00" || $_smarty_tpl->tpl_vars['conteudo_campo']->value == "30/11/-0001") {?>
-												-
-											<?php } else { ?>
-												<?php if ($_smarty_tpl->tpl_vars['column']->value == 'cor_recebe' || $_smarty_tpl->tpl_vars['column']->value == 'cor_pedido') {?>
-													<?php if (!empty($_smarty_tpl->tpl_vars['conteudo_campo']->value) && $_smarty_tpl->tpl_vars['conteudo_campo']->value != '--') {?>
-														<span style="float:left; border:solid 1px #ccc; width:35px; height:20px; background-color:#<?php echo $_smarty_tpl->tpl_vars['conteudo_campo']->value;?>
-;"></span>
-													<?php }?>
-												<?php } else { ?>
+											
 													<?php echo smarty_modifier_truncate(preg_replace('!<[^>]*?>!', ' ', $_smarty_tpl->tpl_vars['conteudo_campo']->value),200,"...");?>
 
-												<?php }?>
-											<?php }?>
 										</td>
 									<?php }?>
 								<?php

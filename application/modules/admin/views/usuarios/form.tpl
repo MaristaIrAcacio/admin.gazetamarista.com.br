@@ -48,7 +48,6 @@
 				<div class="content active" id="geral">
 					{$form->getElement('idperfil')}
 					{$form->getElement('avatar')}
-					{$form->getElement('nomeCompleto')}
 					{$form->getElement('nome')}
 					{$form->getElement('email')}
 
@@ -62,6 +61,8 @@
 					{$form->getElement('instagram')}
 					{$form->getElement('likedin')}
 
+					<hr>
+					<h5 class="title-model">Autenticação</h5>
 					{$form->getElement('login')}
 					{$form->getElement('senha')}
 					<div class="element-form" id="element-senha_confirmar">
