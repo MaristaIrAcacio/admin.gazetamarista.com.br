@@ -47,8 +47,21 @@
 			<div class="tabs-content">
 				<div class="content active" id="geral">
 					{$form->getElement('idperfil')}
+					{$form->getElement('avatar')}
+					{$form->getElement('nomeCompleto')}
 					{$form->getElement('nome')}
 					{$form->getElement('email')}
+
+					<hr>
+					<h5 class="title-model">Escola</h5>
+					{$form->getElement('serie')}
+					{$form->getElement('turma')}
+
+					<hr>
+					<h5 class="title-model">Redes Sociais</h5>
+					{$form->getElement('instagram')}
+					{$form->getElement('likedin')}
+
 					{$form->getElement('login')}
 					{$form->getElement('senha')}
 					<div class="element-form" id="element-senha_confirmar">
@@ -64,6 +77,7 @@
 							</div>
 						</div>
 					</div>
+					{$form->getElement('ativo')}
 				</div>
 			</div>
 		</div>

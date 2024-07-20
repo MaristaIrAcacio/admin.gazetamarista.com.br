@@ -95,22 +95,36 @@ class Admin_Model_Usuarios extends gazetamarista_Db_Table {
 	 */
 	public function init() {
 		// Adiciona os campos ao model
+		$this->setCampo("avatar", "Imagem de Perfil");
+		$this->setCampo("nomeCompleto", "Nome Completo");
 		$this->setCampo("nome", "Nome");
 		$this->setCampo("email", "E-mail");
 		$this->setCampo("login", "Login");
 		$this->setCampo("senha", "Senha", "Informe somente para alterar a senha atual");
 		$this->setCampo("idperfil", "Perfil");
+		$this->setCampo("serie", "Série");
+		$this->setCampo("turma", "Turma");
+		$this->setCampo("instagram", "Instagram");
+		$this->setCampo("linkedin", "linkedin");
+		$this->setCampo("ativo", "Ativo?");
 
 		// Seta o campo de descrição da tabela
 		$this->setDescription("nome");
 
 		// Seta a visibilidade
+		$this->setVisibility("avatar", TRUE, TRUE, FALSE, FALSE);
+		$this->setVisibility("nomeCompleto", TRUE, TRUE, TRUE, FALSE);
 		$this->setVisibility("nome", TRUE, TRUE, TRUE, TRUE);
 		$this->setVisibility("email", TRUE, TRUE, TRUE, TRUE);
 		$this->setVisibility("login", TRUE, TRUE, TRUE, TRUE);
 		$this->setVisibility("senha", TRUE, TRUE, FALSE, FALSE);
 		$this->setVisibility("chave", FALSE, FALSE, FALSE, FALSE);
 		$this->setVisibility("sendmail", FALSE, FALSE, FALSE, FALSE);
+		$this->setVisibility("serie", TRUE, TRUE, TRUE, FALSE);
+		$this->setVisibility("turma", TRUE, TRUE, TRUE, FALSE);
+		$this->setVisibility("instagram", TRUE, TRUE, TRUE, FALSE);
+		$this->setVisibility("linkedin", TRUE, TRUE, TRUE, FALSE);
+		$this->setVisibility("ativo", TRUE, TRUE, TRUE, FALSE);
 		
 		// Seta o modifier
 		$this->setModifier("senha", array('type'=>"password"));
@@ -120,6 +134,13 @@ class Admin_Model_Usuarios extends gazetamarista_Db_Table {
 		
 		// Continua o carregamento do model
 		parent::init();
+
+		// Seta os modificadores
+		$this->setModifier("avatar", array(
+			'type' => "file",
+			'preview' => "common/uploads/usuarios",
+			'destination' => APPLICATION_PATH . "/../common/uploads/usuarios"
+		));
 
 		// Seta o autocomplete personalizado (name 'unicos')
         $select = $this->select();
