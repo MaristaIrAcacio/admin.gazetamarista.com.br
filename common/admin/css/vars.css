@@ -1,0 +1,50 @@
+/**
+ ** Variáveis
+ **/
+:root {
+    --bs-blue: #3200f3;
+    --bs-indigo: #3b499e;
+    --bs-purple: #6f42c1;
+    --bs-pink: #d63384;
+    --bs-red: #e83d32;
+    --bs-orange: #fd7e14;
+    --bs-yellow: #ffc107;
+    --bs-green: #00a958;
+    --bs-teal: #20c997;
+    --bs-cyan: #0dcaf0;
+    --bs-white: #fff;
+    --bs-gray: #6c757d;
+    --bs-gray-dark: #343a40;
+    --bs-primary: #3200f3;
+    --bs-primary-active: #32008f;
+    --bs-indigo-active: #262f4e;
+    --bs-secondary: #4c5668;
+    --bs-secondary-active: #4b5157;
+    --bs-success: var(--bs-green);
+    --bs-success-active: #125c3b;
+    --bs-whatsapp: #008b48;
+    --bs-whatsapp-active: #006d37;
+    --bs-info: #0dcaf0;
+    --bs-info-active: #0d99b1;
+    --bs-warning: #ffc107;
+    --bs-warning-active: #bf9308;
+    --bs-danger: #e63e33;
+    --bs-danger-active: #823e33;
+    --bs-light: #e0e0e0;
+    --bs-dark: #212529;
+    --bs-black: #000;
+    --bs-menu: #1f2633;
+    --bs-menu-list: #1a1f29;
+    --bs-menu-link: #dddddd;
+    --bs-text-header: var(--bs-secondary);
+    --bs-text-light: #5e6a7e;
+    --bs-text-dark: #1f2633;
+    --bs-gazetamarista-darkblue: var(--bs-text-dark);
+    --bs-body-background: var(--bs-light);
+    --bs-body-font-color: var(--bs-text-header);
+    --bs-font-sans-serif: system-ui,-apple-system,"Segoe UI",Roboto,"Helvetica Neue",Arial,"Noto Sans","Liberation Sans",sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji";
+    --bs-font-monospace: SFMono-Regular,Menlo,Monaco,Consolas,"Liberation Mono","Courier New",monospace;
+    --bs-gradient: linear-gradient(180deg, rgba(255, 255, 255, 0.15), rgba(255, 255, 255, 0));
+    --bs-icon-font: "Material Icons";
+    --bs-bx-icon-font: "boxicons";
+}

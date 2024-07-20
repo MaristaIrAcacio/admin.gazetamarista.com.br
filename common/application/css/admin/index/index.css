@@ -1,0 +1,148 @@
+
+.blocoNumeros{
+    width: calc(100% - 10px);
+    float: left;
+    border: none;
+    background: #FFF;
+    margin-bottom: 3px;
+    padding-bottom: 8px;
+    margin: 5px;
+}
+
+.BlocoLaranja{ background: #D27050; }
+.BlocoLaranja i{ background: #bd6142; }
+
+.BlocoVerde{ background: rgba(121, 121, 121, 0.73); }
+.BlocoVerde i{ background: #6e6e6e; }
+
+.BlocoAzul{ background: rgba(121, 121, 121, 0.73); }
+.BlocoAzul i{ background: #6e6e6e; }
+
+.BlocoAmarelo{ background: #D27050; }
+.BlocoAmarelo i{ background: #bd6142; }
+
+.BlocoNumero{
+    width: calc(25% - 8px);
+    float: left;
+    height: 100px;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    border-radius: 3px;
+    margin: 4px;
+    margin-bottom: 0px;
+}
+
+.BlocoNumero i{
+    float: left;
+    font-size: 30px;
+    color: #FFF;
+    /* padding: 10px 20px; */
+    border-radius: 40px;
+    margin-top: 17px;
+    margin-left: 10px;
+    text-align: center;
+    width: 60px;
+    height: 60px;
+    line-height: 59px;
+}
+
+.BlocoNumero .Dados{
+    float: left;
+    margin-left: 10px;
+    margin-top: 38px;
+    color: #FFF;
+}
+
+.BlocoNumero .Dados h4{
+    font-size: 30px;
+    font-weight: bolder;
+    line-height: 4px;
+    color: #FFF;
+}
+
+.BlocoNumero .Dados h4 small{
+    color: #FFF;
+    font-size: 13px !important;
+    margin-right: 2px;
+}
+.BlocoNumero .Dados span{
+    font-size: 12px;
+    font-weight: 500;
+}
+
+#site-corpo .dasboard-list h5 {
+    background: #eaeaea;
+    color: #1f2533;
+    font-weight: 700;
+    line-height: 1.125rem;
+    padding: 12px 0.625rem;
+    margin: 0;
+    font-size: 14px;
+    letter-spacing: 0.29px;
+}
+
+#site-corpo .dasboard-list h5.destaque { background:#0082ca; color:#fff; }
+#site-corpo .dasboard-list .bloco {
+    width: calc(50% - 10px); background:#FFF; border: 2px solid #eaeaec; min-height: 385px; margin-bottom: 10px;  position: relative; float: left; margin: 10px 5px;
+}
+
+
+#site-corpo .dasboard-list table.list {
+    border: none;
+    margin: 0px;
+}
+
+#site-corpo .dasboard-list table.list .verlista{
+    background: #f7f7f7;
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 12px;
+    letter-spacing: 1px;
+    color: #2653bb;
+    padding: 10px;
+    position: absolute;
+    width: 100%;
+    bottom: 0px;
+}
+
+.AtalhoMiniatura{
+    width: calc(26% - 20px);
+    min-width: 168px;
+    padding: 20px;
+    border: 1px solid #ccc;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    border-radius: 3px;
+    margin: 6px 6px;
+    position: relative;
+    float: left;
+    height: 139px;
+}
+
+.AtalhoMiniatura svg{
+    width: 50px;
+    position: relative;
+    left: 50%;
+    margin-left: -25px;
+    margin-bottom: 7px;
+    height: 47px;
+}
+
+
+.AtalhoMiniatura img{
+    width: 100px;
+    position: relative;
+    left: 50%;
+    margin-left: -50px;
+    margin-bottom: 27px;
+    margin-top: 13px;
+}
+
+
+.AtalhoMiniatura h3{ text-align: center;
+    text-transform: uppercase;
+    font-size: 12px;
+    letter-spacing: 1px;
+    color: #1f2533;
+    font-weight: bolder;
+}

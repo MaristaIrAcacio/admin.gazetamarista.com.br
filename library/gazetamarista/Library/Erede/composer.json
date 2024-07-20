@@ -1,0 +1,5 @@
+{
+    "require": {
+        "developersrede/erede-php": "^5.1"
+    }
+}

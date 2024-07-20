@@ -1,0 +1,93 @@
+@import '../../vars';
+@import '../../vendor/uikit/variables-theme';
+
+.select2-dropdown {
+	background-color:white;
+
+	//border:$form-border-width solid $form-border;
+	border-radius:4px;
+
+	box-shadow:0 10px 20px rgba(0, 0, 0, 0.2);
+	box-sizing:border-box;
+
+	display:block;
+
+	position:absolute;
+	left:-100000px;
+
+	width:100%;
+
+	z-index:1051;
+}
+
+.select2-results {
+	display:block;
+}
+
+.select2-results__options {
+	list-style:none;
+	padding:0;
+	margin:0;
+}
+
+.select2-results__option {
+	padding:5px 18px;
+
+	user-select:none;
+	-webkit-user-select:none;
+
+	font-size:14px;
+
+	&[aria-selected] {
+		cursor:pointer;
+	}
+	&:first-child {
+		margin-top:15px;
+	}
+	&:last-child {
+		margin-bottom:15px;
+	}
+}
+
+.select2-container--open .select2-dropdown {
+	left:0;
+}
+
+.select2-container--open .select2-dropdown--above {
+	border-bottom:none;
+	border-bottom-left-radius:0;
+	border-bottom-right-radius:0;
+}
+
+.select2-container--open .select2-dropdown--below {
+	border-top:none;
+	border-top-left-radius:0;
+	border-top-right-radius:0;
+}
+
+.select2-search--dropdown {
+	display:block;
+
+	.select2-search__field {
+		width:100%;
+		box-sizing:border-box;
+
+		&::-webkit-search-cancel-button {
+			-webkit-appearance:none;
+		}
+	}
+
+	&.select2-search--hide {
+		display:none;
+	}
+
+	&:not(.select2-search--hide) + .select2-results {
+		.select2-results__options {
+			.select2-results__option {
+				&:first-child {
+					margin-top:0;
+				}
+			}
+		}
+	}
+}

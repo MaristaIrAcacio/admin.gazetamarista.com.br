@@ -1,0 +1,6 @@
+/* TELA DE ERRO 404 */
+.error-codigo-container{display: block;}
+.fundoerro{height: auto; padding-bottom: 70px; padding-top: 50px;}
+.error-title{font-size: 60px; color: #e63e33; font-weight: bold;}
+.error-button{font-size: 30px;margin-top: 25px;}
+.error-button a{padding: 15px 28px 34px; background: #e63e33;  font-size: 13px; color: #fff; text-transform: uppercase; margin-bottom: 60px; }

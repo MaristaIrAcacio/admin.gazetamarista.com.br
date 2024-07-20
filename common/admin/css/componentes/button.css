@@ -1,0 +1,220 @@
+/**
+ ** Botões
+ **/
+.btn {
+    background-color:transparent;
+    border-radius:5px !important;
+    border:1px solid transparent !important;
+    color:var(--bs-dark);
+    cursor:pointer;
+    display:inline-block;
+    font-size:1rem;
+    font-weight:700;
+    line-height:1.5;
+    margin-bottom:0;
+    padding:0.786rem 2.0rem;
+    text-align:center;
+    text-decoration:none;
+    transition:color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+    user-select:none;
+    vertical-align:middle;
+    -webkit-user-select:none;
+    -moz-user-select:none;
+}
+.btn-primary {
+    background-color:var(--bs-primary);
+    border-color:var(--bs-primary) !important;
+    color:var(--bs-white);
+}
+.btn-indigo {
+    background-color:var(--bs-indigo);
+    border-color:var(--bs-indigo) !important;
+    color:var(--bs-white);
+}
+.btn-secondary {
+    background-color: var(--bs-secondary);
+    border-color: var(--bs-secondary) !important;
+    color:var(--bs-white);
+}
+.btn-success {
+    background-color: var(--bs-success);
+    border-color: var(--bs-success) !important;
+    color:var(--bs-white);
+}
+.btn-danger {
+    background-color:var(--bs-danger);
+    border-color:var(--bs-danger) !important;
+    color:var(--bs-white);
+}
+.btn-warning {
+    background-color:var(--bs-warning);
+    border-color:var(--bs-warning) !important;
+    color:var(--bs-black);
+}
+.btn-info {
+    background-color:var(--bs-info);
+    border-color:var(--bs-info) !important;
+    color:var(--bs-white);
+}
+.btn-light {
+    background-color:var(--bs-light);
+    border-color:var(--bs-light) !important;
+    color:var(--bs-black);
+}
+.btn-green {
+    background-color:var(--bs-green);
+    border-color:var(--bs-green) !important;
+    color:var(--bs-white);
+}
+.btn-dark {
+    background-color:var(--bs-dark);
+    border-color:var(--bs-dark) !important;
+    color:var(--bs-white);
+}
+.btn-white {
+    background-color:var(--bs-white);
+    border-color:var(--bs-white) !important;
+    color:var(--bs-secondary);
+}
+.btn-outline-primary {
+    border-color:var(--bs-primary) !important;
+    color:var(--bs-primary);
+}
+.btn-outline-indigo {
+    border-color:var(--bs-indigo) !important;
+    color:var(--bs-indigo);
+}
+.btn-outline-secondary {
+    border-color:var(--bs-secondary) !important;
+    color:var(--bs-secondary);
+}
+.btn-outline-success {
+    border-color:var(--bs-success) !important;
+    color:var(--bs-success);
+}
+.btn-outline-danger {
+    border-color:var(--bs-danger) !important;
+    color:var(--bs-danger);
+}
+.btn-outline-warning {
+    border-color:var(--bs-warning) !important;
+    color:var(--bs-warning);
+}
+.btn-outline-info {
+    border-color:var(--bs-info) !important;
+    color:var(--bs-info);
+}
+.btn-outline-light {
+    border-color:var(--bs-light) !important;
+    color:var(--bs-light);
+}
+.btn-outline-dark {
+    border-color:var(--bs-dark) !important;
+    color:var(--bs-dark);
+}
+.btn-outline-green {
+    border-color:var(--bs-green) !important;
+    color:var(--bs-green);
+}
+.btn-whatsapp {
+    background-color:var(--bs-whatsapp);
+    border-color:var(--bs-whatsapp) !important;
+    color:var(--bs-white);
+}
+.btn-transparent {
+    color:var(--bs-white);
+}
+/* Hovers e Focus */
+.btn-primary:hover,.btn-primary:focus,
+.btn-outline-primary:hover,.btn-outline-primary:focus {
+    background-color:var(--bs-primary-active);
+    border-color:var(--bs-primary-active) !important;
+    color:var(--bs-white);
+}
+.btn-indigo:hover,.btn-indigo:focus,
+.btn-outline-indigo:hover,.btn-outline-indigo:focus {
+    background-color:var(--bs-indigo-active);
+    border-color:var(--bs-indigo-active) !important;
+    color:var(--bs-white);
+}
+.btn-secondary:hover,.btn-secondary:focus,
+.btn-outline-secondary:hover,.btn-outline-secondary:focus {
+    background-color:var(--bs-secondary-active);
+    border-color:var(--bs-secondary-active) !important;
+    color:var(--bs-white);
+}
+.btn-success:hover,.btn-success:focus,
+.btn-outline-success:hover,.btn-outline-success:focus{
+    background-color:var(--bs-success-active);
+    border-color:var(--bs-success-active) !important;
+    color:var(--bs-white);
+}
+.btn-danger:hover,.btn-danger:focus,
+.btn-outline-danger:hover,.btn-outline-danger:focus {
+    background-color:var(--bs-danger-active);
+    border-color:var(--bs-danger-active) !important;
+    color:var(--bs-white);
+}
+.btn-warning:hover,.btn-warning:focus,
+.btn-outline-warning:hover,.btn-outline-warning:focus {
+    background-color:var(--bs-warning-active);
+    border-color:var(--bs-warning-active) !important;
+}
+.btn-info:hover,.btn-info:focus,
+.btn-outline-info:hover,.btn-outline-info:focus {
+    background-color:var(--bs-info-active);
+    border-color:var(--bs-info-active) !important;
+}
+.btn-green:hover,.btn-green:focus,
+.btn-outline-green:hover,.btn-outline-green:focus {
+    background-color:var(--bs-success-active);
+    border-color:var(--bs-success-active) !important;
+}
+.btn-dark:hover,.btn-dark:focus,
+.btn-outline-dark:hover,.btn-outline-dark:focus {
+    background-color:var(--bs-gray-dark);
+    border-color:var(--bs-gray-dark) !important;
+    color:var(--bs-white);
+}
+.btn-whatsapp:hover,.btn-whatsapp:focus {
+    background-color:var(--bs-whatsapp-active);
+    border-color:var(--bs-whatsapp-active) !important;
+    color:var(--bs-white);
+}
+.btn-white:hover,.btn-white:focus {
+    background-color:var(--bs-secondary);
+    border-color:var(--bs-secondary) !important;
+    color:var(--bs-white);
+}
+/* Grupo de botões */
+.button-group {
+    /*align-items:center;*/
+    /*display:flex;*/
+    justify-content:space-between;
+    margin-bottom:1.25rem;
+    margin-left:0;
+}
+.button-group > div {
+    display:flex;
+    width:100%;
+}
+.button-group > div {
+    display:flex;
+}
+.button-group > div:nth-child(2) {
+    justify-content:flex-end;
+}
+.button-group > div > li:not(:first-child) {
+    margin-left:20px;
+}
+.button-group.stacked-for-small>li>button, .button-group.stacked-for-small>li .button {
+    border:none;
+}
+/* Botão expandido */
+.btn.btn-expanded {
+    width:100%;
+}
+/* Botão com caixa alta */
+.btn.btn-text-uppercase {
+    text-transform:uppercase;
+}

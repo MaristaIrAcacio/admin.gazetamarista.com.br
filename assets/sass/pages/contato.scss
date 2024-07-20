@@ -1,0 +1,91 @@
+@import "../vars";
+
+#site-corpo.main-contato {
+	padding: 0;
+	padding-bottom: 80px;
+
+    .btn-enviar {
+        font-family: 'Montserrat';
+    }
+
+    .titulo-padrao {
+        font-size: 64px;
+        color: #656565;
+        font-weight: 600;
+		font-family: "Avenir";
+        line-height: 76.8px;
+
+        @include mobile {
+            font-size: 36px;
+            line-height: 30px;
+            margin: 20px 0 20px 0;
+        }
+    }
+
+    @include mobile {
+        padding-bottom: 50px;
+    }
+
+    h1 {
+        text-align: center;
+        margin: 80px 0px 40px;
+        
+        @include mobile {
+            margin: 30px 0px 20px;            
+        }
+    }
+
+    p {
+        margin-bottom: 0px;
+    }
+
+    #form-contato {
+        max-width: 780px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .form-footer {
+        display: flex;
+        justify-content: center;
+        gap: 20px;
+
+        > * {
+            @include mobile {
+                width: 100%;
+            }
+        }
+
+        @include mobile {
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .recaptcha-container {
+            margin-bottom: 0;
+        }
+
+        .uk-button {
+            height: 68px;
+            width: 390px;
+            max-width: 100%;
+            background-color: #000000;
+		    font-family: "Avenir";
+            font-weight: 700;
+            font-size: 16px;
+
+            @include mobile {
+                margin-top: 0;
+                width: 100%;
+            }
+        }
+    }
+
+    .arrow {
+        position: absolute;
+        right: 20px;
+        margin-top: 15px;
+        z-index: -1;
+    }
+}

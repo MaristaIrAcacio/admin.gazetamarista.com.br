@@ -1,0 +1,12 @@
+/* Mobile */
+@media only screen and (max-width:40em) {
+	table.responsive { margin-bottom:0; }
+	table.responsive td, table.responsive th { position:relative; white-space:nowrap; overflow:hidden; }
+	table.responsive th:first-child, table.responsive td:first-child { display:none; }
+
+	div.table-wrapper { position:relative; margin-bottom:20px; overflow:hidden; border-right:1px solid #ccc; }
+	div.table-wrapper div.pinned { position:absolute; left:0; top:0; background:#fff; width:35%; overflow:hidden; overflow-x:scroll; }
+	div.table-wrapper div.pinned table th, div.table-wrapper div.pinned table td { white-space:nowrap; }	
+	div.table-wrapper div.scrollable { margin-left:35%; overflow:scroll; overflow-y:hidden; }
+	div.table-wrapper div.scrollable table.responsive { border-left:none; }
+}

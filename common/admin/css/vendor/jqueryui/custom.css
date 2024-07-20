@@ -1,0 +1,9 @@
+/**
+ ** Custom config for jQueryUI
+ **/
+.ui-menu .ui-menu-item-wrapper {
+    background:none;
+    border:1px solid transparent;
+    margin:0;
+    outline:none;
+}

@@ -1,0 +1,29 @@
+{
+  "name": "developersrede/erede-php",
+  "version": "5.1.2",
+  "description": "e.Rede integration SDK",
+  "minimum-stability": "stable",
+  "license": "MIT",
+  "type": "library",
+  "require": {
+    "php": ">=7.2",
+    "ext-curl": "*",
+    "ext-json": "*",
+    "psr/log": "^1.1",
+    "monolog/monolog": "*"
+  },
+  "require-dev": {
+    "phpunit/phpunit": "*"
+  },
+  "autoload": {
+    "psr-4": {
+      "Rede\\": "src/Rede"
+    }
+  },
+  "authors": [
+    {
+      "name": "João Batista Neto",
+      "email": "neto.joaobatista@gmail.com"
+    }
+  ]
+}

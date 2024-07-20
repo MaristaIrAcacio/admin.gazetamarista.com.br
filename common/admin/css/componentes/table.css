@@ -1,0 +1,163 @@
+/**
+ ** Tabela de listagem
+ **/
+table {
+    background:var(--bs-white);
+    border-radius:5px;
+    border:none;
+    box-shadow:0 3px 16px 0 rgba(0, 0, 0, 0.04);
+    margin-bottom:1.25rem;
+    margin-top:10px;
+    table-layout:auto;
+    width:100%;
+}
+table.list {
+}
+table.list thead {
+    background:var(--bs-secondary);
+    border:none;
+}
+table.list thead tr {
+}
+table.list thead tr th {
+    color:var(--bs-white);
+    font-size:12px;
+    letter-spacing:1px;
+    padding:0.83rem 0.625rem;
+    text-transform:uppercase;
+}
+table.list tbody {
+    border:none;
+}
+table.list tbody tr {
+    font-size: 1.125rem;
+    font-weight: 500;
+    border-bottom: 1px solid #f2f2f3;
+}
+table.list tbody tr:hover {
+    background:#f5f5fd;
+    cursor:pointer;
+}
+table.list tbody tr td {
+    font-size: 1rem;
+    padding: 0.9rem 0.625rem;
+}
+table.list tbody tr td.selecionado {
+    background-color: #ebecf5;
+}
+table.list tbody tr.tr_inativa td {
+    color: rgba(31, 38, 51, 0.5);
+}
+table.list tbody tr td a:not(.button) {
+    color: #222;
+    font-size: 2rem;
+}
+table.list tbody tr td.coluna-acoes ul.dropdown {
+    text-align:center;
+}
+table.list tbody tr td.coluna-acoes ul.dropdown > li > a {
+    padding:0;
+}
+table.list tbody tr td.coluna-acoes ul.dropdown > li > a > i {
+    font-size:20px;
+    color:var(--bs-text-header);
+}
+table.list tbody tr td.coluna-acoes ul.dropdown > li > a::after {
+    display:none;
+}
+table.list tbody tr td.coluna-acoes ul.dropdown > li > ul.is-dropdown-submenu {
+    border-radius:5px;
+    border:1px solid var(--bs-body-background);
+    display:none;
+    min-width:135px;
+    padding:15px 0;
+    text-align:left;
+}
+table.list tbody tr td.coluna-acoes ul.dropdown > li > ul.is-dropdown-submenu.js-dropdown-active {
+    display:block !important;
+}
+table.list tbody tr td.coluna-acoes ul.dropdown > li > ul.is-dropdown-submenu > li.is-submenu-item > a {
+    color:var(--bs-text-header);
+    font-size:14px;
+    font-weight:500;
+    line-height:35px;
+    padding:0 2rem;
+}
+table.list tbody tr td.coluna-acoes ul.dropdown > li > ul.is-dropdown-submenu > li.is-submenu-item > a:hover {
+    text-decoration:underline;
+}
+table.list tbody tr td .show-id {
+    color:var(--bs-body-font-color);
+    font-size:14px;
+}
+table.list tbody tr:hover td a:not(.button) {
+    color:#3c4a9e;
+}
+table.list tfoot {
+}
+table.list tfoot tr {
+}
+table.list tfoot tr td {
+}
+/* Lido */
+table.list tbody tr td span.lido {
+    color: #3c499d;
+}
+table.list tbody tr td span.naolido {
+    color: #e63d33;
+}
+table.list tbody tr:hover td span.lido {
+    color: #919ad5;
+}
+table.list tbody tr:hover td span.naolido {
+    color: #e63d33;
+}
+/* Lido */
+/* Destaque */
+table.list.destaque thead tr {
+    cursor: pointer;
+    background: #0082ca;
+    color: #fff;
+}
+table.list.destaque thead tr th {
+    color: #fff;
+}
+/* Checkbox */
+.listcheckbox {
+    float:left;
+    height:20px;
+    margin:0 10px 0 0;
+    position:relative;
+    width:20px;
+}
+.listcheckbox label {
+    background:var(--bs-white);
+    border-radius:3px;
+    border:1px solid #e4e5e6;
+    cursor:pointer;
+    height:20px;
+    left:0;
+    margin:0 !important;
+    position:absolute;
+    top:0;
+    width:20px;
+}
+.listcheckbox label:after {
+    font-family:var(--bs-icon-font);
+    content:'\e5ca';
+    color:#4CAF50;
+    position:absolute;
+    top:-2px;
+    left:3px;
+    opacity:0;
+}
+.listcheckbox label:hover::after {
+    opacity:0.3;
+}
+.listcheckbox input[type=checkbox] {
+    margin-bottom:0;
+    visibility:hidden;
+}
+.listcheckbox input[type=checkbox]:checked + label:after {
+    opacity:1;
+}

@@ -1,0 +1,264 @@
+/**
+ ** Galeria de fotos
+ **/
+#fotos .linha-fotos {
+    margin-top:10px;
+}
+#fotos .linha-fotos .panel {
+    background:var(--bs-body-background);
+    border-radius:5px;
+    border:1px solid #d5d7db;
+    margin-bottom:18px;
+    padding:10px 10px 20px;
+}
+#fotos .linha-fotos .panel .acoes-galeria {
+    position:relative;
+}
+#fotos .linha-fotos .panel .acoes-galeria a, #fotos .linha-fotos .panel .acoes-galeria div.capa-image {
+    border-radius:50%;
+    color:#fff;
+    font-family:monospace;
+    font-size:20px;
+    height:30px;
+    left:-15px;
+    line-height:30px;
+    position:absolute;
+    text-align:center;
+    top:-15px;
+    width:30px;
+    z-index:10;
+}
+#fotos .linha-fotos .panel .acoes-galeria a.btn-remove-image {
+    background-color:#e63d33;
+}
+#fotos .linha-fotos .panel .acoes-galeria .delete:before {
+    -webkit-font-smoothing:antialiased;
+    content:"\e92b";
+    font:normal normal normal 18px/1 var(--bs-icon-font);
+    text-rendering:auto;
+    line-height:30px;
+
+}
+#fotos .linha-fotos .panel .acoes-galeria .icon-preview {
+    background-color:var(--bs-indigo);
+    left:18px;
+}
+#fotos .linha-fotos .panel .acoes-galeria .icon-preview .preview:before {
+    -webkit-font-smoothing:antialiased;
+    content:"\e417";
+    font:normal normal normal 18px/1 var(--bs-icon-font);
+    text-rendering:auto;
+    line-height:30px;
+}
+#fotos li:not(:first-of-type) .acoes-galeria div.capa-image {
+    display:none;
+}
+#fotos li:first-of-type .panel .acoes-galeria div.capa-image {
+    background-color:#ffd700;
+    left:52px;
+}
+#fotos li:first-of-type .panel .acoes-galeria div.capa-image .star:before {
+    -webkit-font-smoothing:antialiased;
+    color:var(--bs-white);
+    content:"\e838";
+    font:normal normal normal 18px/1 var(--bs-icon-font);
+    line-height:30px;
+    text-rendering:auto;
+}
+#fotos .linha-fotos .panel .imagem {
+    margin-bottom:10px;
+}
+#fotos .linha-fotos .panel .imagem a {
+    display:block;
+    height:175px;
+}
+#fotos .linha-fotos .panel .imagem a img {
+    border-radius:5px;
+    height:100%;
+    object-fit:cover;
+    width:100%;
+}
+#fotos .linha-fotos .panel .legenda input {
+    height:30px;
+    margin-bottom:0;
+}
+
+/**
+ ** Galeria de videos
+ **/
+#videos .linha-fotos {
+    margin-top:10px;
+}
+#videos .linha-fotos .photos li {
+    width: 330px;
+}
+#videos .linha-fotos .panel {
+    border-radius:5px;
+    border:1px solid #d5d7db;
+    margin-bottom:18px;
+    padding:10px 10px 20px;
+}
+#videos .linha-fotos .panel .acoes-galeria {
+    position:relative;
+}
+#videos .linha-fotos .panel .acoes-galeria a, #videos .linha-fotos .panel .acoes-galeria div.capa-image {
+    border-radius:50%;
+    color:#fff;
+    font-family:monospace;
+    font-size:20px;
+    height:30px;
+    left:-15px;
+    line-height:30px;
+    position:absolute;
+    text-align:center;
+    top:-15px;
+    width:30px;
+    z-index:10;
+}
+#videos .linha-fotos .panel .acoes-galeria a.btn-remove-video {
+    background-color:#e63d33;
+}
+#videos .linha-fotos .panel .acoes-galeria .delete:before {
+    -webkit-font-smoothing:antialiased;
+    content:"\e92b";
+    font:normal normal normal 18px/1 var(--bs-icon-font);
+    text-rendering:auto;
+    line-height:30px;
+
+}
+#videos .linha-fotos .panel .acoes-galeria .icon-preview {
+    background-color:var(--bs-indigo);
+    left:18px;
+}
+#videos .linha-fotos .panel .acoes-galeria .icon-preview .preview:before {
+    -webkit-font-smoothing:antialiased;
+    content:"\e417";
+    font:normal normal normal 18px/1 var(--bs-icon-font);
+    text-rendering:auto;
+    line-height:30px;
+}
+#videos li:not(:first-of-type) .acoes-galeria div.capa-image {
+    display:none;
+}
+#videos li:first-of-type .panel .acoes-galeria div.capa-image {
+    background-color:#ffd700;
+    left:52px;
+}
+#videos li:first-of-type .panel .acoes-galeria div.capa-image .star:before {
+    -webkit-font-smoothing:antialiased;
+    color:var(--bs-white);
+    content:"\e838";
+    font:normal normal normal 18px/1 var(--bs-icon-font);
+    line-height:30px;
+    text-rendering:auto;
+}
+#videos .linha-fotos .panel .imagem {
+    margin-bottom:10px;
+}
+#videos .linha-fotos .panel .imagem a {
+    display:block;
+    height:175px;
+}
+#videos .linha-fotos .panel .imagem a img {
+    border-radius:5px;
+    height:100%;
+    object-fit:cover;
+    width:100%;
+}
+#videos .linha-fotos .panel .legenda input {
+    height:30px;
+    margin-bottom:0;
+}
+
+/* Uploads */
+.arquivo-upload-avancado {
+    margin-bottom:22px;
+    max-width:fit-content;
+    position:relative;
+    text-align:left;
+}
+.arquivo-upload-avancado label {
+    color:#303030;
+    font-size:14px;
+}
+.arquivo-upload-avancado label span {
+
+}
+.arquivo-upload-avancado input[type=file] {
+    left:-9999px;
+    margin-bottom:0;
+    position:absolute;
+    top:-9999px;
+    width:0;
+}
+.arquivo-upload-avancado .arquivo_tmp {
+    cursor:pointer;
+    position:relative;
+}
+.arquivo-upload-avancado .arquivo_tmp:hover {
+    background:#3c4a9e;
+}
+.arquivo-upload-avancado .arquivo_tmp.off {
+    cursor:default;
+    pointer-events:none;
+}
+.arquivo-upload-avancado .arquivo_tmp .solte-arquivos {
+    overflow:hidden;
+    text-overflow:ellipsis;
+    white-space:nowrap;
+}
+.arquivo-upload-avancado .arquivo_tmp .loading-box {
+    border-radius:5px;
+    height:104%;
+    left:-1px;
+    top:-1px;
+    transform:translateY(0);
+    width:101%;
+}
+.arquivo-upload-avancado .dimensoes {
+    font-size:10px;
+    margin-top:10px;
+    text-align:center;
+}
+#downloads .lista-simples {
+    position:relative;
+}
+#downloads .lista-simples .lista-simples-item a {
+    border-radius:50%;
+    color:#fff;
+    font-family:monospace;
+    font-size:20px;
+    height:30px;
+    left:18px;
+    line-height:30px;
+    position:absolute;
+    text-align:center;
+    top:12px;
+    width:30px;
+    z-index:10;
+}
+#downloads .lista-simples .lista-simples-item a.btn-remove-arquivo {
+    background-color:#e63d33;
+}
+#downloads .lista-simples .lista-simples-item .delete:before {
+    -webkit-font-smoothing:antialiased;
+    content:"\e92b";
+    font:normal normal normal 18px/1 var(--bs-icon-font);
+    text-rendering:auto;
+    line-height:30px;
+
+}
+#downloads .lista-simples .lista-simples-item .icon-preview {
+    background-color:var(--bs-indigo);
+    left:53px;
+}
+#downloads .lista-simples .lista-simples-item .icon-preview .preview:before {
+    -webkit-font-smoothing:antialiased;
+    content:"\e417";
+    font:normal normal normal 18px/1 var(--bs-icon-font);
+    text-rendering:auto;
+    line-height:30px;
+}
+#downloads .lista-simples .lista-simples-item .nome {
+    margin-left: 80px !important;
+}

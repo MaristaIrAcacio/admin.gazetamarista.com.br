@@ -1,0 +1,18 @@
+@media print {
+	div.mCustomScrollBox{ display: none !important; }
+	#footer-framework{ display: none !important; }
+	ul.ui-widget-header{ display: none !important; }
+	div.form-buttons{ display: none !important; }
+	div.icon-bar{ display: none !important; }
+	
+	#usuariodrop{ display: none !important; }
+	.breadcrumbs{ display: none !important; }
+	.container{ display: inline-block !important; line-height: 2.0; }
+	.ct-paginner{ display: none !important; }
+
+	label{ color: #666; font-family: inherit; font-size: 21px; }
+	input,textarea{ border: none; font-family: inherit; font-size: 21px; resize:none; }
+
+	textarea#mensagem{ display: none !important; }
+	div#text_mensagem{ font-family: inherit; font-size: 21px; display: inline-block !important; }
+}

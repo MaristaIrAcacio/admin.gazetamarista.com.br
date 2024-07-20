@@ -1,0 +1,634 @@
+@import "../vars";
+
+#site-corpo.main-index {
+	padding: 0;
+	min-height: 100vh;
+	overflow-x: hidden;
+
+	.slides.banners {
+		position: relative;
+
+		.whatsapp-float {
+			position: absolute;
+			top: 35%;
+			right: -35px;
+			transform: translate(-50%, -50%);
+			z-index: 100;
+			background-color: #33c630;
+			padding: 8px 16px;
+			font-size: 32px;
+			text-align: center;
+			cursor: pointer;
+			border-radius: 10px 0 0 10px;
+			a {
+				color: #fff;
+			}
+			@include tablet {
+				top: 50%;
+			}
+		}
+
+		.swiper-container {
+			position: relative;
+			@include desktop {
+				height: 982px;
+			}
+
+			@include tablet {
+				height: 600px;
+			}
+
+			.mobile-arrow {
+				position: absolute;
+				top: 20%;
+				font-size: 26px;
+
+				&.swiper-button-next {
+					right: 0;
+				}
+				&.swiper-button-prev {
+					left: 0;
+				}
+			}
+		}
+
+		.swiper-slide {
+			img {
+				width: 100%;
+				height: 100%;
+				object-fit: cover;
+
+				@include mobile {
+					height: 658px;
+				}
+			}
+		}
+
+		.slide-title {
+			position: absolute;
+			top: 0;
+			left: 0;
+			display: flex;
+			align-items: center;
+			justify-content: space-around;
+			flex-direction: column;
+			padding-bottom: 100px;
+			width: 100%;
+			height: 100%;
+
+			@include tablet {
+				padding: 40px 20px;
+				justify-content: start;
+			}
+
+			h2 {
+				font-weight: 800;
+				font-size: 64px;
+				font-family: "Avenir";
+				text-align: center;
+				color: #656565;
+				overflow-wrap: break-word;
+				margin-top: 140px;
+				max-width: 85%;
+
+				@include desktop {
+					max-width: 75%;
+				}
+
+				@include tablet {
+					font-size: 44px;
+				}
+
+				@include mobile {
+					font-size: 36px;
+					padding: 0 15px;
+					width: 100%;
+					margin-top: 0;
+					margin-bottom: 0;
+				}
+			}
+
+			.content {
+				display: flex;
+				row-gap: 20px;
+				justify-content: center;
+				align-items: start;
+			}
+
+			.slide-buttons {
+				margin-top: 50px;
+				display: flex;
+				flex-direction: column;
+				a {
+					text-align: center;
+					text-transform: uppercase;
+				}
+				@include mobile {
+					position: absolute;
+					bottom: 74px;
+					max-width: calc(100% - 40px);
+				}
+			}
+
+			button {
+				border: 1px solid #d27050;
+				padding: 20px 50px;
+				border-radius: 5px;
+				min-height: 50px;
+				background: transparent;
+				line-height: 1;
+				font-size: 16px;
+				font-weight: 100;
+				color: #d27050;
+				text-transform: uppercase;
+				font-family: "Avenir";
+				width: 100%;
+
+				@include desktop {
+					&:hover {
+						background-color: #d27050;
+						color: #fff;
+						border: none;
+					}
+				}
+
+				@include tablet_small_down {
+					font-size: 14px;
+					font-weight: 300;
+					padding: 10px 25px;
+				}
+			}
+
+			.whatsapp-button {
+				margin-top: 10px;
+				padding: 20px 45px;
+				border: 1px solid #525254;
+				color: #525254;
+				border-radius: 5px;
+				@include tablet_small_down {
+					font-size: 14px;
+					font-weight: 300;
+				}
+				img {
+					width: 32px;
+					height: 32px;
+					@include mobile {
+						width: 20px;
+						height: 20px;
+					}
+				}
+			}
+		}
+
+		.swiper-pagination {
+			bottom: 34px;
+
+			.swiper-pagination-bullet {
+				border: 2px solid #fff;
+				background-color: transparent;
+				opacity: 1;
+			}
+
+			.swiper-pagination-bullet-active {
+				background-color: $primary-color;
+				border-color: $primary-color;
+			}
+		}
+
+		.swiper-button-prev,
+		.swiper-button-next {
+			&:after,
+			&:before {
+				display: none;
+			}
+
+			background-color: transparent;
+			width: unset;
+			height: unset;
+			padding-left: 10px;
+			padding-right: 10px;
+			font-weight: 300;
+			font-size: 18px;
+			line-height: 17px;
+			color: #525254;
+			text-transform: uppercase;
+			top: unset;
+			bottom: 47px;
+			user-select: none;
+			font-family: "Avenir";
+		}
+	}
+
+	.bloco-sobre {
+		width: 100%;
+
+		.descricao-1 {
+			width: 100%;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			background-color: #d27050;
+			padding: 60px 220px;
+			p {
+				font-family: "Avenir";
+				font-size: 20px;
+				color: #fff;
+				text-align: left;
+				font-weight: 100;
+				margin: 0;
+			}
+			@include tablet_large_down {
+				padding: 60px 110px;
+				p {
+					font-size: 18px;
+				}
+			}
+
+			@include mobile {
+				padding: 50px 20px;
+			}
+		}
+
+		img:not(.playButton) {
+			width: 100%;
+		}
+
+		.video {
+			position: relative;
+			.thumb {
+				width: 100%;
+				object-fit: cover;
+				object-position: center;
+				@include mobile_up {
+					max-height: 800px;
+				}
+			}
+			cursor: pointer;
+			.playButton {
+				position: absolute;
+				bottom: 40px;
+				right: 40px;
+				pointer-events: none;
+				@include mobile {
+					right: 25%;
+				}
+			}
+		}
+
+		.descricao-2 {
+			width: 100%;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			padding: 110px 220px;
+			p {
+				font-family: "Avenir";
+				font-size: 20px;
+				color: #656565;
+				text-align: left;
+				font-weight: 300;
+			}
+			@include tablet_large_down {
+				padding: 60px 110px;
+				p {
+					font-size: 18px;
+				}
+			}
+
+			@include mobile {
+				padding: 50px 20px;
+			}
+		}
+	}
+
+	.bloco-proposito {
+		width: 100%;
+		background-color: #f6f6f6;
+		padding: 80px 220px;
+		color: #656565;
+		font-family: "Avenir";
+
+		@include tablet {
+			padding: 60px 110px;
+		}
+
+		@include mobile {
+			padding: 50px 20px;
+		}
+
+		.proposito-content {
+			max-height: 300px;
+			overflow: hidden;
+			position: relative;
+
+			.titulo {
+				display: flex;
+				justify-content: center;
+				width: 100%;
+				h2 {
+					font-size: 64px;
+					font-weight: 500;
+					@include tablet {
+						font-size: 52px;
+					}
+					@include mobile {
+						font-size: 36px;
+					}
+				}
+			}
+
+			.texto {
+				margin-top: 40px;
+				p {
+					font-size: 20px;
+					font-weight: 300;
+					@include tablet {
+						font-size: 18px;
+					}
+					@include mobile {
+						font-size: 16px;
+					}
+				}
+			}
+		}
+
+		.proposito-content:before {
+			content: "";
+			position: absolute;
+			width: 100%;
+			margin-top: 200px;
+			height: 100px;
+			background: linear-gradient(
+				to bottom,
+				rgba(240, 240, 240, 0),
+				#f6f6f6
+			);
+			pointer-events: none;
+			z-index: 100;
+		}
+
+		.no-shadow:before {
+			height: 0 !important;
+		}
+
+		.botao {
+			margin-top: 40px;
+			width: 100%;
+			display: flex;
+			justify-content: center;
+			label {
+				background: #fff;
+				text-transform: uppercase;
+				padding: 15px 60px;
+				border: 1px solid #656565;
+				border-radius: 5px;
+				font-weight: 100;
+				cursor: pointer;
+				@include mobile {
+					font-size: 18px;
+				}
+			}
+		}
+	}
+
+	.bloco-servicos {
+		width: 100%;
+		padding: 100px 220px;
+
+		@include tablet {
+			padding: 70px 110px;
+		}
+
+		@include mobile {
+			padding: 50px 20px;
+		}
+		.topo {
+			width: 100%;
+			display: flex;
+			justify-content: center;
+			.titulo {
+				font-size: 36px;
+				color: #d27050;
+				font-family: "Avenir";
+				@include tablet {
+					font-size: 32px;
+				}
+				@include mobile {
+					font-size: 24px;
+				}
+			}
+		}
+
+		.grid {
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+			gap: 10px;
+		}
+		.item {
+			cursor: pointer;
+			.content {
+				width: 100%;
+				display: flex;
+				flex-direction: column;
+				align-items: center;
+				img {
+					width: 100%;
+					object-fit: cover;
+					object-position: center;
+					filter: grayscale(100%);
+				}
+				.titulo-servico {
+					width: 100%;
+					display: flex;
+					justify-content: center;
+					padding: 40px 80px;
+					background: #f6f6f6;
+					@include tablet_small_down {
+						padding: 20px;
+					}
+					h2 {
+						text-align: center;
+						font-size: 36px;
+						color: #656565;
+						font-family: "Avenir";
+						@include tablet {
+							font-size: 32px;
+						}
+						@include mobile {
+							font-size: 24px;
+						}
+					}
+				}
+			}
+		}
+	}
+
+	.bloco-blog {
+		width: 100%;
+		background-color: #f6f6f6;
+		padding: 100px 80px;
+		@include tablet_small_down {
+			padding: 0;
+		}
+
+		.swiper-wrapper {
+			align-items: center;
+		}
+
+		.item {
+			display: flex;
+			padding: 0 140px 50px 140px;
+			@include tablet {
+				padding: 50px 40px;
+			}
+			@include mobile {
+				padding: 20px;
+				padding-bottom: 50px;
+			}
+			@include tablet_small_down {
+				flex-direction: column;
+				align-items: center;
+			}
+			.imagem-noticia {
+				margin: 0;
+				width: 480px;
+				min-height: 480px;
+				background-color: #fff;
+				img {
+					width: 100%;
+					height: 100%;
+					object-fit: cover;
+					object-position: center;
+				}
+				@include mobile {
+					width: 100%;
+					min-height: 320px;
+				}
+			}
+
+			.content {
+				gap: 30px;
+				display: flex;
+				padding: 40px;
+				color: #656565;
+				font-family: "Avenir";
+				flex-direction: column;
+				justify-content: center;
+				background-color: #fff;
+				width: calc(100% - 480px);
+				* {
+					margin: 0;
+				}
+				@include tablet_small_down {
+					width: 480px;
+					padding: 20px;
+
+					p {
+						font-size: 18px;
+						font-weight: 300 !important;
+					}
+
+					a {
+						width: 100% !important;
+						display: block;
+					}
+				}
+
+				@include mobile {
+					width: 100%;
+					min-height: 320px;
+				}
+				h2 {
+					width: 100%;
+					font-size: 30px;
+					font-weight: 500;
+				}
+				p {
+					width: 100%;
+					font-weight: 100;
+				}
+				a {
+					text-align: center;
+					padding: 20px 50px;
+					border-radius: 5px;
+					text-transform: uppercase;
+					border: 1px solid #656565;
+					width: fit-content;
+					font-weight: 100;
+					letter-spacing: 0.9px;
+				}
+			}
+		}
+	}
+
+	.bloco-email {
+		width: 100%;
+		form {
+			width: 100%;
+			.input-container {
+				display: flex;
+				align-items: center;
+				gap: 20px;
+				padding: 30px 110px;
+				font-family: "Avenir";
+				width: 100%;
+
+				@include tablet_small_down {
+					flex-direction: column;
+					padding: 20px;
+				}
+				.fv-plugins-icon-container {
+					display: flex;
+					align-items: center;
+					gap: 20px;
+					width: 100%;
+
+					@include tablet_small_down {
+						flex-direction: column;
+					}
+					.icone {
+						margin: 0;
+						height: fit-content;
+						i {
+							font-size: 26px;
+							color: #656565;
+						}
+					}
+					input {
+						width: 100%;
+						padding: 10px;
+						border: none;
+						font-size: 16px;
+						outline: none;
+						letter-spacing: 0.6px;
+						&:focus {
+							border-bottom: 1px solid #525254;
+						}
+						@include tablet_small_down {
+							border-bottom: 1px solid #525254;
+							text-align: center;
+						}
+					}
+				}
+				button {
+					height: auto;
+					padding: 10px 20px;
+					border: 1px solid #656565;
+					border-radius: 5px;
+					color: #656565;
+					text-transform: uppercase;
+					font-weight: 100;
+					letter-spacing: 2px;
+					background: transparent;
+					@include tablet_small_down {
+						padding: 0 20px;
+					}
+					@include mobile {
+						padding: 0 10px;
+					}
+				}
+			}
+		}
+	}
+}

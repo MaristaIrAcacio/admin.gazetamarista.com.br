@@ -1,0 +1,155 @@
+body {
+	background-color: #e4e4e4;
+}
+
+main.pagina-login{
+	width: 100% !important;
+	margin: 0px !important;
+}
+main.pagina-login h1#logo{
+	width: 160px;
+	margin: auto;
+	margin-top: 0;
+	margin-bottom: 20px;
+
+}
+
+main.pagina-login div.box{
+	width: 80%;
+	margin: auto;
+	height: 530px;
+	position: relative;
+	top: 50%;
+	margin-top: -265px;
+}
+
+.LoginBanner{
+	float: left;
+	height: 100vh;
+	background: #107c88; /* Old browsers */
+	background: -moz-linear-gradient(45deg,  #107c88 0%, #5e4092 100%); /* FF3.6-15 */
+	background: -webkit-linear-gradient(45deg,  #107c88 0%,#5e4092 100%); /* Chrome10-25,Safari5.1-6 */
+	background: linear-gradient(45deg,  #107c88 0%,#5e4092 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#107c88', endColorstr='#5e4092',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
+	/* padding: 0; */
+}
+
+/* .LoginBanner>img {
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+} */
+
+.formulario{
+	float: left;
+	background: #FFF;
+	height: 100vh;
+}
+
+form {}
+
+form label {
+	color: #313131;
+	font-size: 13px;
+}
+
+form button,
+form .button{
+	-webkit-box-shadow: inset 0px -5px 0px 0px #2e7548;
+	box-shadow: inset 0px -5px 0px 0px #2e7548;
+	margin-bottom: 0;
+}
+form a{
+	display: inline-block;
+	color: #3C4A9E;
+	margin-top: 10px;
+	text-align: center;
+	width: 100%;
+	text-decoration: underline;
+}
+form a:hover{
+	color: #2e7548;
+}
+
+form input:focus{
+	border: 2px solid #3C4A9E !important;
+}
+
+form input[type=text], form input[type=password] {}
+form input[type=submit], form input {
+	border: 1px solid #ccc !important;
+	-webkit-border-radius: 2px !important;
+	-moz-border-radius: 2px !important;
+	border-radius: 2px !important;
+	height: 50px !important;
+	box-shadow: none !important;
+}
+
+form input[type=submit]{
+	background: #3C4A9E !important;
+	border: none !important;
+	margin-top: 20px;
+}
+
+
+.ChamadaCenter{
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+}
+
+.ChamadaCenter h2{
+	font-size: 50px;
+	color: #FFF;
+	text-align: center;
+	float: left;
+	width: 100%;
+	line-height: 60px;
+}
+
+.ChamadaCenter .BtnChamada{
+	font-size: 14px;
+	color: #FFF;
+	text-align: center;
+	border: 1px solid #FFF;
+	padding: 15px 50px;
+	margin: 20px auto;
+	float: left;
+	position: relative;
+	left: 50%;
+	letter-spacing: 1px;
+	transform: translateX(-50%);
+}
+
+
+/* Footer Framework Project */
+	footer#footer-framework{
+		position: fixed;
+		bottom: 0;
+		right: 0;
+		padding: 17px 40px;
+		background: none;
+		max-height: 53px;
+		width: 100%;
+	}
+	footer#footer-framework div.footer-developer{
+		font-size: 0.75rem;
+		font-weight: 400;
+		color: #303030;
+	}
+	footer#footer-framework div.footer-developer a{
+		position: relative;
+		top: -5px;
+	}
+/* Footer Framework Project */
+
+/* Small screens  */
+	@media only screen and (max-width: 40em) {
+		footer#footer-framework div.footer-developer {
+			text-align: center;
+			width: 100%;
+		}
+
+	} /* max-width 640px, mobile-only styles, use when QAing mobile issues */
+/* Small screens  */
