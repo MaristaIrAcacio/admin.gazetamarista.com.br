@@ -3,14 +3,6 @@
 <!--[if IE 9 ]><html class="no-js ie9 lt-ie10" lang="pt"><![endif]-->
 <!--[if (gte IE 9)|!(IE)]><!--><html class="no-js" lang="pt"><!--<![endif]-->
 	<head>
-	<!--
-     .o88b. db      d888888b  .o88b. db   dD db   d8b   db d88888b d8888b.
-    d8P  Y8 88        `88'   d8P  Y8 88 ,8P' 88   I8I   88 88'     88  `8D
-    8P      88         88    8P      88,8P   88   I8I   88 88ooooo 88oooY'
-    8b      88         88    8b      88`8b   Y8   I8I   88 88~~~~~ 88~~~b.
-    Y8b  d8 88booo.   .88.   Y8b  d8 88 `88. `8b d8'8b d8' 88.     88   8D
-     `Y88P' Y88888P Y888888P  `Y88P' YP   YD  `8b8' `8d8'  Y88888P Y8888P'   -->
-
 		<meta charset="utf-8">
 		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -102,37 +94,25 @@
 	
 	<body>
 		<main id="site-corpo" class="pagina-{$currentAction}">
-				<div class="small-12 medium-4 large-4 columns formulario">
-					<div class="box">
-
-						<div class="row">
-							<div class="small-12 columns text-center">
-								<h1 id="logo">
-									<img src="{$basePath}/common/admin/images/logos/logo.png" alt="Logo" />
-								</h1>
-							</div>
-						</div>
-
-
-						<form enctype="application/x-www-form-urlencoded" action="{$this->CreateUrl('login', 'usuarios', 'admin', [], TRUE)}" method="post" data-abide>
-							<div>
-								<label for="login" class="required">Login/E-mail {$teste}</label>
-								<input type="text" name="login" id="login" placeholder="Nome/E-mail do usuário" field-type="text" class="radius string" required tabindex="1">
-							</div>
-							<div>
-								<label for="senha" class="required">Senha</label>
-								<input type="password" name="senha" id="senha" placeholder="●●●●●●●●●●●●" field-type="password" class="radius string password" required tabindex="2">
-							</div>
-							<div>
-								<input type="submit" name="submit" id="submit" value="Entrar" class="button expand radius success" tabindex="3">
-								<a href="{$this->CreateUrl('reset', 'usuarios', 'admin', ['login' => ''], TRUE)}" type="button" tabindex="4">Esqueceu a Senha?</a>
-							</div>
-						</form>
+			<div class="small-12 medium-4 large-4 columns formulario">
+				<div class="box">
+					<div class="image">
+						<img src="{$basePath}/common/admin/images/logos/logo-marista.png" alt="">
 					</div>
+					<form enctype="application/x-www-form-urlencoded" action="{$this->CreateUrl('login', 'usuarios', 'admin', [], TRUE)}" method="post" data-abide>
+						<div>
+							<label for="login" class="required">Username</label>
+							<input type="text" name="login" id="login" placeholder="Nome do usuário" field-type="text" class="radius string" required tabindex="1">
+						</div>
+						<div>
+							<label for="senha" class="required">Senha</label>
+							<input type="password" name="senha" id="senha" placeholder="●●●●●●●●●●●●" field-type="password" class="radius string password" required tabindex="2">
+						</div>
+						<div>
+							<input type="submit" name="submit" id="submit" value="Entrar" class="button expand radius success" tabindex="3">
+						</div>
+					</form>
 				</div>
-
-			<div class="small-12 medium-8 large-8 columns LoginBanner">
-				<!-- <img src="{$path}/common/admin/images/banner-auth.png" alt="Banner Auth"> -->
 			</div>
 		</main>
 

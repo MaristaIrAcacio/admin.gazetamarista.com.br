@@ -27,61 +27,61 @@ class Admin_IndexController extends gazetamarista_Controller_Action {
 	 */
 	public function indexAction() {
 		// Busca totais
-        $model = new Admin_Model_Usuarios();
-		$select = $model->select()
-			->from("usuarios", array(""))
-			->columns(array(
-			    'qtd_contato'  	=> new Zend_Db_Expr("(SELECT COUNT(idcontato) FROM contatos)"),
-                'qtd_email' 	=> new Zend_Db_Expr("(SELECT COUNT(idemail) FROM emails)"),
-                'qtd_servicos' 	=> new Zend_Db_Expr("(SELECT COUNT(idservico) FROM servicos)"),
-                'qtd_noticias' 	=> new Zend_Db_Expr("(SELECT COUNT(idblog) FROM blogs)"),
-			))
-			->setIntegrityCheck(false);
+        // $model = new Admin_Model_Usuarios();
+		// $select = $model->select()
+		// 	->from("usuarios", array(""))
+		// 	->columns(array(
+		// 	    'qtd_contato'  	=> new Zend_Db_Expr("(SELECT COUNT(idcontato) FROM contatos)"),
+        //         'qtd_email' 	=> new Zend_Db_Expr("(SELECT COUNT(idemail) FROM emails)"),
+        //         'qtd_servicos' 	=> new Zend_Db_Expr("(SELECT COUNT(idservico) FROM servicos)"),
+        //         'qtd_noticias' 	=> new Zend_Db_Expr("(SELECT COUNT(idblog) FROM blogs)"),
+		// 	))
+		// 	->setIntegrityCheck(false);
 
-		$resumo = $model->fetchRow($select);
+		// $resumo = $model->fetchRow($select);
 
-		// Busca ultimos contatos
-		$select = $model->select()
-			->from("contatos", array("idcontato", "nome", "email", "data"))
-			->order("contatos.idcontato DESC")
-			->limit(13)
-			->setIntegrityCheck(false);
+		// // Busca ultimos contatos
+		// $select = $model->select()
+		// 	->from("contatos", array("idcontato", "nome", "email", "data"))
+		// 	->order("contatos.idcontato DESC")
+		// 	->limit(13)
+		// 	->setIntegrityCheck(false);
 
-		$contatos = $model->fetchAll($select);
+		// $contatos = $model->fetchAll($select);
 
-		// Busca ultimos emails
-		$select = $model->select()
-			->from("emails", array("idemail", "email", "data"))
-			->order("emails.idemail DESC")
-			->limit(13)
-			->setIntegrityCheck(false);
+		// // Busca ultimos emails
+		// $select = $model->select()
+		// 	->from("emails", array("idemail", "email", "data"))
+		// 	->order("emails.idemail DESC")
+		// 	->limit(13)
+		// 	->setIntegrityCheck(false);
 
-		$emails = $model->fetchAll($select);
+		// $emails = $model->fetchAll($select);
 
-		// Busca ultimas notícias
-		$select = $model->select()
-			->from("blogs", array("idblog", "titulo", "autor","data"))
-			->order("blogs.data DESC")
-			->limit(13)
-			->setIntegrityCheck(false);
+		// // Busca ultimas notícias
+		// $select = $model->select()
+		// 	->from("blogs", array("idblog", "titulo", "autor","data"))
+		// 	->order("blogs.data DESC")
+		// 	->limit(13)
+		// 	->setIntegrityCheck(false);
 
-		$blogs = $model->fetchAll($select);
+		// $blogs = $model->fetchAll($select);
 
-		// Busca ultimas serviços
-		$select = $model->select()
-			->from("servicos", array("idservico", "titulo", "descricao"))
-			->order("servicos.ordenacao ASC")
-			->limit(13)
-			->setIntegrityCheck(false);
+		// // Busca ultimas serviços
+		// $select = $model->select()
+		// 	->from("servicos", array("idservico", "titulo", "descricao"))
+		// 	->order("servicos.ordenacao ASC")
+		// 	->limit(13)
+		// 	->setIntegrityCheck(false);
 
-		$servicos = $model->fetchAll($select);
+		// $servicos = $model->fetchAll($select);
 
-		// Assina para o template
-		$this->view->resumo     = $resumo;
-		$this->view->contatos   = $contatos;
-		$this->view->emails 	= $emails;
-		$this->view->blogs 	= $blogs;
-		$this->view->servicos 	= $servicos;
+		// // Assina para o template
+		// $this->view->resumo     = $resumo;
+		// $this->view->contatos   = $contatos;
+		// $this->view->emails 	= $emails;
+		// $this->view->blogs 	= $blogs;
+		// $this->view->servicos 	= $servicos;
 	}
 
 	/**

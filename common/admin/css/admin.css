@@ -230,9 +230,9 @@ ul.off-canvas-list li a { -webkit-transition: all 300ms cubic-bezier(0.550, 0.05
 	-o-transition: all 100ms cubic-bezier(0.550, 0.055, 0.675, 0.190);
 	transition: all 100ms cubic-bezier(0.550, 0.055, 0.675, 0.190);
 	font-size: 0.99rem;color: #fff; border-left: 0px solid transparent;font-weight: 400;padding: 1rem 1.75rem 1rem 1rem;display: inline-block;width: 100%; position: relative; border-bottom: none; letter-spacing: 0.3px;}
-ul.off-canvas-list li a:hover { color:#fff; background:#262d3c; }
+ul.off-canvas-list li a:hover { color:#fff; background:#002e4d; }
 ul.off-canvas-list li.active > a .icone_menu_principal{	color: #9eb2d4; }
-ul.off-canvas-list li.active > a { color: #9eb2d4;   background: #252d3e; border-left: 5px solid #3a78d5; }
+ul.off-canvas-list li.active > a { color: #9eb2d4;   background: #003a62; border-left: 5px solid #3a78d5; }
 ul.off-canvas-list > li > a::after { border-style:solid; border-width:4px 4px 0 4px; border-color:#ffffff transparent transparent transparent; line-height:0px; _border-color:#ffffff #000000 #000000 #000000; _filter:progid:DXImageTransform.Microsoft.Chroma(color='#000000');	content:""; display:block; height:0; width:0; margin-right:0.9375rem; margin-top:-4.5px; position:absolute; right:0; top:50%; -webkit-transition: all 150ms cubic-bezier(0.000, 0.000, 0.580, 1.000); -moz-transition: all 150ms cubic-bezier(0.000, 0.000, 0.580, 1.000); -o-transition: all 150ms cubic-bezier(0.000, 0.000, 0.580, 1.000); transition: all 150ms cubic-bezier(0.000, 0.000, 0.580, 1.000);}
 ul.off-canvas-list > li.active > a::after { border-width:0 4px 4px 4px; border-color:transparent transparent #ffffff transparent; line-height:0px; _border-color:#000000 #000000 #ffffff #000000;}
 @media only screen and (max-width:40em) {
@@ -244,7 +244,7 @@ ul.off-canvas-list > li.active > a::after { border-width:0 4px 4px 4px; border-c
 /* Demais niveis */
 ul.off-canvas-list > li ul{ display:none; margin-left:0; width:100%; }
 ul.off-canvas-list > li.active ul{ display:inline-block; }
-ul.off-canvas-list > li ul li a { font-size:0.875rem; color:#fff; font-weight:400; padding:0.475rem 1.75rem 0.475rem 1rem; display:inline-block; width:100%; position:relative; background: #2b3346;border-left: 23px solid transparent; }
+ul.off-canvas-list > li ul li a { font-size:0.875rem; color:#fff; font-weight:400; padding:0.475rem 1.75rem 0.475rem 1rem; display:inline-block; width:100%; position:relative; background: #016090;border-left: 23px solid transparent; }
 ul.off-canvas-list > li ul li a.hide { display:none; }
 @media only screen and (max-width:40em) {
 	ul.off-canvas-list > li ul li a {
@@ -253,10 +253,10 @@ ul.off-canvas-list > li ul li a.hide { display:none; }
 	}
 }
 
-ul.off-canvas-list > li ul li a:hover  { color: #8690a7; background: #2a3345; border-left: 23px solid transparent; position: relative; }
+ul.off-canvas-list > li ul li a:hover  { color: #8690a7; background: #003a62; border-left: 23px solid transparent; position: relative; }
 ul.off-canvas-list > li ul li a:hover::before { content: ''; width:5px; height:5px; background: #8690a7; position:absolute; left:0px; top:12px; -webkit-border-radius: 20px; -moz-border-radius: 20px; border-radius: 20px;}
 
-ul.off-canvas-list > li ul li.active > a { color: #69a0f1; background: #2a3345; border-left: 23px solid transparent; position: relative; }
+ul.off-canvas-list > li ul li.active > a { color: #69a0f1; background: #003a62; border-left: 23px solid transparent; position: relative; }
 ul.off-canvas-list > li ul li.active > a:before { content: ''; width:5px; height:5px; background: #3978d4; position:absolute; left:0px; top:12px; -webkit-border-radius: 20px; -moz-border-radius: 20px; border-radius: 20px;}
 @media only screen and (max-width:40em) {
 	ul.off-canvas-list > li ul li a:hover::before {
@@ -267,8 +267,8 @@ ul.off-canvas-list > li ul li.active > a:before { content: ''; width:5px; height
 	}
 }
 /* Menu offcanvas principal */
-.menu-principal-off-wrap .menu-navegacao-off-left { position:fixed; background:#1f2633; overflow:hidden; z-index:200; width: 240px; }
-.menu-principal-off-wrap .icon-bar { background:#1f2633; }
+.menu-principal-off-wrap .menu-navegacao-off-left { position:fixed; background:#034e78; overflow:hidden; z-index:200; width: 240px; }
+.menu-principal-off-wrap .icon-bar { background:#034e78; }
 .menu-principal-off-wrap .icon-bar.vertical { min-height:100vh; width: 100%; text-align:left; margin-bottom: -6px; }
 
 .menu-principal-off-wrap .icon-bar ul.off-canvas-list{
@@ -278,8 +278,32 @@ ul.off-canvas-list > li ul li.active > a:before { content: ''; width:5px; height
 }
 
 
-.logo-rodape{
-	width: 50px;
+.logo-usuario {
+	display: flex;
+	flex-direction: column;
+	row-gap: 10px;
+	width: 100%;
+	justify-content: center;
+	align-items: center;
+	height: 200px;
+}
+
+.logo-usuario:hover {
+	background-color: #304059 !important;
+}
+
+.logo-usuario img {
+	border-radius: 50%;
+	width: 100px;
+	height: 100px;
+	margin: 0;
+}
+
+.logo-usuario .titulo-usuario {
+	font-size: 18px;
+	font-weight: 600;
+	color: #fff;
+	margin: 0;
 }
 
 .menu-principal-off-wrap .icon-bar .Logo{
@@ -297,7 +321,7 @@ ul.off-canvas-list > li ul li.active > a:before { content: ''; width:5px; height
 .menu-principal-off-wrap .icon-bar .logo-branca .logo-letras{fill:#FFF;}
 
 .menu-principal-off-wrap .icon-bar .Logo:hover{
-	background: #1f2633;
+	background: #034e78;
 }
 
 .menu-principal-off-wrap .icon-bar .Logo:hover .logo-letras{fill:#3C4A9E;}
@@ -317,38 +341,38 @@ ul.off-canvas-list > li ul li.active > a:before { content: ''; width:5px; height
 	height: 70px;
 }
 
-.BtnLogout{
+.BtnLogout {
 	position: relative;
-	/* bottom: 23px; */
 	background: #e63e33;
-	/* width: 86px; */
 	border-radius: 3px;
-	/* left: 15px; */
 	height: 35px;
 	float: left;
 	font-size: 24px;
-	padding: 17px 18px 10px;
+	padding: 10px 20px;
 	line-height: 26px;
+	display: flex;
+	align-items: center;
+	gap: 10px;
 }
 
 .BtnLogout:hover{
 	background: #e83618 !important;
 }
 
+.BtnLogout span {
+	color: #fff;
+	font-size: 18px;
+	line-height: 20px;
+}
+
+.BtnLogout:nth-child(2) {
+	margin-bottom: 10px;
+}
+
 .BtnLogout i{
 	float: left;
 	font-size: 14px;
 	line-height: 0px;
-}
-
-.BtnLogout span{
-	float: left;
-	text-transform: uppercase;
-	color: #FFF;
-	line-height: 0px;
-	margin-left: 10px;
-	letter-spacing: 1px;
-	font-size: 12px;
 }
 
 .BtnSettings{
@@ -549,7 +573,7 @@ button.normal.secondary span, .button.normal.secondary span{
 .exportxls i{ font-size: 19px; top: 2px !important;}
 .exportxls:hover a, .exportxls:focus a{ background: #195f3c;}
 .btn_upgrades{
-	color: #1f2633 !important;
+	color: #034e78 !important;
 	border: 1px solid #f5f5f5 !important;
 	background: #f5f5f5 !important;
 	line-height: 30px;
@@ -614,7 +638,7 @@ ul.pagination li.current button:focus {
 	-ms-border-radius:1px;
 	-o-border-radius:1px;
 	border-radius:1px;
-	background-color:#2a3345;
+	background-color:#003a62;
 }
 
 /*** Grupo de botões ============================================= */
@@ -643,8 +667,8 @@ ul.pagination li.current button:focus {
     padding-left: 12px;
 }
 .tabs dd > a:hover, .tabs .tab-title > a:hover { color:#222; background:transparent; }
-.tabs dd.active > a, .tabs .tab-title.active > a { background: #2a3345;
-	border: 2px solid #2a3345;
+.tabs dd.active > a, .tabs .tab-title.active > a { background: #003a62;
+	border: 2px solid #003a62;
 	border-bottom: 0;
 	color: #fff;
 	font-size: 1.125rem;
@@ -824,7 +848,7 @@ table.list tbody tr td.coluna-acoes ul a{
 	text-transform: uppercase;
 	line-height: 14px;
 	padding: 10px;
-	color: #1f2633 !important;
+	color: #034e78 !important;
 }
 
 table.list tbody tr td.coluna-acoes ul li:hover a{
@@ -1211,7 +1235,7 @@ a.btn-add i { font-size:2.25rem; color:#303030; }
 	font: 400 14px/1.5 "Roboto", Arial, Tahoma;
 	font-weight: bolder;
 	font-size: 14px;
-	color: #1f2633;
+	color: #034e78;
 	line-height: 23px;
 	padding-top: 12px;
 	border-radius: 3px;
@@ -1368,7 +1392,7 @@ a.btn-add i { font-size:2.25rem; color:#303030; }
 	height: 100%;
 	text-align: center;
 	line-height: 199px;
-	color: #1f2633;
+	color: #034e78;
 	font-weight: bolder;
 }*/
 
@@ -1586,7 +1610,7 @@ div.msg-error {
 		.btn-menu-mobile{
 		    padding: 0px;
 		    width: 100%;
-		    background: #1f2633;
+		    background: #034e78;
 		    margin-bottom: 5px !important;
 		}
 

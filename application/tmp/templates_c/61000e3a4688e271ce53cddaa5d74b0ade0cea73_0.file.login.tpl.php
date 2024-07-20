@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.36, created on 2024-07-19 21:32:17
+/* Smarty version 3.1.36, created on 2024-07-19 22:37:15
   from 'c:\xampp-7.4\htdocs\admin.gazetamarista.com.br\application\modules\admin\views\usuarios\login.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.36',
-  'unifunc' => 'content_669b0591461228_82194662',
+  'unifunc' => 'content_669b14cb6b5b69_57626120',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '61000e3a4688e271ce53cddaa5d74b0ade0cea73' => 
     array (
       0 => 'c:\\xampp-7.4\\htdocs\\admin.gazetamarista.com.br\\application\\modules\\admin\\views\\usuarios\\login.tpl',
-      1 => 1721433141,
+      1 => 1721437761,
       2 => 'file',
     ),
   ),
@@ -20,20 +20,12 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_669b0591461228_82194662 (Smarty_Internal_Template $_smarty_tpl) {
+function content_669b14cb6b5b69_57626120 (Smarty_Internal_Template $_smarty_tpl) {
 ?><!doctype html>
 <!--[if IE 8 ]><html class="no-js ie8 oldie lt-ie9" lang="pt"><![endif]-->
 <!--[if IE 9 ]><html class="no-js ie9 lt-ie10" lang="pt"><![endif]-->
 <!--[if (gte IE 9)|!(IE)]><!--><html class="no-js" lang="pt"><!--<![endif]-->
 	<head>
-	<!--
-     .o88b. db      d888888b  .o88b. db   dD db   d8b   db d88888b d8888b.
-    d8P  Y8 88        `88'   d8P  Y8 88 ,8P' 88   I8I   88 88'     88  `8D
-    8P      88         88    8P      88,8P   88   I8I   88 88ooooo 88oooY'
-    8b      88         88    8b      88`8b   Y8   I8I   88 88~~~~~ 88~~~b.
-    Y8b  d8 88booo.   .88.   Y8b  d8 88 `88. `8b d8'8b d8' 88.     88   8D
-     `Y88P' Y88888P Y888888P  `Y88P' YP   YD  `8b8' `8d8'  Y88888P Y8888P'   -->
-
 		<meta charset="utf-8">
 		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -172,42 +164,27 @@ function content_669b0591461228_82194662 (Smarty_Internal_Template $_smarty_tpl)
 	<body>
 		<main id="site-corpo" class="pagina-<?php echo $_smarty_tpl->tpl_vars['currentAction']->value;?>
 ">
-				<div class="small-12 medium-4 large-4 columns formulario">
-					<div class="box">
-
-						<div class="row">
-							<div class="small-12 columns text-center">
-								<h1 id="logo">
-									<img src="<?php echo $_smarty_tpl->tpl_vars['basePath']->value;?>
-/common/admin/images/logos/logo.png" alt="Logo" />
-								</h1>
-							</div>
-						</div>
-
-
-						<form enctype="application/x-www-form-urlencoded" action="<?php echo $_smarty_tpl->tpl_vars['this']->value->CreateUrl('login','usuarios','admin',array(),TRUE);?>
-" method="post" data-abide>
-							<div>
-								<label for="login" class="required">Login/E-mail <?php echo $_smarty_tpl->tpl_vars['teste']->value;?>
-</label>
-								<input type="text" name="login" id="login" placeholder="Nome/E-mail do usuário" field-type="text" class="radius string" required tabindex="1">
-							</div>
-							<div>
-								<label for="senha" class="required">Senha</label>
-								<input type="password" name="senha" id="senha" placeholder="●●●●●●●●●●●●" field-type="password" class="radius string password" required tabindex="2">
-							</div>
-							<div>
-								<input type="submit" name="submit" id="submit" value="Entrar" class="button expand radius success" tabindex="3">
-								<a href="<?php echo $_smarty_tpl->tpl_vars['this']->value->CreateUrl('reset','usuarios','admin',array('login'=>''),TRUE);?>
-" type="button" tabindex="4">Esqueceu a Senha?</a>
-							</div>
-						</form>
+			<div class="small-12 medium-4 large-4 columns formulario">
+				<div class="box">
+					<div class="image">
+						<img src="<?php echo $_smarty_tpl->tpl_vars['basePath']->value;?>
+/common/admin/images/logos/logo-marista.png" alt="">
 					</div>
+					<form enctype="application/x-www-form-urlencoded" action="<?php echo $_smarty_tpl->tpl_vars['this']->value->CreateUrl('login','usuarios','admin',array(),TRUE);?>
+" method="post" data-abide>
+						<div>
+							<label for="login" class="required">Username</label>
+							<input type="text" name="login" id="login" placeholder="Nome do usuário" field-type="text" class="radius string" required tabindex="1">
+						</div>
+						<div>
+							<label for="senha" class="required">Senha</label>
+							<input type="password" name="senha" id="senha" placeholder="●●●●●●●●●●●●" field-type="password" class="radius string password" required tabindex="2">
+						</div>
+						<div>
+							<input type="submit" name="submit" id="submit" value="Entrar" class="button expand radius success" tabindex="3">
+						</div>
+					</form>
 				</div>
-
-			<div class="small-12 medium-8 large-8 columns LoginBanner">
-				<!-- <img src="<?php echo $_smarty_tpl->tpl_vars['path']->value;?>
-/common/admin/images/banner-auth.png" alt="Banner Auth"> -->
 			</div>
 		</main>
 

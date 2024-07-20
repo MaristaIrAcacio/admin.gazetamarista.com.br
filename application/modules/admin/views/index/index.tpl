@@ -1,6 +1,6 @@
 {if $logged_usuario['idperfil'] > 2}
 	<div class="row" id="container">
-		<div class="columns dasboard-list" id="sortable">
+		{* <div class="columns dasboard-list" id="sortable">
 
 			<div class="blocoNumeros ui-state-default">
 				<h5><i class="mdi mdi-cursor-move"></i> Total Geral</h5>
@@ -115,7 +115,6 @@
 					</tbody>
 				</table>
 			</div>
-
-		</div>
+		</div> *}
 	</div>
 {/if}
