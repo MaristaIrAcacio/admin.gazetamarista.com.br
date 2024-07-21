@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.36, created on 2024-07-21 19:41:07
-  from 'c:\xampp-7.4\htdocs\admin.gazetamarista.com.br\application\modules\admin\views\materiasrascunhos\form.tpl' */
+/* Smarty version 3.1.36, created on 2024-07-21 20:29:17
+  from 'c:\xampp-7.4\htdocs\admin.gazetamarista.com.br\application\modules\admin\views\materiasrejeitado\form.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.36',
-  'unifunc' => 'content_669d8e83cf7195_12496529',
+  'unifunc' => 'content_669d99cda0d254_15666197',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
-    'a7be3a2b336d3cceaa7ef96393d8bc04d80d2782' => 
+    'e42445ba1fbe0a2650ac1d4a74dbeb4c68c5cf72' => 
     array (
-      0 => 'c:\\xampp-7.4\\htdocs\\admin.gazetamarista.com.br\\application\\modules\\admin\\views\\materiasrascunhos\\form.tpl',
-      1 => 1721577643,
+      0 => 'c:\\xampp-7.4\\htdocs\\admin.gazetamarista.com.br\\application\\modules\\admin\\views\\materiasrejeitado\\form.tpl',
+      1 => 1721604556,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_669d8e83cf7195_12496529 (Smarty_Internal_Template $_smarty_tpl) {
+function content_669d99cda0d254_15666197 (Smarty_Internal_Template $_smarty_tpl) {
 ?><div class="row">
 	<div class="small-12 columns buttons-bar">
 		<ul class="stack-for-small button-group">
@@ -31,10 +31,7 @@ function content_669d8e83cf7195_12496529 (Smarty_Internal_Template $_smarty_tpl)
 				</a>
 			</li>
 			<li>
-				<button id="salvarComoRascunho" class="hidden" style="display: flex;gap: 10px; align-items: center;" form="form_admin" type="submit" name="submit" onclick="$('#'+this.getAttribute('form')).submit();">
-					<span class="mdi mdi-content-save"></span>Salvar como rascunho
-				</button>
-				<button id="enviarParaAprovacao" style="display: flex;gap: 10px; align-items: center;" form="form_admin" type="submit" name="submit" onclick="$('#'+this.getAttribute('form')).submit();">
+				<button id="salvarComoRascunho" style="display: flex;gap: 10px; align-items: center;" form="form_admin" type="submit" name="submit" onclick="$('#'+this.getAttribute('form')).submit();">
 					<span class="mdi mdi-content-save"></span>Enviar Para Aprovação
 				</button>
 			</li>
@@ -46,7 +43,7 @@ function content_669d8e83cf7195_12496529 (Smarty_Internal_Template $_smarty_tpl)
 		<div class="small-12 columns">
 			<div class="show-for-medium-up">
 				<ul class="tabs" data-tab>
-					<li class="tab-title active"><a href="#geral">Rascunho</a></li>
+					<li class="tab-title active"><a href="#geral">Rejeitado</a></li>
 				</ul>
 			</div>
 			<div class="show-for-small-only">
@@ -60,7 +57,7 @@ function content_669d8e83cf7195_12496529 (Smarty_Internal_Template $_smarty_tpl)
 					</ul>
 					<section class="top-bar-section">
 						<ul class="left" data-tab>
-							<li class="active"><a href="#geral">Rascunho</a></li>
+							<li class="active"><a href="#geral">Rejeitado</a></li>
 						</ul>
 					</section>
 				</nav>

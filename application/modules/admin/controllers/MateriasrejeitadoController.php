@@ -3,15 +3,15 @@
 /**
  * Controlador
  *
- * @name Admin_MateriasController
+ * @name Admin_MateriasrejeitadoController
  */
-class Admin_MateriasrascunhosController extends gazetamarista_Controller_Action {
+class Admin_MateriasrejeitadoController extends gazetamarista_Controller_Action {
 	/**
 	 * Armazena o model padrão da tela
 	 *
 	 * @access protected
 	 * @name $_model
-	 * @var Admin_Model_MateriasRascunho
+	 * @var Admin_Model_MateriasRejeitado
 	 */
 	protected $_model = NULL;
 
@@ -22,7 +22,7 @@ class Admin_MateriasrascunhosController extends gazetamarista_Controller_Action 
 	 */
 	public function init() {
 		// Inicializa o model da tela
-		$this->_model = new Admin_Model_MateriasRascunho();
+		$this->_model = new Admin_Model_MateriasRejeitado();
 		$this->session = new Zend_Session_Namespace("loginadmin");
 		
 		// Continua o carregamento do controlador
@@ -43,7 +43,7 @@ class Admin_MateriasrascunhosController extends gazetamarista_Controller_Action 
 
 		// Monta a query
 		$select
-			->where("status = ?", "rascunho")
+			->where("status = ?", "rejeitado")
 			->where("autorId = ?", $id)
 			->order("atualizadoEm DESC");
 
@@ -86,12 +86,13 @@ class Admin_MateriasrascunhosController extends gazetamarista_Controller_Action 
 	 */
 	public function doBeforeUpdate($data) {
 		// Verifica se está marcado como rascunho
-		$isRascunho = $data['isRascunho'];
+		$apontamentos       = $this->_request->getParam("apontamentos", "");
 
-		if ($isRascunho == 1) {
-			$data['status'] = "rascunho";
+		if ($apontamentos && !empty($apontamentos)) {
+			$data['apontamentos'] = $_POST['apontamentos'];
+			$data['status'] = "rejeitado";
 		} else {
-			$data['status'] = "pendente";
+
 		};
 
 		// Retorna os dados para o framework

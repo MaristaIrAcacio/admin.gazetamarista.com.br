@@ -6,7 +6,7 @@
  * @name Admin_Model_Materias
  * @see Zend_Db_Table_Abstract
  */
-class Admin_Model_MateriasPendente extends gazetamarista_Db_Table {
+class Admin_Model_MateriasRejeitado extends gazetamarista_Db_Table {
 	/**
 	 * Armazena o nome da tabela
 	 *
@@ -50,6 +50,9 @@ class Admin_Model_MateriasPendente extends gazetamarista_Db_Table {
 	 */
 	public function init() {
 		// Adiciona os campos ao model
+
+		$this->setCampo("apontamentos", "Apontamentos");
+
 		$this->setCampo("titulo", "Título da notícia");
 		$this->setCampo("subtitulo", "Subtítulo");
 		$this->setCampo("lide", "Lide da Notícia");
@@ -66,12 +69,14 @@ class Admin_Model_MateriasPendente extends gazetamarista_Db_Table {
 		$this->setCampo("criadoEm", "Texto Criado Em");
 		$this->setCampo("atualizadoEm", "Texto Atualizado Em");
 		$this->setCampo("ultimaAlteracao", "Última Alteração Em");
-		$this->setCampo("apontamentos", "Apontamentos");
 
 		// Seta o campo de descrição da tabela
 		$this->setDescription("titulo");
 
 		// Seta visibilidade dos campos
+
+		$this->setVisibility("apontamentos", TRUE, TRUE, FALSE, FALSE);
+
 		$this->setVisibility("titulo", TRUE, TRUE, TRUE, TRUE);
 		$this->setVisibility("subtitulo", TRUE, TRUE, FALSE, FALSE);
 		$this->setVisibility("lide", TRUE, TRUE, FALSE, FALSE, FALSE, array('data-ckeditor' => ''));
@@ -89,7 +94,6 @@ class Admin_Model_MateriasPendente extends gazetamarista_Db_Table {
 		$this->setVisibility("atualizadoEm", FALSE, FALSE, FALSE, FALSE);
 		$this->setVisibility("ultimaAlteracao", FALSE, FALSE, FALSE, FALSE);
 
-		$this->setVisibility("apontamentos", FALSE, FALSE, FALSE, FALSE);
 
 		// Seta autocomplete
 		$this->setAutocomplete("categoriaId", "Admin_Model_MateriasCategoria");

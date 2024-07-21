@@ -41,7 +41,7 @@ class Admin_MateriaspendenteController extends gazetamarista_Controller_Action {
 		// Monta a query
 		$select
 			->where("status = ?", "pendente")
-			->order("ultimaAlteracao DESC");
+			->order("atualizadoEm DESC");
 
 		// Continua a execução
 		return $select;
@@ -82,12 +82,13 @@ class Admin_MateriaspendenteController extends gazetamarista_Controller_Action {
 	 */
 	public function doBeforeUpdate($data) {
 		// Verifica se está marcado como rascunho
-		$isRascunho = $data['isRascunho'];
+		$apontamentos       = $this->_request->getParam("apontamentos", "");
 
-		if ($isRascunho == 1) {
-			$data['status'] = "rascunho";
+		if ($apontamentos && !empty($apontamentos)) {
+			$data['apontamentos'] = $_POST['apontamentos'];
+			$data['status'] = "rejeitado";
 		} else {
-			$data['status'] = "pendente";
+
 		};
 
 		// Retorna os dados para o framework

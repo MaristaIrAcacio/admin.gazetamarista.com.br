@@ -45,7 +45,7 @@ class Admin_MateriaspublicadasController extends gazetamarista_Controller_Action
 		$select
 			->where("status = ?", "publicado")
 			->where("autorId = ?", $id)
-			->order("ultimaAlteracao DESC");
+			->order("atualizadoEm DESC");
 
 		// Continua a execução
 		return $select;

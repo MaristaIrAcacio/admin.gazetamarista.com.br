@@ -387,6 +387,33 @@ ul.off-canvas-list > li ul li.active > a:before { content: ''; width:5px; height
 	font-size: 14px;
 }
 
+.btn-reprovar {
+	transition: .33s;
+	background-color: #e53d32 !important;
+}
+
+.btn-reprovar:hover {
+	background-color: #c93328 !important;
+}
+
+.btn-aprovar {
+	transition: .33s;
+	background-color: #38bc80 !important;
+}
+
+.btn-aprovar:hover {
+	background-color: #279664 !important;
+}
+
+.btn-listagem {
+	transition: .33s;
+	background-color: #7d7d7d !important;
+}
+
+.btn-listagem:hover {
+	background-color: #5b5b5b !important;
+}
+
 .btn-enviar-aprovacao {
 	transition: .33s;
 	background-color: #32b977 !important;
@@ -394,6 +421,13 @@ ul.off-canvas-list > li ul li.active > a:before { content: ''; width:5px; height
 
 .hidden {
 	display: none !important;
+}
+
+.custom-textarea {
+	border-radius: 5px;
+    height: 150px;
+    width: 100%;
+    resize: none;
 }
 
 .btn-enviar-aprovacao:hover {
