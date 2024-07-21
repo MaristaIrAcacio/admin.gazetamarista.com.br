@@ -1,11 +1,11 @@
 <?php
-/* Smarty version 3.1.36, created on 2024-07-20 09:51:16
+/* Smarty version 3.1.36, created on 2024-07-21 13:39:17
   from 'c:\xampp-7.4\htdocs\admin.gazetamarista.com.br\application\layouts\form.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.36',
-  'unifunc' => 'content_669bb2c432ad36_29718278',
+  'unifunc' => 'content_669d39b52d1cc9_45142004',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_669bb2c432ad36_29718278 (Smarty_Internal_Template $_smarty_tpl) {
+function content_669d39b52d1cc9_45142004 (Smarty_Internal_Template $_smarty_tpl) {
 $_smarty_tpl->_checkPlugins(array(0=>array('file'=>'C:\\xampp-7.4\\htdocs\\admin.gazetamarista.com.br\\library\\gazetamarista\\Library\\Smarty\\plugins\\modifier.capitalize.php','function'=>'smarty_modifier_capitalize',),));
 ?>
 <div class="row">

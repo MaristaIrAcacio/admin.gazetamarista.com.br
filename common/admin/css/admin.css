@@ -387,6 +387,19 @@ ul.off-canvas-list > li ul li.active > a:before { content: ''; width:5px; height
 	font-size: 14px;
 }
 
+.btn-enviar-aprovacao {
+	transition: .33s;
+	background-color: #32b977 !important;
+}
+
+.hidden {
+	display: none !important;
+}
+
+.btn-enviar-aprovacao:hover {
+	background-color: #269a62 !important;
+}
+
 .BtnSettings:hover{ background:#3c4a9e !important }
 
 .title-model {

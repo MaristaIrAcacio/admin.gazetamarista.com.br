@@ -5,13 +5,13 @@
  *
  * @name Admin_MateriasController
  */
-class Admin_MateriasController extends gazetamarista_Controller_Action {
+class Admin_MateriaspublicadasController extends gazetamarista_Controller_Action {
 	/**
 	 * Armazena o model padrão da tela
 	 *
 	 * @access protected
 	 * @name $_model
-	 * @var Admin_Model_Materias
+	 * @var Admin_Model_MateriasPublicado
 	 */
 	protected $_model = NULL;
 
@@ -22,7 +22,7 @@ class Admin_MateriasController extends gazetamarista_Controller_Action {
 	 */
 	public function init() {
 		// Inicializa o model da tela
-		$this->_model = new Admin_Model_Materias();
+		$this->_model = new Admin_Model_MateriasPublicado();
 		
 		// Continua o carregamento do controlador
 		parent::init();
@@ -37,9 +37,14 @@ class Admin_MateriasController extends gazetamarista_Controller_Action {
 	 */
 	public function doBeforeList($select) {
 
-		// Busca a sessão do login
+		// Resgata o id do usuário da session
+		$this->session = new Zend_Session_Namespace("loginadmin");
+		$id = $this->session->logged_usuario['idusuario'];
+
 		// Monta a query
 		$select
+			->where("status = ?", "publicado")
+			->where("autorId = ?", $id)
 			->order("ultimaAlteracao DESC");
 
 		// Continua a execução
