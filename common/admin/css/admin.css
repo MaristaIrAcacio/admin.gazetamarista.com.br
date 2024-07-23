@@ -442,6 +442,7 @@ ul.off-canvas-list > li ul li.active > a:before { content: ''; width:5px; height
 	color: rgb(222, 76, 76);
 	font-size: 16px;
 	font-weight: 500;
+	word-break: break-all;
 }
 
 .custom-textarea {

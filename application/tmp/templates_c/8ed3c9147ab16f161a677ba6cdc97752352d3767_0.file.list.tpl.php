@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.36, created on 2024-07-23 07:34:29
+/* Smarty version 3.1.36, created on 2024-07-23 07:56:35
   from 'c:\xampp-7.4\htdocs\admin.gazetamarista.com.br\application\modules\admin\views\materiasrascunhos\list.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.36',
-  'unifunc' => 'content_669f873508d038_02704880',
+  'unifunc' => 'content_669f8c632a56e8_71885283',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '8ed3c9147ab16f161a677ba6cdc97752352d3767' => 
     array (
       0 => 'c:\\xampp-7.4\\htdocs\\admin.gazetamarista.com.br\\application\\modules\\admin\\views\\materiasrascunhos\\list.tpl',
-      1 => 1721730730,
+      1 => 1721731503,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_669f873508d038_02704880 (Smarty_Internal_Template $_smarty_tpl) {
+function content_669f8c632a56e8_71885283 (Smarty_Internal_Template $_smarty_tpl) {
 $_smarty_tpl->_checkPlugins(array(0=>array('file'=>'C:\\xampp-7.4\\htdocs\\admin.gazetamarista.com.br\\library\\gazetamarista\\Library\\Smarty\\plugins\\modifier.truncate.php','function'=>'smarty_modifier_truncate',),));
 ?>
 <div class="row">	
@@ -32,7 +32,7 @@ $_smarty_tpl->_checkPlugins(array(0=>array('file'=>'C:\\xampp-7.4\\htdocs\\admin
 					<li>
 						<a href="<?php echo $_smarty_tpl->tpl_vars['url']->value;?>
 " class="button btn-new">
-							<i class="mdi mdi-plus-circle-outline"></i> Teeset
+							<i class="mdi mdi-plus-circle-outline"></i> Nova Matéria
 						</a>
 					</li>
 				<?php }?>
@@ -70,15 +70,6 @@ echo $_smarty_tpl->tpl_vars['filtrosParam']->value;?>
 					</li>
 				<?php }?>
 			<?php }?>
-
-			<?php if ($_smarty_tpl->tpl_vars['esconderBtnFiltrar']->value != true) {?>
-				<li class="btn-filtro">
-					<a class="button " data-reveal-id="filtros">
-						<i class="mdi mdi-filter-outline"></i> Filtrar
-					</a>
-				</li>
-			<?php }?>
-
 		</ul>
 	</div>
 	
@@ -167,7 +158,6 @@ $_smarty_tpl->smarty->ext->_foreach->restore($_smarty_tpl, 1);?>
 								<input type="checkbox" value="" id="selecionatodoslist" class="selecionatodoslist">
 								<label for="selecionatodoslist"></label>
 							</div>
-							#
 						</th>
 						<?php
 $_from = $_smarty_tpl->smarty->ext->_foreach->init($_smarty_tpl, $_smarty_tpl->tpl_vars['_model']->value->getCampo(), 'value', false, 'column');

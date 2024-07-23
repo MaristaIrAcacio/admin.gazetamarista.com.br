@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.36, created on 2024-07-22 21:56:43
+/* Smarty version 3.1.36, created on 2024-07-23 07:55:12
   from 'c:\xampp-7.4\htdocs\admin.gazetamarista.com.br\application\modules\admin\views\materiasrascunhos\form.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.36',
-  'unifunc' => 'content_669effcb439570_13037737',
+  'unifunc' => 'content_669f8c10590526_36378338',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     'a7be3a2b336d3cceaa7ef96393d8bc04d80d2782' => 
     array (
       0 => 'c:\\xampp-7.4\\htdocs\\admin.gazetamarista.com.br\\application\\modules\\admin\\views\\materiasrascunhos\\form.tpl',
-      1 => 1721577643,
+      1 => 1721644562,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_669effcb439570_13037737 (Smarty_Internal_Template $_smarty_tpl) {
+function content_669f8c10590526_36378338 (Smarty_Internal_Template $_smarty_tpl) {
 ?><div class="row">
 	<div class="small-12 columns buttons-bar">
 		<ul class="stack-for-small button-group">

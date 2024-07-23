@@ -66,9 +66,9 @@ class Admin_MateriasrascunhosController extends gazetamarista_Controller_Action 
 		// Verifica se está marcado como rascunho
 		$isRascunho = $data['isRascunho'];
 
-		if ($isRascunho == 1) {
+		if ($isRascunho == 'Rascunho') {
 			$data['status'] = "rascunho";
-		} else {
+		} else if ($isRascunho == 'Aprovação'){
 			$data['status'] = "pendente";
 		};
 

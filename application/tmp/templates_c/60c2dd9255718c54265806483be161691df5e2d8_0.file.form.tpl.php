@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.36, created on 2024-07-22 21:33:38
+/* Smarty version 3.1.36, created on 2024-07-23 08:07:45
   from 'c:\xampp-7.4\htdocs\admin.gazetamarista.com.br\application\modules\admin\views\materiaspendente\form.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.36',
-  'unifunc' => 'content_669efa62868133_39794317',
+  'unifunc' => 'content_669f8f01a68b21_61137243',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '60c2dd9255718c54265806483be161691df5e2d8' => 
     array (
       0 => 'c:\\xampp-7.4\\htdocs\\admin.gazetamarista.com.br\\application\\modules\\admin\\views\\materiaspendente\\form.tpl',
-      1 => 1721604538,
+      1 => 1721732861,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_669efa62868133_39794317 (Smarty_Internal_Template $_smarty_tpl) {
+function content_669f8f01a68b21_61137243 (Smarty_Internal_Template $_smarty_tpl) {
 ?><div class="row">
 	<div class="small-12 columns buttons-bar">
 		<ul class="stack-for-small button-group">
@@ -69,6 +69,17 @@ function content_669efa62868133_39794317 (Smarty_Internal_Template $_smarty_tpl)
 			</div>
 			<div class="tabs-content">
 				<div class="content active" id="geral">
+					<div class="apontamentos-container">
+						<h2 class="titulo">último Apontamento Feito:</h2>
+						<hr>
+						<?php if ($_smarty_tpl->tpl_vars['apontamentos']->value) {?>
+							<p class="text-apontamentos"><?php echo $_smarty_tpl->tpl_vars['apontamentos']->value;?>
+</p>	
+						<?php } else { ?>
+							<p class="text-apontamentos-null">Sem apontamentos!</p>	
+						<?php }?>
+					</div>
+					<hr>
 					<?php echo $_smarty_tpl->tpl_vars['form']->value;?>
 
 				</div>

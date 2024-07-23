@@ -3,10 +3,10 @@
 		<ul class="stack-for-small button-group">
 			{assign var="url" value=$this->CreateUrl("form", NULL, NULL, [])}
 			{if $somenteview != true}
-				z{if $esconderBtnNovo != true}
+				{if $esconderBtnNovo != true}
 					<li>
 						<a href="{$url}" class="button btn-new">
-							<i class="mdi mdi-plus-circle-outline"></i> Teeset
+							<i class="mdi mdi-plus-circle-outline"></i> Nova Matéria
 						</a>
 					</li>
 				{/if}
@@ -41,15 +41,6 @@
 					</li>
 				{/if}
 			{/if}
-
-			{if $esconderBtnFiltrar != true}
-				<li class="btn-filtro">
-					<a class="button " data-reveal-id="filtros">
-						<i class="mdi mdi-filter-outline"></i> Filtrar
-					</a>
-				</li>
-			{/if}
-
 		</ul>
 	</div>
 	
@@ -111,7 +102,6 @@
 								<input type="checkbox" value="" id="selecionatodoslist" class="selecionatodoslist">
 								<label for="selecionatodoslist"></label>
 							</div>
-							#
 						</th>
 						{foreach $_model->getCampo() as $column=>$value}
 							{if $_model->getVisibility($column, 'list')}

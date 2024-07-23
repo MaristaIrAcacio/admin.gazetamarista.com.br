@@ -50,7 +50,7 @@ class Admin_Model_MateriasRascunho extends gazetamarista_Db_Table {
 	 */
 	public function init() {
 		// Adiciona os campos ao model
-		$this->setCampo("isRascunho", "Salvar como rascunho?");
+		$this->setCampo("isRascunho", "Tipo de Envio de Matéria?");
 		$this->setCampo("titulo", "Título da notícia");
 		$this->setCampo("subtitulo", "Subtítulo");
 		$this->setCampo("lide", "Lide da Notícia");

@@ -40,7 +40,7 @@
 			<div class="tabs-content">
 				<div class="content active" id="geral">
 					<div class="apontamentos-container">
-							<h2 class="titulo">Apontamentos feitos pelos administradores:</h2>
+							<h2 class="titulo">Apontamentos feito pelos administradores:</h2>
 							<hr>
 						{if $apontamentos}
 							<p class="text-apontamentos">{$apontamentos}</p>	
@@ -48,6 +48,7 @@
 							<p class="text-apontamentos-null">Sem apontamentos!</p>	
 						{/if}
 					</div>
+					<hr>
 					{$form}
 				</div>
 			</div>

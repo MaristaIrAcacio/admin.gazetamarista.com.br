@@ -73,5 +73,21 @@ class Admin_MateriaspendenteController extends gazetamarista_Controller_Action {
 		return $data;
 	}
 
+	/**
+	 * Hook executado antes a população do formulario
+	 *
+	 * @name doBeforePopulate
+	 * @param array $data Vetor dos dados do formulario
+	 * @return array
+	 */
+	public function doBeforePopulate($data) {
+	
+		// Joga os apontamentos para a view para serem renderizados
+		$this->view->apontamentos = $data['apontamentos'];
+
+		// Retorna os dados
+		return $data;
+	}
+
 
 }
