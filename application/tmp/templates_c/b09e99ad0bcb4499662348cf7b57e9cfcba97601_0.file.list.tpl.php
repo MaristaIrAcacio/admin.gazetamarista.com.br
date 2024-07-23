@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.36, created on 2024-07-23 07:31:07
-  from 'c:\xampp-7.4\htdocs\admin.gazetamarista.com.br\application\layouts\list.tpl' */
+/* Smarty version 3.1.36, created on 2024-07-23 07:34:31
+  from 'c:\xampp-7.4\htdocs\admin.gazetamarista.com.br\application\modules\admin\views\materiasrejeitado\list.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.36',
-  'unifunc' => 'content_669f866b3e7fb8_04966516',
+  'unifunc' => 'content_669f8737088ab2_55734079',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
-    '771b5374a717950599edbd42efe9dc0e0ba4c07c' => 
+    'b09e99ad0bcb4499662348cf7b57e9cfcba97601' => 
     array (
-      0 => 'c:\\xampp-7.4\\htdocs\\admin.gazetamarista.com.br\\application\\layouts\\list.tpl',
-      1 => 1721729699,
+      0 => 'c:\\xampp-7.4\\htdocs\\admin.gazetamarista.com.br\\application\\modules\\admin\\views\\materiasrejeitado\\list.tpl',
+      1 => 1721730710,
       2 => 'file',
     ),
   ),
@@ -20,23 +20,13 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_669f866b3e7fb8_04966516 (Smarty_Internal_Template $_smarty_tpl) {
+function content_669f8737088ab2_55734079 (Smarty_Internal_Template $_smarty_tpl) {
 $_smarty_tpl->_checkPlugins(array(0=>array('file'=>'C:\\xampp-7.4\\htdocs\\admin.gazetamarista.com.br\\library\\gazetamarista\\Library\\Smarty\\plugins\\modifier.truncate.php','function'=>'smarty_modifier_truncate',),));
 ?>
 <div class="row">	
 	<div class="small-12 columns buttons-bar">
 		<ul class="stack-for-small button-group">
 			<?php $_smarty_tpl->_assignInScope('url', $_smarty_tpl->tpl_vars['this']->value->CreateUrl("form",NULL,NULL,array()));?>
-			<?php if ($_smarty_tpl->tpl_vars['somenteview']->value != true) {?>
-				<?php if ($_smarty_tpl->tpl_vars['esconderBtnNovo']->value != true) {?>
-					<li>
-						<a href="<?php echo $_smarty_tpl->tpl_vars['url']->value;?>
-" class="button btn-new">
-							<i class="mdi mdi-plus-circle-outline"></i> Novo
-						</a>
-					</li>
-				<?php }?>
-			<?php }?>
 			<?php if (count($_smarty_tpl->tpl_vars['paginator']->value) > 0) {?>
 				<?php if ($_smarty_tpl->tpl_vars['esconderBtnVisualizar']->value != true) {?>
 					<li>

@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.36, created on 2024-07-23 07:31:07
-  from 'c:\xampp-7.4\htdocs\admin.gazetamarista.com.br\application\layouts\list.tpl' */
+/* Smarty version 3.1.36, created on 2024-07-23 07:34:29
+  from 'c:\xampp-7.4\htdocs\admin.gazetamarista.com.br\application\modules\admin\views\materiasrascunhos\list.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.36',
-  'unifunc' => 'content_669f866b3e7fb8_04966516',
+  'unifunc' => 'content_669f873508d038_02704880',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
-    '771b5374a717950599edbd42efe9dc0e0ba4c07c' => 
+    '8ed3c9147ab16f161a677ba6cdc97752352d3767' => 
     array (
-      0 => 'c:\\xampp-7.4\\htdocs\\admin.gazetamarista.com.br\\application\\layouts\\list.tpl',
-      1 => 1721729699,
+      0 => 'c:\\xampp-7.4\\htdocs\\admin.gazetamarista.com.br\\application\\modules\\admin\\views\\materiasrascunhos\\list.tpl',
+      1 => 1721730730,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_669f866b3e7fb8_04966516 (Smarty_Internal_Template $_smarty_tpl) {
+function content_669f873508d038_02704880 (Smarty_Internal_Template $_smarty_tpl) {
 $_smarty_tpl->_checkPlugins(array(0=>array('file'=>'C:\\xampp-7.4\\htdocs\\admin.gazetamarista.com.br\\library\\gazetamarista\\Library\\Smarty\\plugins\\modifier.truncate.php','function'=>'smarty_modifier_truncate',),));
 ?>
 <div class="row">	
@@ -32,7 +32,7 @@ $_smarty_tpl->_checkPlugins(array(0=>array('file'=>'C:\\xampp-7.4\\htdocs\\admin
 					<li>
 						<a href="<?php echo $_smarty_tpl->tpl_vars['url']->value;?>
 " class="button btn-new">
-							<i class="mdi mdi-plus-circle-outline"></i> Novo
+							<i class="mdi mdi-plus-circle-outline"></i> Teeset
 						</a>
 					</li>
 				<?php }?>

@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.36, created on 2024-07-21 11:00:39
+/* Smarty version 3.1.36, created on 2024-07-23 07:18:11
   from 'c:\xampp-7.4\htdocs\admin.gazetamarista.com.br\application\modules\admin\views\usuarios\trocarsenha.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.36',
-  'unifunc' => 'content_669d148793d9f3_80192591',
+  'unifunc' => 'content_669f8363013bb5_69535345',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '4526f599f6c8577682586f60dbe4b8c9b6bfd99c' => 
     array (
       0 => 'c:\\xampp-7.4\\htdocs\\admin.gazetamarista.com.br\\application\\modules\\admin\\views\\usuarios\\trocarsenha.tpl',
-      1 => 1721433141,
+      1 => 1721644562,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_669d148793d9f3_80192591 (Smarty_Internal_Template $_smarty_tpl) {
+function content_669f8363013bb5_69535345 (Smarty_Internal_Template $_smarty_tpl) {
 ?><div class="row">
 	<div class="small-12 columns buttons-bar">
 		<ul class="stack-for-small button-group">

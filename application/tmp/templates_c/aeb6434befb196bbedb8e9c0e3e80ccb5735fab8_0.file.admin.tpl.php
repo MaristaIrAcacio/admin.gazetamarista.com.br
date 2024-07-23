@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.36, created on 2024-07-22 22:11:26
+/* Smarty version 3.1.36, created on 2024-07-23 07:34:31
   from 'c:\xampp-7.4\htdocs\admin.gazetamarista.com.br\application\layouts\admin.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.36',
-  'unifunc' => 'content_669f033e252a17_86492322',
+  'unifunc' => 'content_669f8737246f82_20781550',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     'aeb6434befb196bbedb8e9c0e3e80ccb5735fab8' => 
     array (
       0 => 'c:\\xampp-7.4\\htdocs\\admin.gazetamarista.com.br\\application\\layouts\\admin.tpl',
-      1 => 1721696783,
+      1 => 1721729699,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_669f033e252a17_86492322 (Smarty_Internal_Template $_smarty_tpl) {
+function content_669f8737246f82_20781550 (Smarty_Internal_Template $_smarty_tpl) {
 ?><!doctype html>
 <html class="no-js" lang="pt">
 	<head>
