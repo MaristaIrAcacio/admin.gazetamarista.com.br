@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.36, created on 2024-07-22 22:02:53
+/* Smarty version 3.1.36, created on 2024-07-22 22:11:26
   from 'c:\xampp-7.4\htdocs\admin.gazetamarista.com.br\application\layouts\admin.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.36',
-  'unifunc' => 'content_669f013d6b1553_05153898',
+  'unifunc' => 'content_669f033e252a17_86492322',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     'aeb6434befb196bbedb8e9c0e3e80ccb5735fab8' => 
     array (
       0 => 'c:\\xampp-7.4\\htdocs\\admin.gazetamarista.com.br\\application\\layouts\\admin.tpl',
-      1 => 1721476787,
+      1 => 1721696783,
       2 => 'file',
     ),
   ),
@@ -20,11 +20,9 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_669f013d6b1553_05153898 (Smarty_Internal_Template $_smarty_tpl) {
+function content_669f033e252a17_86492322 (Smarty_Internal_Template $_smarty_tpl) {
 ?><!doctype html>
-<!--[if IE 8 ]><html class="no-js ie8 oldie lt-ie9" lang="pt"><![endif]-->
-<!--[if IE 9 ]><html class="no-js ie9 lt-ie10" lang="pt"><![endif]-->
-<!--[if (gte IE 9)|!(IE)]><!--><html class="no-js" lang="pt"><!--<![endif]-->
+<html class="no-js" lang="pt">
 	<head>
 		<meta charset="utf-8">
 		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
@@ -39,71 +37,10 @@ function content_669f013d6b1553_05153898 (Smarty_Internal_Template $_smarty_tpl)
 		<link rel="shortcut icon" type="image/png" href="<?php echo $_smarty_tpl->tpl_vars['imagePath']->value;?>
 /favicon/32x32.png">
 
-		<!-- Favicon Apple -->
-		<link rel="apple-touch-icon" sizes="57x57" href="<?php echo $_smarty_tpl->tpl_vars['imagePath']->value;?>
-/favicon/57x57.png">
-		<link rel="apple-touch-icon" sizes="60x60" href="<?php echo $_smarty_tpl->tpl_vars['imagePath']->value;?>
-/favicon/60x60.png">
-		<link rel="apple-touch-icon" sizes="72x72" href="<?php echo $_smarty_tpl->tpl_vars['imagePath']->value;?>
-/favicon/72x72.png">
-		<link rel="apple-touch-icon" sizes="76x76" href="<?php echo $_smarty_tpl->tpl_vars['imagePath']->value;?>
-/favicon/76x76.png">
-		<link rel="apple-touch-icon" sizes="114x114" href="<?php echo $_smarty_tpl->tpl_vars['imagePath']->value;?>
-/favicon/114x114.png">
-		<link rel="apple-touch-icon" sizes="120x120" href="<?php echo $_smarty_tpl->tpl_vars['imagePath']->value;?>
-/favicon/120x120.png">
-		<link rel="apple-touch-icon" sizes="144x144" href="<?php echo $_smarty_tpl->tpl_vars['imagePath']->value;?>
-/favicon/144x144.png">
-		<link rel="apple-touch-icon" sizes="152x152" href="<?php echo $_smarty_tpl->tpl_vars['imagePath']->value;?>
-/favicon/152x152.png">
-		<link rel="apple-touch-icon" sizes="180x180" href="<?php echo $_smarty_tpl->tpl_vars['imagePath']->value;?>
-/favicon/180x180.png">
-
-		<!-- Outros Favicons -->
-		<link rel="icon" type="image/png" sizes="192x192"  href="<?php echo $_smarty_tpl->tpl_vars['imagePath']->value;?>
-/favicon/192x192.png">
-		<link rel="icon" type="image/png" sizes="32x32" href="<?php echo $_smarty_tpl->tpl_vars['imagePath']->value;?>
-/favicon/32x32.png">
-		<link rel="icon" type="image/png" sizes="96x96" href="<?php echo $_smarty_tpl->tpl_vars['imagePath']->value;?>
-/favicon/96x96.png">
-		<link rel="icon" type="image/png" sizes="16x16" href="<?php echo $_smarty_tpl->tpl_vars['imagePath']->value;?>
-/favicon/16x16.png">
-
-		<!-- Splash Screen PWA -->
-		<link href="<?php echo $_smarty_tpl->tpl_vars['imagePath']->value;?>
-/splashscreens/iphone5_splash.png" media="(device-width: 320px) and (device-height: 568px) and (-webkit-device-pixel-ratio: 2)" rel="apple-touch-startup-image" />
-		<link href="<?php echo $_smarty_tpl->tpl_vars['imagePath']->value;?>
-/splashscreens/iphone6_splash.png" media="(device-width: 375px) and (device-height: 667px) and (-webkit-device-pixel-ratio: 2)" rel="apple-touch-startup-image" />
-		<link href="<?php echo $_smarty_tpl->tpl_vars['imagePath']->value;?>
-/splashscreens/iphoneplus_splash.png" media="(device-width: 621px) and (device-height: 1104px) and (-webkit-device-pixel-ratio: 3)" rel="apple-touch-startup-image" />
-		<link href="<?php echo $_smarty_tpl->tpl_vars['imagePath']->value;?>
-/splashscreens/iphonex_splash.png" media="(device-width: 375px) and (device-height: 812px) and (-webkit-device-pixel-ratio: 3)" rel="apple-touch-startup-image" />
-		<link href="<?php echo $_smarty_tpl->tpl_vars['imagePath']->value;?>
-/splashscreens/iphonexr_splash.png" media="(device-width: 414px) and (device-height: 896px) and (-webkit-device-pixel-ratio: 2)" rel="apple-touch-startup-image" />
-		<link href="<?php echo $_smarty_tpl->tpl_vars['imagePath']->value;?>
-/splashscreens/iphonexsmax_splash.png" media="(device-width: 414px) and (device-height: 896px) and (-webkit-device-pixel-ratio: 3)" rel="apple-touch-startup-image" />
-		<link href="<?php echo $_smarty_tpl->tpl_vars['imagePath']->value;?>
-/splashscreens/ipad_splash.png" media="(device-width: 768px) and (device-height: 1024px) and (-webkit-device-pixel-ratio: 2)" rel="apple-touch-startup-image" />
-		<link href="<?php echo $_smarty_tpl->tpl_vars['imagePath']->value;?>
-/splashscreens/ipadpro1_splash.png" media="(device-width: 834px) and (device-height: 1112px) and (-webkit-device-pixel-ratio: 2)" rel="apple-touch-startup-image" />
-		<link href="<?php echo $_smarty_tpl->tpl_vars['imagePath']->value;?>
-/splashscreens/ipadpro3_splash.png" media="(device-width: 834px) and (device-height: 1194px) and (-webkit-device-pixel-ratio: 2)" rel="apple-touch-startup-image" />
-		<link href="<?php echo $_smarty_tpl->tpl_vars['imagePath']->value;?>
-/splashscreens/ipadpro2_splash.png" media="(device-width: 1024px) and (device-height: 1366px) and (-webkit-device-pixel-ratio: 2)" rel="apple-touch-startup-image" />
-
-		<!-- Manifest PWA -->
-		<link rel="manifest" href="<?php echo $_smarty_tpl->tpl_vars['imagePath']->value;?>
-/favicon/site_manifest.json">
-
-		<!-- Outras informações PWA -->
-		<link rel="mask-icon" href="<?php echo $_smarty_tpl->tpl_vars['imagePath']->value;?>
-/favicon/safari-pinned-tab.svg" color="#d33535">
 		<meta name="apple-mobile-web-app-title" content="CW Panel">
 		<meta name="application-name" content="CW Panel">
 		<meta name="msapplication-TileColor" content="#ffffff">
 		<meta name="theme-color" content="#ffffff">
-		<meta name="msapplication-TileImage" content="<?php echo $_smarty_tpl->tpl_vars['imagePath']->value;?>
-/favicon/180x180.png">
 
 		<?php echo $_smarty_tpl->tpl_vars['this']->value->headTitle();?>
 
@@ -114,13 +51,6 @@ function content_669f013d6b1553_05153898 (Smarty_Internal_Template $_smarty_tpl)
 
 		<link type="text/css" rel="stylesheet" media="print" href="<?php echo $_smarty_tpl->tpl_vars['basePath']->value;?>
 /common/admin/css/impressaogeral.css">
-
-		<!--[if lt IE 9]>
-			<?php echo '<script'; ?>
- src="<?php echo $_smarty_tpl->tpl_vars['basePath']->value;?>
-common/default/js/ie8.js" type="text/javascript"><?php echo '</script'; ?>
->
-		<![endif]-->
 
 		<?php echo '<script'; ?>
 >

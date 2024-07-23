@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.36, created on 2024-07-22 22:02:52
+/* Smarty version 3.1.36, created on 2024-07-22 22:11:25
   from 'c:\xampp-7.4\htdocs\admin.gazetamarista.com.br\application\layouts\list.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.36',
-  'unifunc' => 'content_669f013cd39a31_19011587',
+  'unifunc' => 'content_669f033d76e798_88050986',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '771b5374a717950599edbd42efe9dc0e0ba4c07c' => 
     array (
       0 => 'c:\\xampp-7.4\\htdocs\\admin.gazetamarista.com.br\\application\\layouts\\list.tpl',
-      1 => 1721480011,
+      1 => 1721697058,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_669f013cd39a31_19011587 (Smarty_Internal_Template $_smarty_tpl) {
+function content_669f033d76e798_88050986 (Smarty_Internal_Template $_smarty_tpl) {
 $_smarty_tpl->_checkPlugins(array(0=>array('file'=>'C:\\xampp-7.4\\htdocs\\admin.gazetamarista.com.br\\library\\gazetamarista\\Library\\Smarty\\plugins\\modifier.truncate.php','function'=>'smarty_modifier_truncate',),));
 ?>
 <div class="row">	
@@ -229,8 +229,7 @@ $_smarty_tpl->tpl_vars['value']->do_else = false;
 									<?php $_smarty_tpl->_assignInScope('conteudo_campo', $_smarty_tpl->tpl_vars['this']->value->GetColumnValue($_smarty_tpl->tpl_vars['row']->value,$_smarty_tpl->tpl_vars['column']->value));?>
 									<?php if ($_smarty_tpl->tpl_vars['_model']->value->getVisibility($_smarty_tpl->tpl_vars['column']->value,'list')) {?>
 										<td>
-											
-													<?php echo smarty_modifier_truncate(preg_replace('!<[^>]*?>!', ' ', $_smarty_tpl->tpl_vars['conteudo_campo']->value),200,"...");?>
+											<?php echo smarty_modifier_truncate(preg_replace('!<[^>]*?>!', ' ', $_smarty_tpl->tpl_vars['conteudo_campo']->value),200,"...");?>
 
 										</td>
 									<?php }?>

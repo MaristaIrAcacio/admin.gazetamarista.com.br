@@ -144,8 +144,7 @@
 									{assign var="conteudo_campo" value=$this->GetColumnValue($row, $column)}
 									{if $_model->getVisibility($column, 'list')}
 										<td>
-											
-													{$conteudo_campo|strip_tags|truncate:200:"..."}
+											{$conteudo_campo|strip_tags|truncate:200:"..."}
 										</td>
 									{/if}
 								{/foreach}
