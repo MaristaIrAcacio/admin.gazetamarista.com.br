@@ -43,8 +43,8 @@ class Admin_MateriaspublicadasController extends gazetamarista_Controller_Action
 
 		// Monta a query
 		$select
+			// Busca apenas as matérias com os status "publicado"
 			->where("status = ?", "publicado")
-			->where("autorId = ?", $id)
 			->order("atualizadoEm DESC");
 
 		// Continua a execução

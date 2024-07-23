@@ -43,7 +43,9 @@ class Admin_MateriasrascunhosController extends gazetamarista_Controller_Action 
 
 		// Monta a query
 		$select
+			// Busca apenas as matérias com os status "rascunho"
 			->where("status = ?", "rascunho")
+			// Busca apenas as matérias escritas pelo usuário logado por meio do Id do Usuário salvo na sessão durante o Login
 			->where("autorId = ?", $id)
 			->order("atualizadoEm DESC");
 

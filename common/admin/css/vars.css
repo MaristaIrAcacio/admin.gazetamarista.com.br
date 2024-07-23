@@ -42,8 +42,8 @@
     --bs-gazetamarista-darkblue: var(--bs-text-dark);
     --bs-body-background: var(--bs-light);
     --bs-body-font-color: var(--bs-text-header);
-    --bs-font-sans-serif: system-ui,-apple-system,"Segoe UI",Roboto,"Helvetica Neue",Arial,"Noto Sans","Liberation Sans",sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji";
-    --bs-font-monospace: SFMono-Regular,Menlo,Monaco,Consolas,"Liberation Mono","Courier New",monospace;
+    --bs-font-sans-serif: "poppins";
+    --bs-font-monospace: "poppins";
     --bs-gradient: linear-gradient(180deg, rgba(255, 255, 255, 0.15), rgba(255, 255, 255, 0));
     --bs-icon-font: "Material Icons";
     --bs-bx-icon-font: "boxicons";

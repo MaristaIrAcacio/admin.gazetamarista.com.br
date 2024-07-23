@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.36, created on 2024-07-19 22:44:52
+/* Smarty version 3.1.36, created on 2024-07-22 21:40:21
   from 'c:\xampp-7.4\htdocs\admin.gazetamarista.com.br\application\modules\admin\views\configuracoes\form.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.36',
-  'unifunc' => 'content_669b1694609980_12663849',
+  'unifunc' => 'content_669efbf5a278e7_57655745',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '447434d1e264638a6d485b9e6d6fc21d67dd63a9' => 
     array (
       0 => 'c:\\xampp-7.4\\htdocs\\admin.gazetamarista.com.br\\application\\modules\\admin\\views\\configuracoes\\form.tpl',
-      1 => 1721433221,
+      1 => 1721695045,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_669b1694609980_12663849 (Smarty_Internal_Template $_smarty_tpl) {
+function content_669efbf5a278e7_57655745 (Smarty_Internal_Template $_smarty_tpl) {
 ?><div class="row">
 	<div class="small-12 columns buttons-bar">
 		<ul class="stack-for-small button-group">
@@ -38,7 +38,6 @@ function content_669b1694609980_12663849 (Smarty_Internal_Template $_smarty_tpl)
 			<div class="show-for-medium-up">
 				<ul class="tabs" data-tab data-options="deep_linking:true">
 					<li class="tab-title active"><a href="#geral">Geral</a></li>
-					<li class="tab-title"><a href="#filiais">Filiais</a></li>
 					<?php if ($_smarty_tpl->tpl_vars['idperfil']->value === '99') {?><li class="tab-title"><a href="#codigos">Códigos/Share</a></li><?php }?>
 					<li class="tab-title"><a href="#cookies">Política Cookies</a></li>
 				</ul>
@@ -55,7 +54,6 @@ function content_669b1694609980_12663849 (Smarty_Internal_Template $_smarty_tpl)
 					<section class="top-bar-section">
 						<ul class="left" data-tab data-options="deep_linking:true">
 							<li class="active"><a href="#geral">Geral</a></li>
-							<li><a href="#filiais">Filiais</a></li>
 							<?php if ($_smarty_tpl->tpl_vars['idperfil']->value === '99') {?><li><a href="#codigos">Códigos/Share</a></li><?php }?>
 							<li><a href="#cookies">Política Cookies</a></li>
 						</ul>
@@ -84,60 +82,6 @@ function content_669b1694609980_12663849 (Smarty_Internal_Template $_smarty_tpl)
 
 					<?php echo $_smarty_tpl->tpl_vars['form']->value->getElement('cidade_rodape');?>
 
-				</div>
-
-				<div class="content" id="filiais">
-					
-					<h3 style="padding-left: 20px;">Filial 1</h3>
-					
-					<?php echo $_smarty_tpl->tpl_vars['form']->value->getElement('filial_1_cidade');?>
-
-					<?php echo $_smarty_tpl->tpl_vars['form']->value->getElement('filial_1_endereco');?>
-
-					<?php echo $_smarty_tpl->tpl_vars['form']->value->getElement('filial_1_complemento');?>
-
-					<?php echo $_smarty_tpl->tpl_vars['form']->value->getElement('filial_1_telefone');?>
-
-					
-					<br><hr><br>
-					
-					<h3 style="padding-left: 20px;">Filial 2</h3>
-					
-					<?php echo $_smarty_tpl->tpl_vars['form']->value->getElement('filial_2_cidade');?>
-
-					<?php echo $_smarty_tpl->tpl_vars['form']->value->getElement('filial_2_endereco');?>
-
-					<?php echo $_smarty_tpl->tpl_vars['form']->value->getElement('filial_2_complemento');?>
-
-					<?php echo $_smarty_tpl->tpl_vars['form']->value->getElement('filial_2_telefone');?>
-
-					
-					<br><hr><br>
-					
-					<h3 style="padding-left: 20px;">Filial 3</h3>
-					
-					<?php echo $_smarty_tpl->tpl_vars['form']->value->getElement('filial_3_cidade');?>
-
-					<?php echo $_smarty_tpl->tpl_vars['form']->value->getElement('filial_3_endereco');?>
-
-					<?php echo $_smarty_tpl->tpl_vars['form']->value->getElement('filial_3_complemento');?>
-
-					<?php echo $_smarty_tpl->tpl_vars['form']->value->getElement('filial_3_telefone');?>
-
-
-					<br><hr><br>
-					
-					<h3 style="padding-left: 20px;">Filial 4</h3>
-					
-					<?php echo $_smarty_tpl->tpl_vars['form']->value->getElement('filial_4_cidade');?>
-
-					<?php echo $_smarty_tpl->tpl_vars['form']->value->getElement('filial_4_endereco');?>
-
-					<?php echo $_smarty_tpl->tpl_vars['form']->value->getElement('filial_4_complemento');?>
-
-					<?php echo $_smarty_tpl->tpl_vars['form']->value->getElement('filial_4_telefone');?>
-
-				
 				</div>
 
 				<div class="content" id="codigos">

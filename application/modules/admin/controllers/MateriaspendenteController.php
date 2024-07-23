@@ -48,39 +48,13 @@ class Admin_MateriaspendenteController extends gazetamarista_Controller_Action {
 	}
 
 	/**
-	 * Hook para ser executado antes do insert
-	 *
-	 * @access protected
-	 * @name doBeforeInsert
-	 * @param array $data Vetor com os valores à serem inseridos
-	 * @return array
-	 */
-	protected function doBeforeInsert($data) {
-		
-		// Verifica se está marcado como rascunho
-		$isRascunho = $data['isRascunho'];
-
-		if ($isRascunho == 1) {
-			$data['status'] = "rascunho";
-		} else {
-			$data['status'] = "pendente";
-		};
-
-		// Resgata o id do usuário da session
-		$id = $this->session->logged_usuario['idusuario'];
-		$data['autorId'] = $id;
-		
-		// Retorna os dados para o framework
-		return $data;
-	}
-
-	/**
 	 * Hook para a edição do usuário
 	 * 
 	 * @name doBeforeUpdate
 	 * @param array $data Valores à serem editados
 	 */
 	public function doBeforeUpdate($data) {
+		
 		// Verifica se está marcado como rascunho
 		$apontamentos       = $this->_request->getParam("apontamentos", "");
 
@@ -88,7 +62,11 @@ class Admin_MateriaspendenteController extends gazetamarista_Controller_Action {
 			$data['apontamentos'] = $_POST['apontamentos'];
 			$data['status'] = "rejeitado";
 		} else {
+			// Altera para publicada a notícia
+			$data['status'] = "publicado";
 
+			// Salva a hora da publicação
+			$data['dataPublicacao'] = date('Y-m-d H:i:s');
 		};
 
 		// Retorna os dados para o framework

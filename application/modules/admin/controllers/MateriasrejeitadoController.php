@@ -43,7 +43,9 @@ class Admin_MateriasrejeitadoController extends gazetamarista_Controller_Action 
 
 		// Monta a query
 		$select
+			// Busca apenas as matérias com os status "Rejeitado"
 			->where("status = ?", "rejeitado")
+			// Busca apenas as matérias escritas pelo usuário logado por meio do Id do Usuário salvo na sessão durante o Login
 			->where("autorId = ?", $id)
 			->order("atualizadoEm DESC");
 
@@ -52,29 +54,18 @@ class Admin_MateriasrejeitadoController extends gazetamarista_Controller_Action 
 	}
 
 	/**
-	 * Hook para ser executado antes do insert
+	 * Hook executado antes a população do formulario
 	 *
-	 * @access protected
-	 * @name doBeforeInsert
-	 * @param array $data Vetor com os valores à serem inseridos
+	 * @name doBeforePopulate
+	 * @param array $data Vetor dos dados do formulario
 	 * @return array
 	 */
-	protected function doBeforeInsert($data) {
-		
-		// Verifica se está marcado como rascunho
-		$isRascunho = $data['isRascunho'];
+	public function doBeforePopulate($data) {
+	
+		// Joga os apontamentos para a view para serem renderizados
+		$this->view->apontamentos = $data['apontamentos'];
 
-		if ($isRascunho == 1) {
-			$data['status'] = "rascunho";
-		} else {
-			$data['status'] = "pendente";
-		};
-
-		// Resgata o id do usuário da session
-		$id = $this->session->logged_usuario['idusuario'];
-		$data['autorId'] = $id;
-		
-		// Retorna os dados para o framework
+		// Retorna os dados
 		return $data;
 	}
 
@@ -85,15 +76,9 @@ class Admin_MateriasrejeitadoController extends gazetamarista_Controller_Action 
 	 * @param array $data Valores à serem editados
 	 */
 	public function doBeforeUpdate($data) {
-		// Verifica se está marcado como rascunho
-		$apontamentos       = $this->_request->getParam("apontamentos", "");
 
-		if ($apontamentos && !empty($apontamentos)) {
-			$data['apontamentos'] = $_POST['apontamentos'];
-			$data['status'] = "rejeitado";
-		} else {
-
-		};
+		// Troca os status para pendete novamente
+		$data['status'] = "pendente";
 
 		// Retorna os dados para o framework
 		return $data;

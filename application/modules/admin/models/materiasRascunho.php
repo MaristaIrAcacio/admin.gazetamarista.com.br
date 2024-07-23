@@ -86,7 +86,7 @@ class Admin_Model_MateriasRascunho extends gazetamarista_Db_Table {
 
 		$this->setVisibility("status", FALSE, FALSE, FALSE, FALSE);
 		$this->setVisibility("apontamentos", FALSE, FALSE, FALSE, FALSE);
-		$this->setVisibility("dataPublicacao", TRUE, TRUE, FALSE, FALSE);
+		$this->setVisibility("dataPublicacao", FALSE, FALSE, FALSE, FALSE);
 		$this->setVisibility("tags", TRUE, TRUE, FALSE, FALSE);
 		$this->setVisibility("tipo", TRUE, TRUE, FALSE, TRUE);
 		$this->setVisibility("criadoEm", FALSE, FALSE, FALSE, TRUE);

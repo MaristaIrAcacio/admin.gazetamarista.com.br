@@ -75,7 +75,7 @@ class Admin_Model_MateriasRejeitado extends gazetamarista_Db_Table {
 
 		// Seta visibilidade dos campos
 
-		$this->setVisibility("apontamentos", TRUE, TRUE, FALSE, FALSE);
+		$this->setVisibility("apontamentos", FALSE, FALSE, FALSE, FALSE);
 
 		$this->setVisibility("titulo", TRUE, TRUE, TRUE, TRUE);
 		$this->setVisibility("subtitulo", TRUE, TRUE, FALSE, FALSE);

@@ -14,7 +14,6 @@
 			<div class="show-for-medium-up">
 				<ul class="tabs" data-tab data-options="deep_linking:true">
 					<li class="tab-title active"><a href="#geral">Geral</a></li>
-					<li class="tab-title"><a href="#filiais">Filiais</a></li>
 					{if $idperfil === '99'}<li class="tab-title"><a href="#codigos">Códigos/Share</a></li>{/if}
 					<li class="tab-title"><a href="#cookies">Política Cookies</a></li>
 				</ul>
@@ -31,7 +30,6 @@
 					<section class="top-bar-section">
 						<ul class="left" data-tab data-options="deep_linking:true">
 							<li class="active"><a href="#geral">Geral</a></li>
-							<li><a href="#filiais">Filiais</a></li>
 							{if $idperfil === '99'}<li><a href="#codigos">Códigos/Share</a></li>{/if}
 							<li><a href="#cookies">Política Cookies</a></li>
 						</ul>
@@ -50,44 +48,6 @@
 					{$form->getElement('whatsapp')}
 					{$form->getElement('twitter')}
 					{$form->getElement('cidade_rodape')}
-				</div>
-
-				<div class="content" id="filiais">
-					
-					<h3 style="padding-left: 20px;">Filial 1</h3>
-					
-					{$form->getElement('filial_1_cidade')}
-					{$form->getElement('filial_1_endereco')}
-					{$form->getElement('filial_1_complemento')}
-					{$form->getElement('filial_1_telefone')}
-					
-					<br><hr><br>
-					
-					<h3 style="padding-left: 20px;">Filial 2</h3>
-					
-					{$form->getElement('filial_2_cidade')}
-					{$form->getElement('filial_2_endereco')}
-					{$form->getElement('filial_2_complemento')}
-					{$form->getElement('filial_2_telefone')}
-					
-					<br><hr><br>
-					
-					<h3 style="padding-left: 20px;">Filial 3</h3>
-					
-					{$form->getElement('filial_3_cidade')}
-					{$form->getElement('filial_3_endereco')}
-					{$form->getElement('filial_3_complemento')}
-					{$form->getElement('filial_3_telefone')}
-
-					<br><hr><br>
-					
-					<h3 style="padding-left: 20px;">Filial 4</h3>
-					
-					{$form->getElement('filial_4_cidade')}
-					{$form->getElement('filial_4_endereco')}
-					{$form->getElement('filial_4_complemento')}
-					{$form->getElement('filial_4_telefone')}
-				
 				</div>
 
 				<div class="content" id="codigos">

@@ -60,14 +60,10 @@ class Admin_Model_Configuracoes extends gazetamarista_Db_Table {
 	public function init() {
         // Adiciona os campos ao model
         $this->setCampo("nome_site", "Nome site");
-		$this->setCampo("email_contato", "E-mail contato", "separar por vírgula (,)");
-		$this->setCampo("email_rodape", "E-mail rodapé");
-		$this->setCampo("cidade_rodape", "Cidade Rodapé");
 		$this->setCampo("facebook", "Facebook");
 		$this->setCampo("instagram", "Instagram");
 		$this->setCampo("linkedin", "Linkedin");
 		$this->setCampo("whatsapp", "Whatsapp");
-		$this->setCampo("twitter", "Twitter");
 
 		// Configs
         $this->setCampo("recaptcha_key", "Recaptcha key");
@@ -78,45 +74,15 @@ class Admin_Model_Configuracoes extends gazetamarista_Db_Table {
         $this->setCampo("codigo_final_body", "HTML final do body");
         $this->setCampo("politica_cookie_texto", "HTML final do body");
 
-		// Filiais
-
-		// =========== Filial 1 ===========
-        $this->setCampo("filial_1_cidade", "Cidade filial");
-        $this->setCampo("filial_1_endereco", "Endereço filial");
-        $this->setCampo("filial_1_complemento", "Complemento filial");
-        $this->setCampo("filial_1_telefone", "Telefone filial");
-
-		// =========== Filial 2 ===========
-		$this->setCampo("filial_2_cidade", "Cidade filial");
-        $this->setCampo("filial_2_endereco", "Endereço filial");
-        $this->setCampo("filial_2_complemento", "Complemento filial");
-        $this->setCampo("filial_2_telefone", "Telefone filial");
-
-		// =========== Filial 3 ===========
-		$this->setCampo("filial_3_cidade", "Cidade filial");
-        $this->setCampo("filial_3_endereco", "Endereço filial");
-        $this->setCampo("filial_3_complemento", "Complemento filial");
-        $this->setCampo("filial_3_telefone", "Telefone filial");
-
-		// =========== Filial 4 ===========
-		$this->setCampo("filial_4_cidade", "Cidade filial");
-        $this->setCampo("filial_4_endereco", "Endereço filial");
-        $this->setCampo("filial_4_complemento", "Complemento filial");
-        $this->setCampo("filial_4_telefone", "Telefone filial");
-
         // Seta o campo de descrição da tabela
 		$this->setDescription("nome_site");
 
         // Seta visibilidade dos campos
         $this->setVisibility("nome_site", TRUE, TRUE, FALSE, TRUE);
-		$this->setVisibility("email_contato", TRUE, TRUE, FALSE, TRUE);
-        $this->setVisibility("email_rodape", TRUE, TRUE, FALSE, TRUE);
-        $this->setVisibility("cidade_rodape", TRUE, TRUE, FALSE, TRUE);
 		$this->setVisibility("facebook", TRUE, TRUE, FALSE, FALSE);
 		$this->setVisibility("instagram", TRUE, TRUE, FALSE, FALSE);
 		$this->setVisibility("linkedin", TRUE, TRUE, FALSE, FALSE);
 		$this->setVisibility("whatsapp", TRUE, TRUE, FALSE, FALSE);
-		$this->setVisibility("twitter", TRUE, TRUE, FALSE, FALSE);
         // Configs
         $this->setVisibility("recaptcha_key", TRUE, TRUE, FALSE, FALSE);
         $this->setVisibility("recaptcha_secret", TRUE, TRUE, FALSE, FALSE);

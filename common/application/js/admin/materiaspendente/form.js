@@ -16,9 +16,14 @@ $(function() {
         }).then((value) => {
             if (value) {
                 const apontamentos = document.getElementById('swal-textarea').value;
-                const inputHidden = `<input type="hidden" id="apontamentos" name="apontamentos" class="apontamentos" value="${apontamentos}">`;
-                document.getElementById('geral').innerHTML += inputHidden;
-                $('.btn-aprovar').click();
+                
+                if (apontamentos.length > 0) {
+                    const inputHidden = `<input type="hidden" id="apontamentos" name="apontamentos" class="apontamentos" value="${apontamentos}">`;
+                    document.getElementById('geral').innerHTML += inputHidden;
+                    $('.btn-aprovar').click();
+                } else {
+				    swal('Ops!', 'Preencha o campo de apontamentos.', 'warning');
+                };
             } else {};
         });
     });

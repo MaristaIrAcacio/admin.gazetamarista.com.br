@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.36, created on 2024-07-21 20:21:35
+/* Smarty version 3.1.36, created on 2024-07-22 21:33:38
   from 'c:\xampp-7.4\htdocs\admin.gazetamarista.com.br\application\modules\admin\views\materiaspendente\form.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.36',
-  'unifunc' => 'content_669d97ffd9a999_66197233',
+  'unifunc' => 'content_669efa62868133_39794317',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '60c2dd9255718c54265806483be161691df5e2d8' => 
     array (
       0 => 'c:\\xampp-7.4\\htdocs\\admin.gazetamarista.com.br\\application\\modules\\admin\\views\\materiaspendente\\form.tpl',
-      1 => 1721602283,
+      1 => 1721604538,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_669d97ffd9a999_66197233 (Smarty_Internal_Template $_smarty_tpl) {
+function content_669efa62868133_39794317 (Smarty_Internal_Template $_smarty_tpl) {
 ?><div class="row">
 	<div class="small-12 columns buttons-bar">
 		<ul class="stack-for-small button-group">
@@ -48,7 +48,7 @@ function content_669d97ffd9a999_66197233 (Smarty_Internal_Template $_smarty_tpl)
 		<div class="small-12 columns">
 			<div class="show-for-medium-up">
 				<ul class="tabs" data-tab>
-					<li class="tab-title active"><a href="#geral">Rascunho</a></li>
+					<li class="tab-title active"><a href="#geral">Pendente</a></li>
 				</ul>
 			</div>
 			<div class="show-for-small-only">
@@ -62,7 +62,7 @@ function content_669d97ffd9a999_66197233 (Smarty_Internal_Template $_smarty_tpl)
 					</ul>
 					<section class="top-bar-section">
 						<ul class="left" data-tab>
-							<li class="active"><a href="#geral">Rascunho</a></li>
+							<li class="active"><a href="#geral">Pendente</a></li>
 						</ul>
 					</section>
 				</nav>
