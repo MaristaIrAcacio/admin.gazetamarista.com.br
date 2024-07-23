@@ -288,9 +288,7 @@ function funcoesLista(){
 			;
 
 			if( checkbox.length == 1 ){
-				if(!confirm('Deseja remover o registro?')) {
-					return false;
-				}
+				
 			}else if( checkbox.length > 1 ){
 				if(!confirm('Deseja remover estes registros?')) {
 					return false;
@@ -341,30 +339,46 @@ function funcoesLista(){
 				line    = obj.closest('tr'),
 				id      = obj.attr('data-id').replace('idemail_','');
 
-				if(!confirm('Deseja remover o registro?')) {
-					return false;
-				}
-
-				$.ajax({
-					url: url + id,
-					async: false,
-					success: function(data) {
-						if(data.result) {
-							line.css({'background-color':'#ff9595'});
-							line.fadeOut( 1000, function() {
-								$(this).remove();
-							});
-						}else{
-							if(data.message != "") {
-								$.msgBox({message:data.message, type:'error'});
-							}else{
-								$.msgBox({message:'Não foi possível remover o registro', type:'error'});
-							}
+				swal({
+					title: "Deseja Remover Esse Registro?",
+					text: "Você não poderá desfazer essa ação!",
+					icon: "warning",
+					buttons: {
+						cancel: "Cancelar",
+						confirm: {
+							text: "Deletar",
+							value: true,
 						}
-					}
+					},
+					dangerMode: true,
+				}).then((willDelete) => {
+					if (willDelete) {
+						$.ajax({
+							url: url + id,
+							async: false,
+							success: function(data) {
+								if(data.result) {
+									line.css({'background-color':'#ff9595'});
+									line.fadeOut( 1000, function() {
+										$(this).remove();
+									});
+								}else{
+									if(data.message != "") {
+										$.msgBox({message:data.message, type:'error'});
+									}else{
+										$.msgBox({message:'Não foi possível remover o registro', type:'error'});
+									}
+								}
+							}
+						});
+		
+						return false;
+					} else {
+						return false;
+					};
 				});
 
-				return false;
+				
 			});
 		});
 	}

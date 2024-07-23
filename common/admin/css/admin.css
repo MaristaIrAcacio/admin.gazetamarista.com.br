@@ -26,7 +26,7 @@
 	Tema foundation
 ============================================================================ */
 /*** Geral ============================================= */
-html, body { height:auto; min-height:100%; font:400 14px/1.5 "Roboto", Arial, Tahoma; }
+html, body { height:auto; min-height:100%; font:400 14px/1.5 "Poppins", Arial, Tahoma; }
 body { color:#303030; -webkit-tap-highlight-color:rgba(0,0,0,0); background: #f2f2f3;}
 
 *::-webkit-input-placeholder {
@@ -65,7 +65,7 @@ select,
 h1, h2, h3, h4, h5, h6,
 .sub-nav dt, .sub-nav dd, .sub-nav li, .btn-new, .label {
 	font-weight:400;
-	font-family:"Roboto", Arial, Tahoma, sans-serif;
+	font-family:"Poppins", Arial, Tahoma, sans-serif;
 }
 
 ul.errors li { font-weight:400; font-size:1rem; color:#FF0000; }
@@ -906,13 +906,12 @@ table.list tbody tr td.selecionado { background-color:#ebecf5; }
 table.list tbody tr.tr_inativa td{ color: rgba(31, 38, 51, 0.5); }
 table.list tbody tr td a:not(.button) { color:#222; font-size:2rem; }
 
-table.list tbody tr td.coluna-acoes { display:flex; display: flex; background:#f9f9f9; padding: 14px 17px;	border-left: 1px solid #f2f2f3; }
+table.list tbody tr td.coluna-acoes { display:flex; display: flex; gap: 10px;background:#fff; padding: 14px 17px;	border-left: 1px solid #f2f2f3; }
 table.list tbody tr td.coluna-acoes i.mdi.mdi-delete,
 table.list tbody tr td.coluna-acoes i.mdi.mdi-eye { color:#cacaca; font-size:18px; }
-table.list tbody tr td.coluna-acoes ul li:hover a i{ color:#333 }
+table.list tbody tr td.coluna-acoes ul li:hover a i{ color:#f30000 }
 
 table.list tbody tr td.coluna-acoes .btn_acoes{
-	/*background: #e4e4e4; *! */
 	font-size: 17px;
 	padding: 6px;
 	border-radius: 4px;
@@ -935,7 +934,39 @@ table.list tbody tr td.coluna-acoes ul a i{
 	float: left;
 }
 
-table.list tbody tr:hover td a:not(.button) { color:#bbb; }
+.btn-deletar-individual {
+	width: 50px;
+	height: 50px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	border-radius: 4px;
+	background-color: rgb(251, 54, 54);
+	color: #fff;
+	transition: .33s;
+}
+
+.btn-deletar-individual:hover {
+	background-color: rgb(221, 36, 36);
+}
+
+.btn-visualizar-individual {
+	width: 50px;
+	height: 50px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	border-radius: 4px;
+	background-color: #034e78;
+	color: #fff;
+	transition: .33s;
+}
+
+.btn-visualizar-individual:hover {
+	background-color: #016090;
+}
+
+table.list tbody tr:hover td a:not(.button) { color:#272727; }
 
 /* Lido */
 table.list tbody tr td span.lido { color:#3c499d; }
