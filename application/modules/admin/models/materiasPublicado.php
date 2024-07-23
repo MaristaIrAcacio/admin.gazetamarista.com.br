@@ -50,6 +50,9 @@ class Admin_Model_MateriasPublicado extends gazetamarista_Db_Table {
 	 */
 	public function init() {
 		// Adiciona os campos ao model
+		$this->setCampo("imagem_desktop", "Imagem de Capa da Notícia - Desktop");
+		$this->setCampo("imagem_mobile", "Imagem de Capa da Notícia - Mobile");
+
 		$this->setCampo("titulo", "Título da notícia");
 		$this->setCampo("subtitulo", "Subtítulo");
 		$this->setCampo("lide", "Lide da Notícia");
@@ -73,6 +76,9 @@ class Admin_Model_MateriasPublicado extends gazetamarista_Db_Table {
 		$this->setDescription("titulo");
 
 		// Seta visibilidade dos campos
+		$this->setVisibility("imagem_desktop", TRUE, TRUE, FALSE, FALSE);
+		$this->setVisibility("imagem_mobile", TRUE, TRUE, FALSE, FALSE);
+
 		$this->setVisibility("titulo", TRUE, TRUE, TRUE, TRUE);
 		$this->setVisibility("subtitulo", TRUE, TRUE, FALSE, FALSE);
 		$this->setVisibility("lide", TRUE, TRUE, FALSE, FALSE, FALSE, array('data-ckeditor' => ''));
@@ -95,6 +101,21 @@ class Admin_Model_MateriasPublicado extends gazetamarista_Db_Table {
 		$this->setAutocomplete("categoriaId", "Admin_Model_MateriasCategoria");
 		$this->setAutocomplete("colaboradorId", "Admin_Model_Usuarios");	
 		
+		// Seta os Modificadores
+		$this->setModifier("imagem_desktop", array(
+			'type' => "file",
+			'preview' => "common/uploads/materias",
+			'destination' => APPLICATION_PATH . "/../common/uploads/materias",
+            'extension' => array('jpg', 'jpeg', 'png')
+		));
+
+		$this->setModifier("imagem_mobile", array(
+			'type' => "file",
+			'preview' => "common/uploads/materias",
+			'destination' => APPLICATION_PATH . "/../common/uploads/materias",
+            'extension' => array('jpg', 'jpeg', 'png')
+		));
+
 		// Continua o carregamento do model
 		parent::init();
 	}

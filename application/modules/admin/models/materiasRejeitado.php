@@ -42,7 +42,7 @@ class Admin_Model_MateriasRejeitado extends gazetamarista_Db_Table {
 	 * @var string
 	 */
 	protected $_somenteView = false;
-	
+
 	/**
 	 * Inicializa o model
 	 * 
@@ -52,6 +52,9 @@ class Admin_Model_MateriasRejeitado extends gazetamarista_Db_Table {
 		// Adiciona os campos ao model
 
 		$this->setCampo("apontamentos", "Apontamentos");
+
+		$this->setCampo("imagem_desktop", "Imagem de Capa da Notícia - Desktop");
+		$this->setCampo("imagem_mobile", "Imagem de Capa da Notícia - Mobile");
 
 		$this->setCampo("titulo", "Título da notícia");
 		$this->setCampo("subtitulo", "Subtítulo");
@@ -77,6 +80,9 @@ class Admin_Model_MateriasRejeitado extends gazetamarista_Db_Table {
 
 		$this->setVisibility("apontamentos", FALSE, FALSE, FALSE, FALSE);
 
+		$this->setVisibility("imagem_desktop", TRUE, TRUE, FALSE, FALSE);
+		$this->setVisibility("imagem_mobile", TRUE, TRUE, FALSE, FALSE);
+
 		$this->setVisibility("titulo", TRUE, TRUE, TRUE, TRUE);
 		$this->setVisibility("subtitulo", TRUE, TRUE, FALSE, FALSE);
 		$this->setVisibility("lide", TRUE, TRUE, FALSE, FALSE, FALSE, array('data-ckeditor' => ''));
@@ -100,6 +106,21 @@ class Admin_Model_MateriasRejeitado extends gazetamarista_Db_Table {
 		$this->setAutocomplete("autorId", "Admin_Model_Usuarios");
 		$this->setAutocomplete("colaboradorId", "Admin_Model_Usuarios");	
 		
+		// Seta os Modificadores
+		$this->setModifier("imagem_desktop", array(
+			'type' => "file",
+			'preview' => "common/uploads/materias",
+			'destination' => APPLICATION_PATH . "/../common/uploads/materias",
+            'extension' => array('jpg', 'jpeg', 'png')
+		));
+
+		$this->setModifier("imagem_mobile", array(
+			'type' => "file",
+			'preview' => "common/uploads/materias",
+			'destination' => APPLICATION_PATH . "/../common/uploads/materias",
+            'extension' => array('jpg', 'jpeg', 'png')
+		));
+
 		// Continua o carregamento do model
 		parent::init();
 	}

@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.36, created on 2024-07-23 08:08:09
+/* Smarty version 3.1.36, created on 2024-07-23 09:32:32
   from 'c:\xampp-7.4\htdocs\admin.gazetamarista.com.br\application\modules\admin\views\materiasrejeitado\list.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.36',
-  'unifunc' => 'content_669f8f19043905_05591446',
+  'unifunc' => 'content_669fa2e02ac1d9_06043667',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     'b09e99ad0bcb4499662348cf7b57e9cfcba97601' => 
     array (
       0 => 'c:\\xampp-7.4\\htdocs\\admin.gazetamarista.com.br\\application\\modules\\admin\\views\\materiasrejeitado\\list.tpl',
-      1 => 1721730710,
+      1 => 1721737951,
       2 => 'file',
     ),
   ),
@@ -20,47 +20,12 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_669f8f19043905_05591446 (Smarty_Internal_Template $_smarty_tpl) {
+function content_669fa2e02ac1d9_06043667 (Smarty_Internal_Template $_smarty_tpl) {
 $_smarty_tpl->_checkPlugins(array(0=>array('file'=>'C:\\xampp-7.4\\htdocs\\admin.gazetamarista.com.br\\library\\gazetamarista\\Library\\Smarty\\plugins\\modifier.truncate.php','function'=>'smarty_modifier_truncate',),));
 ?>
 <div class="row">	
 	<div class="small-12 columns buttons-bar">
 		<ul class="stack-for-small button-group">
-			<?php $_smarty_tpl->_assignInScope('url', $_smarty_tpl->tpl_vars['this']->value->CreateUrl("form",NULL,NULL,array()));?>
-			<?php if (count($_smarty_tpl->tpl_vars['paginator']->value) > 0) {?>
-				<?php if ($_smarty_tpl->tpl_vars['esconderBtnVisualizar']->value != true) {?>
-					<li>
-						<a href="javascript:void(0);" class="button btn-view secondary">
-							<i class="mdi mdi-eye"></i> Visualizar
-						</a>
-					</li>
-				<?php }?>
-			
-				<?php $_smarty_tpl->_assignInScope('urldata', ((($_smarty_tpl->tpl_vars['this']->value->CreateUrl("delete",NULL,NULL,array())).('/')).($_smarty_tpl->tpl_vars['primary']->value)).('/'));?>
-				<?php if ($_smarty_tpl->tpl_vars['_permitidoExcluir']->value) {?>
-					<?php if ($_smarty_tpl->tpl_vars['esconderBtnRemover']->value != true) {?>
-						<li>
-							<a href="<?php echo utf8_encode($_smarty_tpl->tpl_vars['urldata']->value);?>
-" class="button btn-remove alert">
-								<i class="mdi mdi-delete"></i> Remover
-							</a>
-						</li>
-					<?php }?>
-				<?php }?>
-			<?php }?>
-
-			<?php if (count($_smarty_tpl->tpl_vars['paginator']->value) > 0) {?>
-				<?php if ($_smarty_tpl->tpl_vars['gerarxls']->value !== false) {?>
-					<li class="exportxls">
-						<a href="<?php echo $_smarty_tpl->tpl_vars['this']->value->url(array('module'=>'admin','controller'=>$_smarty_tpl->tpl_vars['controller']->value,'action'=>'exportarxls'),'default',TRUE);
-echo $_smarty_tpl->tpl_vars['filtrosParam']->value;?>
-" target="_blank" class="button">
-							<i class="mdi mdi-file-excel"></i> Exportar lista (xls)
-						</a>
-					</li>
-				<?php }?>
-			<?php }?>
-
 			<?php if ($_smarty_tpl->tpl_vars['esconderBtnFiltrar']->value != true) {?>
 				<li class="btn-filtro">
 					<a class="button " data-reveal-id="filtros">
@@ -68,7 +33,6 @@ echo $_smarty_tpl->tpl_vars['filtrosParam']->value;?>
 					</a>
 				</li>
 			<?php }?>
-
 		</ul>
 	</div>
 	
@@ -230,15 +194,6 @@ $_smarty_tpl->smarty->ext->_foreach->restore($_smarty_tpl, 1);?>
 								<td class="coluna-acoes" >
 									<a href="<?php echo $_smarty_tpl->tpl_vars['urlimprimir']->value;?>
 " target="_blank" title="Visualizar"><i class="mdi mdi-printer btn-visualizar-individual"></i> </a>
-
-									<?php $_smarty_tpl->_assignInScope('urlexcluirindividual', ((($_smarty_tpl->tpl_vars['this']->value->CreateUrl("delete",NULL,NULL,array())).('/')).($_smarty_tpl->tpl_vars['primary']->value)).('/'));?>
-									<?php if ($_smarty_tpl->tpl_vars['_permitidoExcluir']->value) {?>
-										<?php if ($_smarty_tpl->tpl_vars['esconderBtnRemover']->value != true) {?>
-											<a href="<?php echo utf8_encode($_smarty_tpl->tpl_vars['urlexcluirindividual']->value);?>
-" class="btn-remove-invidual" title="Excluir" data-id="<?php echo $_smarty_tpl->tpl_vars['row']->value[$_smarty_tpl->tpl_vars['primary']->value];?>
-"><i class="mdi mdi-trash-can-outline btn-deletar-individual"></i></a>
-										<?php }?>
-									<?php }?>
 								</td>
 							</tr>
 						<?php
