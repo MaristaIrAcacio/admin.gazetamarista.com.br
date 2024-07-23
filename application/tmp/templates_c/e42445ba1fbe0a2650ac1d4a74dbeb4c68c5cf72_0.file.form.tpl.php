@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.36, created on 2024-07-21 20:29:17
+/* Smarty version 3.1.36, created on 2024-07-21 21:11:51
   from 'c:\xampp-7.4\htdocs\admin.gazetamarista.com.br\application\modules\admin\views\materiasrejeitado\form.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.36',
-  'unifunc' => 'content_669d99cda0d254_15666197',
+  'unifunc' => 'content_669da3c7cb89c6_19349760',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     'e42445ba1fbe0a2650ac1d4a74dbeb4c68c5cf72' => 
     array (
       0 => 'c:\\xampp-7.4\\htdocs\\admin.gazetamarista.com.br\\application\\modules\\admin\\views\\materiasrejeitado\\form.tpl',
-      1 => 1721604556,
+      1 => 1721604579,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_669d99cda0d254_15666197 (Smarty_Internal_Template $_smarty_tpl) {
+function content_669da3c7cb89c6_19349760 (Smarty_Internal_Template $_smarty_tpl) {
 ?><div class="row">
 	<div class="small-12 columns buttons-bar">
 		<ul class="stack-for-small button-group">
@@ -32,7 +32,7 @@ function content_669d99cda0d254_15666197 (Smarty_Internal_Template $_smarty_tpl)
 			</li>
 			<li>
 				<button id="salvarComoRascunho" style="display: flex;gap: 10px; align-items: center;" form="form_admin" type="submit" name="submit" onclick="$('#'+this.getAttribute('form')).submit();">
-					<span class="mdi mdi-content-save"></span>Enviar Para Aprovação
+					<span class="mdi mdi-bookmark-check"></span>Enviar Para Aprovação
 				</button>
 			</li>
 		</ul>
