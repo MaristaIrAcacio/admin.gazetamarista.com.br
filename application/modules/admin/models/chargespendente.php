@@ -50,8 +50,8 @@ class Admin_Model_Chargespendente extends gazetamarista_Db_Table {
 	 */
 	public function init() {
 		// Adiciona os campos ao model
-		$this->setCampo("titulo", "Título", "*Obrigatório");
-		$this->setCampo("descricao", "Descrição");
+		$this->setCampo("titulo", "Título", "Será usado no SEO da charge");
+		$this->setCampo("descricao", "Descrição", "Será usado no SEO da charge");
 		$this->setCampo("imagem", "Charge", "[.png .jpg.]");
 		$this->setCampo("autorId", "");
 		$this->setCampo("colaborador1Id", "Colaborador 1");

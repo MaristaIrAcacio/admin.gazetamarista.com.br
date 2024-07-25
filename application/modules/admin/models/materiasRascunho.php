@@ -59,8 +59,8 @@ class Admin_Model_MateriasRascunho extends gazetamarista_Db_Table {
 		$this->setCampo("autorId", "Autor");
 		$this->setCampo("colaboradorId", "Colaborador");
 
-		$this->setCampo("titulo", "Título da notícia");
-		$this->setCampo("subtitulo", "Subtítulo");
+		$this->setCampo("titulo", "Título da notícia", "Será usado no SEO da matéria");
+		$this->setCampo("subtitulo", "Subtítulo", "Será usado no SEO da matéria");
 		$this->setCampo("lide", "Lide da Notícia");
 		$this->setCampo("texto", "Corpo do Texto");
 
