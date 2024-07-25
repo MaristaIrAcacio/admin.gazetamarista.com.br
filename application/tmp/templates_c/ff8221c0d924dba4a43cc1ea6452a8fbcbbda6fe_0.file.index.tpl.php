@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.36, created on 2024-07-23 08:29:29
+/* Smarty version 3.1.36, created on 2024-07-24 21:03:42
   from 'c:\xampp-7.4\htdocs\admin.gazetamarista.com.br\application\modules\admin\views\index\index.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.36',
-  'unifunc' => 'content_669f9419303a54_42436325',
+  'unifunc' => 'content_66a1965e07fc66_08743716',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     'ff8221c0d924dba4a43cc1ea6452a8fbcbbda6fe' => 
     array (
       0 => 'c:\\xampp-7.4\\htdocs\\admin.gazetamarista.com.br\\application\\modules\\admin\\views\\index\\index.tpl',
-      1 => 1721644562,
+      1 => 1721436883,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_669f9419303a54_42436325 (Smarty_Internal_Template $_smarty_tpl) {
+function content_66a1965e07fc66_08743716 (Smarty_Internal_Template $_smarty_tpl) {
 if ($_smarty_tpl->tpl_vars['logged_usuario']->value['idperfil'] > 2) {?>
 	<div class="row" id="container">
 			</div>

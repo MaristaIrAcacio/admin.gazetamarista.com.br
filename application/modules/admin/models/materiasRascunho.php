@@ -55,14 +55,14 @@ class Admin_Model_MateriasRascunho extends gazetamarista_Db_Table {
 		$this->setCampo("imagem_desktop", "Imagem de Capa da Notícia - Desktop");
 		$this->setCampo("imagem_mobile", "Imagem de Capa da Notícia - Mobile");
 
+		$this->setCampo("categoriaId", "Categoria da Notícia");
+		$this->setCampo("autorId", "Autor");
+		$this->setCampo("colaboradorId", "Colaborador");
+
 		$this->setCampo("titulo", "Título da notícia");
 		$this->setCampo("subtitulo", "Subtítulo");
 		$this->setCampo("lide", "Lide da Notícia");
 		$this->setCampo("texto", "Corpo do Texto");
-
-		$this->setCampo("categoriaId", "Categoria da Notícia");
-		$this->setCampo("autorId", "Autor");
-		$this->setCampo("colaboradorId", "Colaborador");
 
 		$this->setCampo("status", "Status da Notícia");
 		$this->setCampo("apontamentos", "Apontamentos");
@@ -81,15 +81,15 @@ class Admin_Model_MateriasRascunho extends gazetamarista_Db_Table {
 		$this->setVisibility("imagem_desktop", TRUE, TRUE, FALSE, FALSE);
 		$this->setVisibility("imagem_mobile", TRUE, TRUE, FALSE, FALSE);
 
+		$this->setVisibility("categoriaId", TRUE, TRUE, FALSE, FALSE);
+		$this->setVisibility("autorId", FALSE, FALSE, FALSE, FALSE);
+		$this->setVisibility("colaboradorId", TRUE, TRUE, FALSE, FALSE);
+
 		$this->setVisibility("isRascunho", TRUE, TRUE, FALSE, FALSE);
 		$this->setVisibility("titulo", TRUE, TRUE, FALSE, TRUE);
 		$this->setVisibility("subtitulo", TRUE, TRUE, FALSE, FALSE);
 		$this->setVisibility("lide", TRUE, TRUE, FALSE, FALSE, FALSE, array('data-ckeditor' => ''));
 		$this->setVisibility("texto", TRUE, TRUE, FALSE, FALSE, FALSE, array('data-ckeditor' => ''));
-
-		$this->setVisibility("categoriaId", TRUE, TRUE, FALSE, FALSE);
-		$this->setVisibility("autorId", FALSE, FALSE, FALSE, FALSE);
-		$this->setVisibility("colaboradorId", TRUE, TRUE, FALSE, FALSE);
 
 		$this->setVisibility("status", FALSE, FALSE, FALSE, FALSE);
 		$this->setVisibility("apontamentos", FALSE, FALSE, FALSE, FALSE);

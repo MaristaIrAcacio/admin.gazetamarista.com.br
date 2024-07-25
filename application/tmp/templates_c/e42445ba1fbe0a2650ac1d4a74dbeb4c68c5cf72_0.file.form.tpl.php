@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.36, created on 2024-07-23 09:32:03
+/* Smarty version 3.1.36, created on 2024-07-24 20:45:35
   from 'c:\xampp-7.4\htdocs\admin.gazetamarista.com.br\application\modules\admin\views\materiasrejeitado\form.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.36',
-  'unifunc' => 'content_669fa2c3f28287_12396201',
+  'unifunc' => 'content_66a1921f6a51d2_42883363',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     'e42445ba1fbe0a2650ac1d4a74dbeb4c68c5cf72' => 
     array (
       0 => 'c:\\xampp-7.4\\htdocs\\admin.gazetamarista.com.br\\application\\modules\\admin\\views\\materiasrejeitado\\form.tpl',
-      1 => 1721733228,
+      1 => 1721778715,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_669fa2c3f28287_12396201 (Smarty_Internal_Template $_smarty_tpl) {
+function content_66a1921f6a51d2_42883363 (Smarty_Internal_Template $_smarty_tpl) {
 ?><div class="row">
 	<div class="small-12 columns buttons-bar">
 		<ul class="stack-for-small button-group">
