@@ -3,15 +3,15 @@
 /**
  * Controlador
  *
- * @name Admin_MateriaspendenteController
+ * @name Admin_MateriasController
  */
-class Admin_MateriaspendenteController extends gazetamarista_Controller_Action {
+class Admin_ChargespendenteController extends gazetamarista_Controller_Action {
 	/**
 	 * Armazena o model padrão da tela
 	 *
 	 * @access protected
 	 * @name $_model
-	 * @var Admin_Model_MateriasPendente
+	 * @var Admin_Model_Chargespendente
 	 */
 	protected $_model = NULL;
 
@@ -22,7 +22,7 @@ class Admin_MateriaspendenteController extends gazetamarista_Controller_Action {
 	 */
 	public function init() {
 		// Inicializa o model da tela
-		$this->_model = new Admin_Model_MateriasPendente();
+		$this->_model = new Admin_Model_Chargespendente();
 		$this->session = new Zend_Session_Namespace("loginadmin");
 		
 		// Continua o carregamento do controlador
@@ -40,10 +40,9 @@ class Admin_MateriaspendenteController extends gazetamarista_Controller_Action {
 
 		// Monta a query
 		$select
-			->where("status = ?", "pendente")
-			->order("atualizadoEm DESC");
+			->where('status = ?', "pendente")
+			->order("titulo ASC");
 
-		// Continua a execução
 		return $select;
 	}
 
@@ -87,6 +86,7 @@ class Admin_MateriaspendenteController extends gazetamarista_Controller_Action {
 		// Retorna os dados
 		return $data;
 	}
+
 
 
 }

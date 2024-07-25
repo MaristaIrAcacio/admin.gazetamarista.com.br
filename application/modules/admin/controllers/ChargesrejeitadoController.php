@@ -3,15 +3,15 @@
 /**
  * Controlador
  *
- * @name Admin_MateriaspendenteController
+ * @name Admin_MateriasrejeitadoController
  */
-class Admin_MateriaspendenteController extends gazetamarista_Controller_Action {
+class Admin_ChargesrejeitadoController extends gazetamarista_Controller_Action {
 	/**
 	 * Armazena o model padrão da tela
 	 *
 	 * @access protected
 	 * @name $_model
-	 * @var Admin_Model_MateriasPendente
+	 * @var Admin_Model_Chargesrejeitado
 	 */
 	protected $_model = NULL;
 
@@ -22,7 +22,7 @@ class Admin_MateriaspendenteController extends gazetamarista_Controller_Action {
 	 */
 	public function init() {
 		// Inicializa o model da tela
-		$this->_model = new Admin_Model_MateriasPendente();
+		$this->_model = new Admin_Model_Chargesrejeitado();
 		$this->session = new Zend_Session_Namespace("loginadmin");
 		
 		// Continua o carregamento do controlador
@@ -38,38 +38,18 @@ class Admin_MateriaspendenteController extends gazetamarista_Controller_Action {
 	 */
 	public function doBeforeList($select) {
 
+		// Resgata o id do usuário da session
+		$id = $this->session->logged_usuario['idusuario'];
+
 		// Monta a query
 		$select
-			->where("status = ?", "pendente")
+			// Busca apenas as matérias com os status "Rejeitado"
+			->where("status = ?", "rejeitado")
+			->where("autorId = ?", $id)
 			->order("atualizadoEm DESC");
 
 		// Continua a execução
 		return $select;
-	}
-
-	/**
-	 * Hook para a edição do usuário
-	 * 
-	 * @name doBeforeUpdate
-	 * @param array $data Valores à serem editados
-	 */
-	public function doBeforeUpdate($data) {
-		
-		$apontamentos       = $this->_request->getParam("apontamentos", "");
-
-		if ($apontamentos && !empty($apontamentos)) {
-			$data['apontamentos'] = $_POST['apontamentos'];
-			$data['status'] = "rejeitado";
-		} else {
-			// Altera para publicada a notícia
-			$data['status'] = "publicado";
-
-			// Salva a hora da publicação
-			$data['dataPublicacao'] = date('Y-m-d H:i:s');
-		};
-
-		// Retorna os dados para o framework
-		return $data;
 	}
 
 	/**
@@ -85,6 +65,21 @@ class Admin_MateriaspendenteController extends gazetamarista_Controller_Action {
 		$this->view->apontamentos = $data['apontamentos'];
 
 		// Retorna os dados
+		return $data;
+	}
+
+	/**
+	 * Hook para a edição do usuário
+	 * 
+	 * @name doBeforeUpdate
+	 * @param array $data Valores à serem editados
+	 */
+	public function doBeforeUpdate($data) {
+
+		// Troca os status para pendete novamente
+		$data['status'] = "pendente";
+
+		// Retorna os dados para o framework
 		return $data;
 	}
 
