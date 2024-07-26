@@ -967,6 +967,18 @@ table.list tbody tr td.coluna-acoes ul a i{
 	background-color: #016090;
 }
 
+::-webkit-scrollbar-track {
+    background-color: #F4F4F4;
+}
+::-webkit-scrollbar {
+    width: 12px;
+    background: #F4F4F4;
+}
+::-webkit-scrollbar-thumb {
+    background: #034e78;
+	border-radius: 100px;
+}
+
 table.list tbody tr:hover td a:not(.button) { color:#272727; }
 
 /* Lido */
