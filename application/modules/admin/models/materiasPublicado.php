@@ -41,7 +41,7 @@ class Admin_Model_MateriasPublicado extends gazetamarista_Db_Table {
 	 * @name $_somenteview
 	 * @var string
 	 */
-	protected $_somenteView = false;
+	protected $_somenteView = true;
 	
 	/**
 	 * Inicializa o model
