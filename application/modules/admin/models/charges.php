@@ -14,7 +14,7 @@ class Admin_Model_Charges extends gazetamarista_Db_Table {
 	 * @name $_name
 	 * @var string
 	 */
-	protected $_name = "charges";
+	protected $_name = "gm_charges";
 
 	/**
 	 * Armazena o nome do campo da tabela primaria

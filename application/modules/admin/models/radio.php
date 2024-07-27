@@ -14,7 +14,7 @@ class Admin_Model_Radio extends gazetamarista_Db_Table {
      * @name $_name
      * @var string
      */
-    protected $_name = "programacaoradio";
+    protected $_name = "gm_programacaoradio";
 
     /**
      * Armazena o nome do campo da tabela primaria

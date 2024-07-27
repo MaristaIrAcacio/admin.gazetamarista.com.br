@@ -14,7 +14,7 @@ class Admin_Model_Erros extends gazetamarista_Db_Table {
 	 * @name $_name
 	 * @var string
 	 */
-	protected $_name = "erros";
+	protected $_name = "gm_erros";
 
 	/**
 	 * Armazena o nome do campo da tabela primaria

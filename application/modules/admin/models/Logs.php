@@ -14,7 +14,7 @@ class Admin_Model_Logs extends gazetamarista_Db_Table {
 	 * @name $_name
 	 * @var string
 	 */
-	protected $_name = "logs";
+	protected $_name = "gm_logs";
 
 	/**
 	 * Armazena o nome do campo da tabela primaria

@@ -1,11 +1,11 @@
 <?php
-/* Smarty version 3.1.36, created on 2024-07-26 23:09:48
+/* Smarty version 3.1.36, created on 2024-07-27 10:06:10
   from 'c:\xampp-7.4\htdocs\admin.gazetamarista.com.br\application\layouts\breadcrumbs.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.36',
-  'unifunc' => 'content_66a456ec433147_00934195',
+  'unifunc' => 'content_66a4f0c2c40157_76584142',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_66a456ec433147_00934195 (Smarty_Internal_Template $_smarty_tpl) {
+function content_66a4f0c2c40157_76584142 (Smarty_Internal_Template $_smarty_tpl) {
 $_smarty_tpl->_checkPlugins(array(0=>array('file'=>'C:\\xampp-7.4\\htdocs\\admin.gazetamarista.com.br\\library\\gazetamarista\\Library\\Smarty\\plugins\\modifier.replace.php','function'=>'smarty_modifier_replace',),));
 ?>
 <ul class="breadcrumbs">

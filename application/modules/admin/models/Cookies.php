@@ -14,7 +14,7 @@ class Admin_Model_Cookies extends gazetamarista_Db_Table {
 	 * @name $_name
 	 * @var string
 	 */
-	protected $_name = "cookies";
+	protected $_name = "gm_cookies";
 
 	/**
 	 * Armazena o nome do campo da tabela primaria

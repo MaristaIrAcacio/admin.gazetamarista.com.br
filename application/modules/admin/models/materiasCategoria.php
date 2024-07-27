@@ -14,7 +14,7 @@ class Admin_Model_MateriasCategoria extends gazetamarista_Db_Table {
 	 * @name $_name
 	 * @var string
 	 */
-	protected $_name = "categorias";
+	protected $_name = "gm_categorias";
 
 	/**
 	 * Armazena o nome do campo da tabela primaria
