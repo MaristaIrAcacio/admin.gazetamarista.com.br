@@ -988,6 +988,12 @@ table.list tbody tr:hover td span.lido { color:#919ad5; }
 table.list tbody tr:hover td span.naolido { color:#e63d33; }
 /* Lido */
 
+.line-drawing {
+	fill: none;
+	stroke: #ffffff;
+	stroke-width: 2;
+}
+
 /* Destaque */
 table.list.destaque thead tr { cursor:pointer; background:#0082ca; color:#fff; }
 table.list.destaque thead tr th { color:#fff; }

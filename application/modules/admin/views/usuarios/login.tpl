@@ -94,7 +94,7 @@
 	
 	<body>
 		<main id="site-corpo" class="pagina-{$currentAction}">
-			<div class="small-12 medium-4 large-4 columns formulario">
+			{* <div class="small-12 medium-4 large-4 columns formulario">
 				<div class="box">
 					<div class="image">
 						<img src="{$basePath}/common/admin/images/logos/logo-marista.png" alt="">
@@ -113,7 +113,42 @@
 						</div>
 					</form>
 				</div>
-			</div>
+			</div> *}
+
+			<section class="ftco-section">
+				<div class="container">
+					<div class="row justify-content-center">
+						<div class="col-md-12 col-lg-10">
+							<div class="wrap d-md-flex">
+								{assign var="path" value="{$basePath}/common/admin/images/tres-coisas-que-para-ser-redator-voce-tem-que-gostar.png"}
+								<div class="img" style="background-image: url({$path});">
+						  </div>
+								<div class="login-wrap p-4 p-md-5">
+							  <div class="d-flex">
+								  <div class="w-100">
+									<div class="image">
+										<img width="60px" height="60px" src="{$basePath}/common/admin/images/logos/logo-marista.png" alt="">
+									</div>
+									<form enctype="application/x-www-form-urlencoded" action="{$this->CreateUrl('login', 'usuarios', 'admin', [], TRUE)}" method="post" data-abide class="signin-form">
+								  <div class="form-group mb-3">
+									  <label class="label" for="name">Usuário</label>
+									  <input type="text"  name="login" id="login" class="form-control" placeholder="Username" required>
+								  </div>
+							<div class="form-group mb-3">
+								<label class="label" for="password">Senha</label>
+							  	<input type="password" name="senha" id="senha" class="form-control" placeholder="Password" required>
+							</div>
+							<div class="form-group">
+								<button type="submit" class="form-control btn btn-primary rounded submit px-3">Acessar Painel</button>
+							</div>
+						  </form>
+						  <p class="text-center">Não é um membro do Projeto Conexão? <a href="#">Carla Raveneda</a></p>
+						</div>
+					  </div>
+						</div>
+					</div>
+				</div>
+			</section>
 		</main>
 
 		{$this->headScript()}
