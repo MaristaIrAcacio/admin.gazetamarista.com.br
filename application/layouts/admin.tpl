@@ -86,10 +86,7 @@
 							{$this->navigation()->menu()}
 
 							<div class="btnsPrincipais">
-								<a class="BtnLogout" href="{$this->url(['module'=>'admin', 'controller'=>'usuarios', 'action'=>'logout'], 'default', TRUE)}">
-									<span class="mdi mdi-logout-variant"></span>
-									<span>Sair</span>
-								</a>
+								<a class="BtnLogout" href="{$this->url(['module'=>'admin', 'controller'=>'usuarios', 'action'=>'logout'], 'default', TRUE)}">Sair</a>
 							</div>
 
 						</div>
@@ -119,10 +116,8 @@
 								<div class="row sub_header" >
 									<div class="small-12 columns">
 										<ul class="breadcrumbs">
-											<li class="unavailable">Dashboard</li>
+											<li class="unavailable">Dashboard | Jornal e Rádio</li>
 										</ul>
-										<h2 style="text-transform: capitalize;">Dashboard</h2>
-
 									</div>
 								</div>
 							{/if}

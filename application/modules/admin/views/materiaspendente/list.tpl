@@ -2,36 +2,6 @@
 	<div class="small-12 columns buttons-bar">
 		<ul class="stack-for-small button-group">
 			{assign var="url" value=$this->CreateUrl("form", NULL, NULL, [])}
-			{if $somenteview != true}
-				{if $esconderBtnNovo != true}
-					<li>
-						<a href="{$url}" class="button btn-new">
-							<i class="mdi mdi-plus-circle-outline"></i> Novo
-						</a>
-					</li>
-				{/if}
-			{/if}
-			{if $paginator|count > 0}
-				{if $esconderBtnVisualizar != true}
-					<li>
-						<a href="javascript:void(0);" class="button btn-view secondary">
-							<i class="mdi mdi-eye"></i> Visualizar
-						</a>
-					</li>
-				{/if}
-			
-				{assign var="urldata" value=$this->CreateUrl("delete", NULL, NULL, [])|cat:'/'|cat:$primary|cat:'/'}
-				{if $_permitidoExcluir}
-					{if $esconderBtnRemover != true}
-						<li>
-							<a href="{$urldata|utf8_encode}" class="button btn-remove alert">
-								<i class="mdi mdi-delete"></i> Remover
-							</a>
-						</li>
-					{/if}
-				{/if}
-			{/if}
-
 			{if $paginator|count > 0}
 				{if $gerarxls !== false}
 					<li class="exportxls">
@@ -150,8 +120,6 @@
 								{/foreach}
 
 								<td class="coluna-acoes" >
-									<a href="{$urlimprimir}" target="_blank" title="Visualizar"><i class="mdi mdi-printer btn-visualizar-individual"></i> </a>
-
 									{assign var="urlexcluirindividual" value=$this->CreateUrl("delete", NULL, NULL, [])|cat:'/'|cat:$primary|cat:'/'}
 									{if $_permitidoExcluir}
 										{if $esconderBtnRemover != true}

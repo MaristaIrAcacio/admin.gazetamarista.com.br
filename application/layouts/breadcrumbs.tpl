@@ -1,6 +1,6 @@
 <ul class="breadcrumbs">
     <li>
-    	<a href="{$this->url(['module'=>'admin', 'controller'=>'index', 'action'=>'index'], 'default', TRUE)}">Dashboard</a>
+    	<a href="{$this->url(['module'=>'admin', 'controller'=>'index', 'action'=>'index'], 'default', TRUE)}">Painel Admin</a>
     </li>
 
 	{if $this->pages|count > 0}

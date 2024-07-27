@@ -340,43 +340,29 @@ ul.off-canvas-list > li ul li.active > a:before { content: ''; width:5px; height
 
 .btnsPrincipais{
 	position: absolute;
-	bottom: 23px;
-	width: 100%;
-	height: 70px;
+	bottom: 10px;
+	margin-left: 1px;
 }
 
 .BtnLogout {
-	position: relative;
-	background: #e63e33;
-	border-radius: 3px;
-	height: 35px;
-	float: left;
-	font-size: 24px;
-	padding: 10px 20px;
-	line-height: 26px;
-	display: flex;
-	align-items: center;
-	gap: 10px;
+	width: fit-content;
+	background-color: #e24a35;
+	padding: 3px 20px;
+	border-radius: 2px;
 }
 
-.BtnLogout:hover{
-	background: #e83618 !important;
+.BtnLogout:hover {
+	background-color: #b73423;
 }
 
-.BtnLogout span {
-	color: #fff;
+.BtnLogout {
 	font-size: 18px;
-	line-height: 20px;
+	font-weight: 00;
+	color: #fff;
 }
 
-.BtnLogout:nth-child(2) {
-	margin-bottom: 10px;
-}
-
-.BtnLogout i{
-	float: left;
-	font-size: 14px;
-	line-height: 0px;
+.BtnLogout:hover {
+	color: #fff;
 }
 
 .BtnSettings{
@@ -524,7 +510,7 @@ input[type="text"][aria-invalid="true"], input[type="password"][aria-invalid="tr
 }
 
 input[type="text"][aria-invalid="false"], input[type="password"][aria-invalid="false"], input[type="date"][aria-invalid="false"], input[type="datetime"][aria-invalid="false"], input[type="datetime-local"][aria-invalid="false"], input[type="month"][aria-invalid="false"], input[type="week"][aria-invalid="false"], input[type="email"][aria-invalid="false"], input[type="number"][aria-invalid="false"], input[type="search"][aria-invalid="false"], input[type="tel"][aria-invalid="false"], input[type="time"][aria-invalid="false"], input[type="url"][aria-invalid="false"], input[type="color"][aria-invalid="false"], textarea[aria-invalid="false"]{
-	background-color:#f2fff6;
+	background-color:#7eccf920;
 	border-color: #a8b9af !important;
 }
 
