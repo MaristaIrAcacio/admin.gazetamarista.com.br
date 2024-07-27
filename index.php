@@ -45,7 +45,7 @@ error_reporting(E_ALL & ~E_WARNING & ~E_NOTICE & ~E_STRICT);
 // This constant defines the path to the application directory, which contains
 // the main application code.
 // -----------------------------------------------------------------------------
-defined("APPLICATION_PATH") || define("APPLICATION_PATH", dirname(__FILE__) . "/application");
+defined("APPLICATION_PATH") || define("APPLICATION_PATH", dirname(__FILE__) . "/src");
 
 // -----------------------------------------------------------------------------
 // Define the application environment.
@@ -78,7 +78,7 @@ require_once("utils/gazetamarista/_helpers.php");
 // -----------------------------------------------------------------------------
 $application = new gazetamarista_Application(
     APPLICATION_ENV,
-    APPLICATION_PATH . "/configs/application.ini"
+    APPLICATION_PATH . "/configs/custom_config.ini"
 );
 
 $application->bootstrap()->run();

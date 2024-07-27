@@ -24,7 +24,7 @@ class gazetamarista_Controller_Plugin_Metas extends Zend_Controller_Plugin_Abstr
 		
 		// Busca as informações das metas
 		try {
-			$metas = new Zend_Config_Ini(APPLICATION_PATH . "/configs/metas.ini", $module . "|" . $controller);
+			$metas = new Zend_Config_Ini(APPLICATION_PATH . "/configs/SEO.ini", $module . "|" . $controller);
 		}
 		catch(Exception $e) {
 			return FALSE;

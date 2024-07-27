@@ -159,13 +159,13 @@ class Zend_Tool_Project_Provider_Module
                 $resource->create();
             }
 
-            $response->appendContent('Added a key for path module directory to the application.ini file');
+            $response->appendContent('Added a key for path module directory to the custom_config file');
             $appConfigFile = $this->_loadedProfile->search('ApplicationConfigFile');
             $appConfigFile->removeStringItem('resources.frontController.moduleDirectory', 'production');
             $appConfigFile->addStringItem('resources.frontController.moduleDirectory', 'APPLICATION_PATH "/modules"', 'production', false);
 
             if (strtolower($name) == 'default') {
-                $response->appendContent('Added a key for the default module to the application.ini file');
+                $response->appendContent('Added a key for the default module to the custom_config file');
                 $appConfigFile->addStringItem('resources.frontController.params.prefixDefaultModule', '1', 'production');
             }
 

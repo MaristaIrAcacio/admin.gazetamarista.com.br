@@ -116,7 +116,7 @@ class Zend_Tool_Project_Context_Zf_TestApplicationControllerFile extends Zend_To
                         new Zend_CodeGenerator_Php_Method(array(
                             'name' => 'setUp',
                             'body' => <<<EOS
-\$this->bootstrap = new Zend_Application(APPLICATION_ENV, APPLICATION_PATH . '/configs/application.ini');
+\$this->bootstrap = new Zend_Application(APPLICATION_ENV, APPLICATION_PATH . '/configs/custom_config');
 parent::setUp();
 EOS
                             ))

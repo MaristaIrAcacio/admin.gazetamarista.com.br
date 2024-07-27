@@ -42,7 +42,7 @@ class Zend_Tool_Project_Context_Zf_ApplicationConfigFile extends Zend_Tool_Proje
     /**
      * @var string
      */
-    protected $_filesystemName = 'application.ini';
+    protected $_filesystemName = 'custom_config';
 
     /**
      * @var string

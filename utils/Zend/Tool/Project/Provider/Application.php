@@ -78,7 +78,7 @@ class Zend_Tool_Project_Provider_Application
 
         // note to the user
         $response->appendContent('Note: All existing models will need to be altered to this new namespace by hand', array('color' => 'yellow'));
-        $response->appendContent('application.ini updated with new appnamespace ' . $classNamePrefix);
+        $response->appendContent('custom_config updated with new appnamespace ' . $classNamePrefix);
 
         // store profile
         $this->_storeProfile();
