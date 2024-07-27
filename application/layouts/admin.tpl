@@ -65,33 +65,6 @@
 					</div>
 				</aside>
 				<div class="row collapse">
-					<div class="medium-2 columns show-for-medium-up menu-navegacao-off-left">
-						<div class="icon-bar vertical one-up">
-
-							<a href="{$this->url(['module'=>'admin', 'controller'=>'index', 'action'=>'index'], 'default', TRUE)}" class="logo-usuario small-9 medium-5 large-6 columns left small-only-text-center title-project">
-								
-								{if $logged_usuario["avatar"]}
-									<img src="{$basePath}/common/uploads/usuarios/{$logged_usuario["avatar"]}" alt="Usuário"/>
-								{else}
-									<img src="{$basePath}/common/uploads/usuarios/default.png" alt="Usuário"/>
-								{/if}
-
-								{if $logged_usuario["nome"]}
-									<h1 class="titulo-usuario">{implode(' ', array_slice(explode(' ', $logged_usuario["nome"]), 0, 2))}</h1>
-								{else}
-									<h1 class="titulo-usuario">Usuário Anônimo</h1>
-								{/if}
-							</a>
-
-							{$this->navigation()->menu()}
-
-							<div class="btnsPrincipais">
-								<a class="BtnLogout" href="{$this->url(['module'=>'admin', 'controller'=>'usuarios', 'action'=>'logout'], 'default', TRUE)}">Sair</a>
-							</div>
-
-						</div>
-					</div>
-
 					<div class="small-12 medium-10 columns bodyFramework">
 						<header id="header-framework">
 
@@ -126,6 +99,32 @@
 						<main id="site-corpo" class="pagina-{$currentAction}">
 							{$this->layout()->content}
 						</main>
+					</div>
+					<div class="medium-2 columns show-for-medium-up menu-navegacao-off-left">
+						<div class="icon-bar vertical one-up">
+
+							<a href="{$this->url(['module'=>'admin', 'controller'=>'index', 'action'=>'index'], 'default', TRUE)}" class="logo-usuario small-9 medium-5 large-6 columns left small-only-text-center title-project">
+								
+								{if $logged_usuario["avatar"]}
+									<img src="{$basePath}/common/uploads/usuarios/{$logged_usuario["avatar"]}" alt="Usuário"/>
+								{else}
+									<img src="{$basePath}/common/uploads/usuarios/default.png" alt="Usuário"/>
+								{/if}
+
+								{if $logged_usuario["nome"]}
+									<h1 class="titulo-usuario">{implode(' ', array_slice(explode(' ', $logged_usuario["nome"]), 0, 2))}</h1>
+								{else}
+									<h1 class="titulo-usuario">Usuário Anônimo</h1>
+								{/if}
+							</a>
+
+							{$this->navigation()->menu()}
+
+							<div class="btnsPrincipais">
+								<a class="BtnLogout" href="{$this->url(['module'=>'admin', 'controller'=>'usuarios', 'action'=>'logout'], 'default', TRUE)}">Sair</a>
+							</div>
+
+						</div>
 					</div>
 				</div>
 				<a class="menu-principal-off-overlay"></a>
