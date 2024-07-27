@@ -52,12 +52,12 @@ class gazetamarista_View_Helper_Breadcrumb
     }
 
     /**
-     * Captura dados do menu_itens para exibir no breadcrumb
+     * Captura dados do gm_menuitens para exibir no breadcrumb
      * @param  [type] $campo (colunas da tabela)
      * @return [type] string
      */
     public function menuitem($campo) {
-        // Captura dados da tabela menu_itens
+        // Captura dados da tabela gm_menuitens
         $model      = new Admin_Model_Menusitens();
 
         $controller = Zend_Controller_Front::getInstance()->getRequest()->getControllerName();
@@ -72,8 +72,8 @@ class gazetamarista_View_Helper_Breadcrumb
             if(!empty($coluna)) {
                 // Select
                 $select = $model->select()
-                    ->from("menu_itens", array('*'))
-                    ->joinInner("menu_categorias", "menu_itens.idcategoria = menu_categorias.idcategoria", array('categoria' => 'descricao'))
+                    ->from("gm_menuitens", array('*'))
+                    ->joinInner("gm_menucategorias", "gm_menuitens.idcategoria = gm_menucategorias.idcategoria", array('categoria' => 'descricao'))
                     ->where("controlador = ?", $controller)
                     ->setIntegrityCheck(false);
 

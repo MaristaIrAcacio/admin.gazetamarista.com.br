@@ -3,7 +3,7 @@
 <!-- Carregar Chart.js -->
 <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 
-{if $logged_usuario['idperfil'] > 2}
+{if $logged_usuario['idperfil'] > 0}
     <div class="row" id="container">
         <div class="row-graphs">
             <section class="graph-container">

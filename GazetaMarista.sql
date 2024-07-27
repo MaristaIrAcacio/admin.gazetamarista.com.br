@@ -253,7 +253,7 @@ CREATE TABLE `gm_logs` (
   PRIMARY KEY (`idlog`) USING BTREE,
   KEY `fk_logs_usuarios1` (`idusuario`) USING BTREE,
   CONSTRAINT `fk_logs_usuarios1` FOREIGN KEY (`idusuario`) REFERENCES `usuarios` (`idusuario`)
-) ENGINE=InnoDB AUTO_INCREMENT=799 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=808 DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -262,6 +262,7 @@ CREATE TABLE `gm_logs` (
 
 LOCK TABLES `gm_logs` WRITE;
 /*!40000 ALTER TABLE `gm_logs` DISABLE KEYS */;
+INSERT INTO `gm_logs` VALUES (799,NULL,NULL,'','usuarios','',_binary '{\"idusuario\":\"14\",\"idperfil\":\"99\",\"avatar\":\"16fa94f8bc10e08c32343d76cacb0168.jpg\",\"nome\":\"Desenvolvimento\",\"email\":\"dev@gmail.com\",\"login\":\"developer\",\"chave\":null,\"sendmail\":null,\"serie\":\"8\",\"turma\":\"4\",\"instagram\":\"\",\"linkedin\":null,\"ativo\":\"1\"}','LOGIN-OK','\"Mozilla\\/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit\\/537.36 (KHTML, like Gecko) Chrome\\/127.0.0.0 Safari\\/537.36\"','2024-07-27 14:27:09','::1'),(800,NULL,NULL,'','usuarios','',_binary '{\"idusuario\":\"14\",\"idperfil\":\"99\",\"avatar\":\"16fa94f8bc10e08c32343d76cacb0168.jpg\",\"nome\":\"Desenvolvimento\",\"email\":\"dev@gmail.com\",\"login\":\"developer\",\"chave\":null,\"sendmail\":null,\"serie\":\"8\",\"turma\":\"4\",\"instagram\":\"\",\"linkedin\":null,\"ativo\":\"1\"}','LOGIN-OK','\"Mozilla\\/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit\\/537.36 (KHTML, like Gecko) Chrome\\/127.0.0.0 Safari\\/537.36\"','2024-07-27 14:27:15','::1'),(801,NULL,NULL,'','usuarios','',_binary '{\"idusuario\":\"13\",\"idperfil\":\"90\",\"avatar\":\"4d3c9678bc8ab80c9c3175b40bd26060.jpg\",\"nome\":\"Admin\",\"email\":\"admin@gmail.com.br\",\"login\":\"admin\",\"chave\":null,\"sendmail\":null,\"serie\":\"8\",\"turma\":\"4\",\"instagram\":\"\",\"linkedin\":null,\"ativo\":\"1\"}','LOGIN-OK','\"Mozilla\\/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit\\/537.36 (KHTML, like Gecko) Chrome\\/127.0.0.0 Safari\\/537.36\"','2024-07-27 14:27:22','::1'),(802,NULL,NULL,'','usuarios','',_binary '{\"idusuario\":\"14\",\"idperfil\":\"99\",\"avatar\":\"16fa94f8bc10e08c32343d76cacb0168.jpg\",\"nome\":\"Desenvolvimento\",\"email\":\"dev@gmail.com\",\"login\":\"developer\",\"chave\":null,\"sendmail\":null,\"serie\":\"8\",\"turma\":\"4\",\"instagram\":\"\",\"linkedin\":null,\"ativo\":\"1\"}','LOGIN-OK','\"Mozilla\\/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit\\/537.36 (KHTML, like Gecko) Chrome\\/127.0.0.0 Safari\\/537.36\"','2024-07-27 14:29:09','::1'),(803,NULL,NULL,'','usuarios','',_binary '{\"idusuario\":\"13\",\"idperfil\":\"90\",\"avatar\":\"4d3c9678bc8ab80c9c3175b40bd26060.jpg\",\"nome\":\"Admin\",\"email\":\"admin@gmail.com.br\",\"login\":\"admin\",\"chave\":null,\"sendmail\":null,\"serie\":\"8\",\"turma\":\"4\",\"instagram\":\"\",\"linkedin\":null,\"ativo\":\"1\"}','LOGIN-OK','\"Mozilla\\/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit\\/537.36 (KHTML, like Gecko) Chrome\\/127.0.0.0 Safari\\/537.36\"','2024-07-27 14:29:20','::1'),(804,NULL,NULL,'','usuarios','',_binary '{\"idusuario\":\"14\",\"idperfil\":\"99\",\"avatar\":\"16fa94f8bc10e08c32343d76cacb0168.jpg\",\"nome\":\"Desenvolvimento\",\"email\":\"dev@gmail.com\",\"login\":\"developer\",\"chave\":null,\"sendmail\":null,\"serie\":\"8\",\"turma\":\"4\",\"instagram\":\"\",\"linkedin\":null,\"ativo\":\"1\"}','LOGIN-OK','\"Mozilla\\/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit\\/537.36 (KHTML, like Gecko) Chrome\\/127.0.0.0 Safari\\/537.36\"','2024-07-27 14:29:30','::1'),(805,NULL,NULL,'','usuarios','',_binary '{\"idusuario\":\"15\",\"idperfil\":\"2\",\"avatar\":\"73fe9b8b8fa68ed856a2e199d68fdb46.png\",\"nome\":\"Redator\",\"email\":\"redator@gmail.com\",\"login\":\"redator\",\"chave\":null,\"sendmail\":\"2024-07-24 20:52:02\",\"serie\":\"1\",\"turma\":\"2\",\"instagram\":\"\",\"linkedin\":null,\"ativo\":\"1\"}','LOGIN-OK','\"Mozilla\\/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit\\/537.36 (KHTML, like Gecko) Chrome\\/127.0.0.0 Safari\\/537.36\"','2024-07-27 14:29:38','::1'),(806,NULL,NULL,'','usuarios','',_binary '{\"login\":\"developer\"}','LOGIN-ERRO','\"Mozilla\\/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit\\/537.36 (KHTML, like Gecko) Chrome\\/127.0.0.0 Safari\\/537.36\"','2024-07-27 14:30:51','::1'),(807,NULL,NULL,'','usuarios','',_binary '{\"idusuario\":\"14\",\"idperfil\":\"99\",\"avatar\":\"16fa94f8bc10e08c32343d76cacb0168.jpg\",\"nome\":\"Desenvolvimento\",\"email\":\"dev@gmail.com\",\"login\":\"developer\",\"chave\":null,\"sendmail\":null,\"serie\":\"8\",\"turma\":\"4\",\"instagram\":\"\",\"linkedin\":null,\"ativo\":\"1\"}','LOGIN-OK','\"Mozilla\\/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit\\/537.36 (KHTML, like Gecko) Chrome\\/127.0.0.0 Safari\\/537.36\"','2024-07-27 14:30:59','::1');
 /*!40000 ALTER TABLE `gm_logs` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -307,6 +308,66 @@ LOCK TABLES `gm_materias` WRITE;
 /*!40000 ALTER TABLE `gm_materias` DISABLE KEYS */;
 INSERT INTO `gm_materias` VALUES (1,'Cessna Citation CJ1','asdasdsadsadsadsdsa','teste','teste',1,12,13,'publicado',NULL,'2024-07-24 20:44:47','sdfgfsdgfdsgfds','noticia','2024-07-24 20:34:44','2024-07-24 20:44:47',NULL,'Rascunho','19badbad3a08a6b24b5e9f0efed6fa03.png','ded76796a388530cf9e8e6c01183e434.png'),(2,'Título','Subtítulo','Lide da Notícia','Corpo do Texto',1,12,11,'publicado','teste','2024-07-24 20:45:48','sdfgfsdgfdsgfds','noticia','2024-07-24 20:44:07','2024-07-24 20:45:48',NULL,'Aprovação','c7888e763828b3c89ef9e210cbc6804b.png','7a7693b2bb2135881ea124a4de305b1b.png'),(3,'ACAMPAMENTO RAIO DE LUZ REÚNE ESTUDANTES DE COLÉGIOS MARISTAS E ESCOLAS SOCIAIS EM CASCAVEL, PARANÁ','teste','Cascavel, Paraná - O Acampamento Raio de Luz, realizado em parceria com o Colégio Marista, Marista Escolas Sociais Irmão Acácio de Londrina e Marista Escolas Sociais de Cascavel, proporcionou momentos de integração e espiritualidade para os jovens participantes.','<p>No primeiro dia do acampamento, os estudantes foram divididos em seis grupos, com o objetivo de promover a interação entre eles. Além disso, as barracas foram montadas para o acampamento ao ar livre, proporcionando uma experiência única em meio à natureza. Para encerrar o dia, foi realizada a vigília de Taizé, com o tema &quot;o amor de Deus&quot;.</p>\r\n\r\n<p>No segundo dia, os participantes acordaram às 6:00 da manhã e participaram do &quot;Ofício da manhã - oração&quot;. Em seguida, receberam kits de lanches e partiram para uma trilha na cidade de Cascavel, no Monte Sidinai. Foram percorridos 12km de trilha, com paradas estratégicas ao longo do percurso. Ao final, os jovens tiveram a oportunidade de conhecer uma cachoeira maravilhosa, proporcionando momentos de contemplação e conexão com a natureza.</p>\r\n\r\n<p>Após a trilha, os participantes retornaram ao Recanto Marista, onde puderam conhecer a Escola Marista Social de Cascavel. Na parte da noite, todos se reuniram novamente no recanto para se arrumarem e irem a uma missa. Após a celebração, os estudantes de Londrina partiram para suas casas, encerrando sua participação no acampamento.</p>\r\n\r\n<p>O Acampamento Raio de Luz em Cascavel, Paraná, foi marcado por momentos de integração, espiritualidade e contato com a natureza. A parceria entre os colégios maristas proporcionou uma experiência enriquecedora para os participantes, fortalecendo os laços entre os estudantes e promovendo o desenvolvimento pessoal e social de todos os envolvidos.</p>',5,15,20,'publicado','Não gostei muito da imagem de capa, poderia procurar uma com uma qualidade melhor.\r\n\r\nO texto ficou muito bom, a lide ficou bem escrita!','2024-07-27 10:22:29','Acampamento, Natureza, Trilha, Paraná, espiritualidade','noticia','2024-07-27 10:19:26','2024-07-27 10:22:29',NULL,'Aprovação','3c100ff2f6e910c85b4e0ac0241960be.png','e5cc2d0780d7b603372d104aed722145.png');
 /*!40000 ALTER TABLE `gm_materias` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
+-- Table structure for table `gm_menucategorias`
+--
+
+DROP TABLE IF EXISTS `gm_menucategorias`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!50503 SET character_set_client = utf8mb4 */;
+CREATE TABLE `gm_menucategorias` (
+  `idcategoria` int(11) NOT NULL AUTO_INCREMENT COMMENT '\n',
+  `icone` varchar(255) NOT NULL,
+  `descricao` varchar(50) NOT NULL,
+  `ordenacao` int(11) NOT NULL,
+  PRIMARY KEY (`idcategoria`) USING BTREE
+) ENGINE=InnoDB AUTO_INCREMENT=9 DEFAULT CHARSET=utf8;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `gm_menucategorias`
+--
+
+LOCK TABLES `gm_menucategorias` WRITE;
+/*!40000 ALTER TABLE `gm_menucategorias` DISABLE KEYS */;
+INSERT INTO `gm_menucategorias` VALUES (1,'mdi-view-dashboard','Administração',1),(2,'mdi-home-city-outline','Institucional',5),(3,'mdi-file-document-box-search-outline','Consultas',10),(5,'mdi mdi-newspaper-variant','Matérias',3),(6,'mdi mdi-tools','Desenvolvimento',2),(7,'mdi mdi-image-area','Charges',4),(8,'mdi mdi-radio-tower','Programação Rádio',6);
+/*!40000 ALTER TABLE `gm_menucategorias` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
+-- Table structure for table `gm_menuitens`
+--
+
+DROP TABLE IF EXISTS `gm_menuitens`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!50503 SET character_set_client = utf8mb4 */;
+CREATE TABLE `gm_menuitens` (
+  `iditem` int(11) NOT NULL AUTO_INCREMENT,
+  `idperfil` int(11) NOT NULL,
+  `idcategoria` int(11) NOT NULL,
+  `descricao` varchar(50) NOT NULL,
+  `modulo` varchar(50) NOT NULL,
+  `controlador` varchar(50) NOT NULL,
+  `acao` varchar(50) NOT NULL,
+  `parametros` varchar(250) DEFAULT NULL,
+  PRIMARY KEY (`iditem`) USING BTREE,
+  KEY `fk_menu_itens_menu_categorias1` (`idcategoria`) USING BTREE,
+  KEY `fk_menu_itens_perfis1` (`idperfil`) USING BTREE,
+  CONSTRAINT `fk_menu_itens_menu_categorias1` FOREIGN KEY (`idcategoria`) REFERENCES `gm_menucategorias` (`idcategoria`),
+  CONSTRAINT `fk_menu_itens_perfis1` FOREIGN KEY (`idperfil`) REFERENCES `gm_perfis` (`idperfil`)
+) ENGINE=InnoDB AUTO_INCREMENT=53 DEFAULT CHARSET=utf8;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `gm_menuitens`
+--
+
+LOCK TABLES `gm_menuitens` WRITE;
+/*!40000 ALTER TABLE `gm_menuitens` DISABLE KEYS */;
+INSERT INTO `gm_menuitens` VALUES (1,99,6,'Menu | Categorias','admin','menuscategorias','list',''),(2,99,6,'Menu | Itens','admin','menusitens','list',''),(3,99,6,'Perfil usuários','admin','perfis','list',''),(4,90,1,'Usuários','admin','usuarios','list',NULL),(5,2,1,'Trocar senha','admin','usuarios','trocarsenha',NULL),(6,90,1,'Configurações','admin','configuracoes','form','/idconfiguracao/1'),(7,99,1,'Logs admin','admin','logs','list',NULL),(18,2,3,'Contatos','admin','contatos','list',NULL),(37,2,3,'Emails','admin','emails','list',''),(38,2,5,'Matérias | Meus Rascunhos','admin','materiasrascunhos','list',''),(39,90,5,'Matérias | Categorias','admin','materiascategoria','list',''),(40,2,5,'Matérias | Publicadas','admin','materiaspublicadas','list',''),(41,90,5,'Matérias | Pendentes','admin','materiaspendente','list',''),(42,2,5,'Matérias | Rejeitados','admin','materiasrejeitado','list',''),(43,99,6,'Logs do Painel','admin','logs','list',''),(45,2,7,'Charges | Editor','admin','charges','list',''),(46,90,7,'Charges | Pendentes','admin','chargespendente','list',''),(47,2,7,'Charges | Rejeitados','admin','chargesrejeitado','list',''),(48,2,7,'Charges | Publicadas','admin','chargespublicadas','list',''),(49,2,8,'Rádio | Editor','admin','radio','list',''),(50,2,8,'Rádio | Histórico','admin','radioafter','list',''),(51,90,1,'Séries','admin','serie','list',''),(52,90,1,'Turmas','admin','turma','list','');
+/*!40000 ALTER TABLE `gm_menuitens` ENABLE KEYS */;
 UNLOCK TABLES;
 
 --
@@ -425,66 +486,6 @@ INSERT INTO `gm_turma` VALUES (1,'A'),(2,'B'),(3,'C'),(4,'Colaborador');
 UNLOCK TABLES;
 
 --
--- Table structure for table `menu_categorias`
---
-
-DROP TABLE IF EXISTS `menu_categorias`;
-/*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!50503 SET character_set_client = utf8mb4 */;
-CREATE TABLE `menu_categorias` (
-  `idcategoria` int(11) NOT NULL AUTO_INCREMENT COMMENT '\n',
-  `icone` varchar(255) NOT NULL,
-  `descricao` varchar(50) NOT NULL,
-  `ordenacao` int(11) NOT NULL,
-  PRIMARY KEY (`idcategoria`) USING BTREE
-) ENGINE=InnoDB AUTO_INCREMENT=9 DEFAULT CHARSET=utf8;
-/*!40101 SET character_set_client = @saved_cs_client */;
-
---
--- Dumping data for table `menu_categorias`
---
-
-LOCK TABLES `menu_categorias` WRITE;
-/*!40000 ALTER TABLE `menu_categorias` DISABLE KEYS */;
-INSERT INTO `menu_categorias` VALUES (1,'mdi-view-dashboard','Administração',1),(2,'mdi-home-city-outline','Institucional',5),(3,'mdi-file-document-box-search-outline','Consultas',10),(5,'mdi mdi-newspaper-variant','Matérias',3),(6,'mdi mdi-tools','Desenvolvimento',2),(7,'mdi mdi-image-area','Charges',4),(8,'mdi mdi-radio-tower','Programação Rádio',6);
-/*!40000 ALTER TABLE `menu_categorias` ENABLE KEYS */;
-UNLOCK TABLES;
-
---
--- Table structure for table `menu_itens`
---
-
-DROP TABLE IF EXISTS `menu_itens`;
-/*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!50503 SET character_set_client = utf8mb4 */;
-CREATE TABLE `menu_itens` (
-  `iditem` int(11) NOT NULL AUTO_INCREMENT,
-  `idperfil` int(11) NOT NULL,
-  `idcategoria` int(11) NOT NULL,
-  `descricao` varchar(50) NOT NULL,
-  `modulo` varchar(50) NOT NULL,
-  `controlador` varchar(50) NOT NULL,
-  `acao` varchar(50) NOT NULL,
-  `parametros` varchar(250) DEFAULT NULL,
-  PRIMARY KEY (`iditem`) USING BTREE,
-  KEY `fk_menu_itens_menu_categorias1` (`idcategoria`) USING BTREE,
-  KEY `fk_menu_itens_perfis1` (`idperfil`) USING BTREE,
-  CONSTRAINT `fk_menu_itens_menu_categorias1` FOREIGN KEY (`idcategoria`) REFERENCES `menu_categorias` (`idcategoria`),
-  CONSTRAINT `fk_menu_itens_perfis1` FOREIGN KEY (`idperfil`) REFERENCES `gm_perfis` (`idperfil`)
-) ENGINE=InnoDB AUTO_INCREMENT=53 DEFAULT CHARSET=utf8;
-/*!40101 SET character_set_client = @saved_cs_client */;
-
---
--- Dumping data for table `menu_itens`
---
-
-LOCK TABLES `menu_itens` WRITE;
-/*!40000 ALTER TABLE `menu_itens` DISABLE KEYS */;
-INSERT INTO `menu_itens` VALUES (1,99,6,'Menu | Categorias','admin','menuscategorias','list',''),(2,99,6,'Menu | Itens','admin','menusitens','list',''),(3,99,6,'Perfil usuários','admin','perfis','list',''),(4,90,1,'Usuários','admin','usuarios','list',NULL),(5,2,1,'Trocar senha','admin','usuarios','trocarsenha',NULL),(6,90,1,'Configurações','admin','configuracoes','form','/idconfiguracao/1'),(7,99,1,'Logs admin','admin','logs','list',NULL),(18,2,3,'Contatos','admin','contatos','list',NULL),(37,2,3,'Emails','admin','emails','list',''),(38,2,5,'Matérias | Meus Rascunhos','admin','materiasrascunhos','list',''),(39,90,5,'Matérias | Categorias','admin','materiascategoria','list',''),(40,2,5,'Matérias | Publicadas','admin','materiaspublicadas','list',''),(41,90,5,'Matérias | Pendentes','admin','materiaspendente','list',''),(42,2,5,'Matérias | Rejeitados','admin','materiasrejeitado','list',''),(43,99,6,'Logs do Painel','admin','logs','list',''),(45,2,7,'Charges | Editor','admin','charges','list',''),(46,90,7,'Charges | Pendentes','admin','chargespendente','list',''),(47,2,7,'Charges | Rejeitados','admin','chargesrejeitado','list',''),(48,2,7,'Charges | Publicadas','admin','chargespublicadas','list',''),(49,2,8,'Rádio | Editor','admin','radio','list',''),(50,2,8,'Rádio | Histórico','admin','radioafter','list',''),(51,90,1,'Séries','admin','serie','list',''),(52,90,1,'Turmas','admin','turma','list','');
-/*!40000 ALTER TABLE `menu_itens` ENABLE KEYS */;
-UNLOCK TABLES;
-
---
 -- Table structure for table `usuarios`
 --
 
@@ -531,4 +532,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2024-07-27 14:10:46
+-- Dump completed on 2024-07-27 14:32:08

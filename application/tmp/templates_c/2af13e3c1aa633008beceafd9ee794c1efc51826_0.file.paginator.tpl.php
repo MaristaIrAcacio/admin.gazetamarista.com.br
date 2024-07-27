@@ -1,11 +1,11 @@
 <?php
-/* Smarty version 3.1.36, created on 2024-07-27 12:48:15
+/* Smarty version 3.1.36, created on 2024-07-27 14:40:03
   from 'c:\xampp-7.4\htdocs\admin.gazetamarista.com.br\application\layouts\paginator.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.36',
-  'unifunc' => 'content_66a516bf36da67_87609116',
+  'unifunc' => 'content_66a530f30567b9_60824719',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_66a516bf36da67_87609116 (Smarty_Internal_Template $_smarty_tpl) {
+function content_66a530f30567b9_60824719 (Smarty_Internal_Template $_smarty_tpl) {
 ?><div class="pagination-centered">
 	<ul class="pagination">
 		

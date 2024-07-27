@@ -1901,13 +1901,13 @@ class gazetamarista_Controller_Action extends Zend_Controller_Action {
             // Busca o menu
             $model_menuitem = new Admin_Model_Menusitens();
             $select_menu = $model_menuitem->select()
-                ->from("menu_itens", array(""))
-                ->joinInner("menu_categorias", "menu_categorias.idcategoria = menu_itens.idcategoria", array("description" => "descricao"))
+                ->from("gm_menuitens", array(""))
+                ->joinInner("gm_menucategorias", "gm_menucategorias.idcategoria = gm_menuitens.idcategoria", array("description" => "descricao"))
                 ->columns(array(
-                    'iditem'    => "menu_itens.iditem",
-                    'descricao' => "concat(menu_categorias.descricao, ': ' , menu_itens.descricao)"
+                    'iditem'    => "gm_menuitens.iditem",
+                    'descricao' => "concat(gm_menucategorias.descricao, ': ' , gm_menuitens.descricao)"
                 ))
-                ->where("menu_itens.controlador = ?", $controlador_atual)
+                ->where("gm_menuitens.controlador = ?", $controlador_atual)
                 ->setIntegrityCheck(FALSE);
 
             $rowmenu = $model_menuitem->fetchRow($select_menu);

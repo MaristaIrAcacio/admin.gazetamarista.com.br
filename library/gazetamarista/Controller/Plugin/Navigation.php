@@ -70,8 +70,8 @@ class gazetamarista_Controller_Plugin_Navigation extends Zend_Controller_Plugin_
 					T02.descricao as \"categoria\",
 					T02.icone as \"icone\"
 				FROM 
-					menu_itens T01
-					INNER JOIN menu_categorias T02 USING(idcategoria)
+					gm_menuitens T01
+					INNER JOIN gm_menucategorias T02 USING(idcategoria)
 				" . $where . "
 				ORDER BY
 				    T02.ordenacao,
