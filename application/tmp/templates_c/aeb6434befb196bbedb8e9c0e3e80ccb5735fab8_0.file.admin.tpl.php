@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.36, created on 2024-07-27 10:11:51
+/* Smarty version 3.1.36, created on 2024-07-27 11:36:57
   from 'c:\xampp-7.4\htdocs\admin.gazetamarista.com.br\application\layouts\admin.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.36',
-  'unifunc' => 'content_66a4f217ea6566_68367527',
+  'unifunc' => 'content_66a50609aae7b9_23126883',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     'aeb6434befb196bbedb8e9c0e3e80ccb5735fab8' => 
     array (
       0 => 'c:\\xampp-7.4\\htdocs\\admin.gazetamarista.com.br\\application\\layouts\\admin.tpl',
-      1 => 1721696783,
+      1 => 1722089155,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_66a4f217ea6566_68367527 (Smarty_Internal_Template $_smarty_tpl) {
+function content_66a50609aae7b9_23126883 (Smarty_Internal_Template $_smarty_tpl) {
 ?><!doctype html>
 <html class="no-js" lang="pt">
 	<head>
@@ -111,7 +111,8 @@ function content_66a4f217ea6566_68367527 (Smarty_Internal_Template $_smarty_tpl)
 					<div class="medium-2 columns show-for-medium-up menu-navegacao-off-left">
 						<div class="icon-bar vertical one-up">
 
-							<a class="logo-usuario small-9 medium-5 large-6 columns left small-only-text-center title-project">
+							<a href="<?php echo $_smarty_tpl->tpl_vars['this']->value->url(array('module'=>'admin','controller'=>'index','action'=>'index'),'default',TRUE);?>
+" class="logo-usuario small-9 medium-5 large-6 columns left small-only-text-center title-project">
 								
 								<?php if ($_smarty_tpl->tpl_vars['logged_usuario']->value["avatar"]) {?>
 									<img src="<?php echo $_smarty_tpl->tpl_vars['basePath']->value;?>

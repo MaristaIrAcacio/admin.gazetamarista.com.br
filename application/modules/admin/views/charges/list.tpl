@@ -11,26 +11,6 @@
 					</li>
 				{/if}
 			{/if}
-			{if $paginator|count > 0}
-				{if $esconderBtnVisualizar != true}
-					<li>
-						<a href="javascript:void(0);" class="button btn-view secondary">
-							<i class="mdi mdi-eye"></i> Visualizar
-						</a>
-					</li>
-				{/if}
-			
-				{assign var="urldata" value=$this->CreateUrl("delete", NULL, NULL, [])|cat:'/'|cat:$primary|cat:'/'}
-				{if $_permitidoExcluir}
-					{if $esconderBtnRemover != true}
-						<li>
-							<a href="{$urldata|utf8_encode}" class="button btn-remove alert">
-								<i class="mdi mdi-delete"></i> Remover
-							</a>
-						</li>
-					{/if}
-				{/if}
-			{/if}
 
 			{if $paginator|count > 0}
 				{if $gerarxls !== false}

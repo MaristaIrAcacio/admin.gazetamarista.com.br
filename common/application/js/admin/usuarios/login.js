@@ -1,4 +1,8 @@
 $(function() {
+
+	// Foco automático no campo de usuário
+	$("#login").focus();
+
 	// Cria o evento de recuperar a senha
 	$('#submit').parent().find('a').on('click', function(e) {
 		if($('#login').val() != "") {

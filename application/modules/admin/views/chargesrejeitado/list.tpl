@@ -106,10 +106,6 @@
 										</td>
 									{/if}
 								{/foreach}
-
-								<td class="coluna-acoes" >
-									<a href="{$urlimprimir}" target="_blank" title="Visualizar"><i class="mdi mdi-printer btn-visualizar-individual"></i> </a>
-								</td>
 							</tr>
 						{/foreach}
 					{else}

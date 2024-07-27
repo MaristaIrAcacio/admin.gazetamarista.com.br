@@ -68,8 +68,6 @@
 								{/foreach}
 
 								<td class="coluna-acoes" >
-									<a href="{$urlimprimir}" target="_blank" title="Visualizar"><i class="mdi mdi-printer btn-visualizar-individual"></i> </a>
-
 									{assign var="urlexcluirindividual" value=$this->CreateUrl("delete", NULL, NULL, [])|cat:'/'|cat:$primary|cat:'/'}
 									{if $_permitidoExcluir}
 										{if $esconderBtnRemover != true}

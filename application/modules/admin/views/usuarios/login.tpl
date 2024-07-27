@@ -94,27 +94,6 @@
 	
 	<body>
 		<main id="site-corpo" class="pagina-{$currentAction}">
-			{* <div class="small-12 medium-4 large-4 columns formulario">
-				<div class="box">
-					<div class="image">
-						<img src="{$basePath}/common/admin/images/logos/logo-marista.png" alt="">
-					</div>
-					<form enctype="application/x-www-form-urlencoded" action="{$this->CreateUrl('login', 'usuarios', 'admin', [], TRUE)}" method="post" data-abide>
-						<div>
-							<label for="login" class="required">Username</label>
-							<input type="text" name="login" id="login" placeholder="Nome do usuário" field-type="text" class="radius string" required tabindex="1">
-						</div>
-						<div>
-							<label for="senha" class="required">Senha</label>
-							<input type="password" name="senha" id="senha" placeholder="●●●●●●●●●●●●" field-type="password" class="radius string password" required tabindex="2">
-						</div>
-						<div>
-							<input type="submit" name="submit" id="submit" value="Entrar" class="button expand radius success" tabindex="3">
-						</div>
-					</form>
-				</div>
-			</div> *}
-
 			<section class="ftco-section">
 				<div class="container">
 					<div class="row justify-content-center">

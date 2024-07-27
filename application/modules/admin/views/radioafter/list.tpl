@@ -1,25 +1,17 @@
 <div class="row">	
 	<div class="small-12 columns buttons-bar">
 		<ul class="stack-for-small button-group">
-			{assign var="url" value=$this->CreateUrl("form", NULL, NULL, [])}
-			{if $somenteview != true}
-				{if $esconderBtnNovo != true}
-					<li>
-						<a href="{$url}" class="button btn-new">
-							<i class="mdi mdi-plus-circle-outline"></i> Novo
-						</a>
-					</li>
-				{/if}
-			{/if}
 			{if $paginator|count > 0}
 				{assign var="urldata" value=$this->CreateUrl("delete", NULL, NULL, [])|cat:'/'|cat:$primary|cat:'/'}
 				{if $_permitidoExcluir}
 					{if $esconderBtnRemover != true}
-						<li>
-							<a href="{$urldata|utf8_encode}" class="button btn-remove alert">
-								<i class="mdi mdi-delete"></i> Remover
-							</a>
-						</li>
+						{if $logged_usuario["idperfil"] >= 90 }
+							<li>
+								<a href="{$urldata|utf8_encode}" class="button btn-remove alert">
+									<i class="mdi mdi-delete"></i> Remover
+								</a>
+							</li>
+						{/if}
 					{/if}
 				{/if}
 			{/if}

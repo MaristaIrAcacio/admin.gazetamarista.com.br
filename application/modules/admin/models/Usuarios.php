@@ -129,6 +129,8 @@ class Admin_Model_Usuarios extends gazetamarista_Db_Table {
 		
 		// Seta o relacionamento
 		$this->setAutocomplete("idperfil", "Admin_Model_Perfis");
+		$this->setAutocomplete("serie", "Admin_Model_serie");
+		$this->setAutocomplete("turma", "Admin_Model_turma");
 		
 		// Continua o carregamento do model
 		parent::init();

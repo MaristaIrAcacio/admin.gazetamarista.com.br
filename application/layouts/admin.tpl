@@ -68,7 +68,7 @@
 					<div class="medium-2 columns show-for-medium-up menu-navegacao-off-left">
 						<div class="icon-bar vertical one-up">
 
-							<a class="logo-usuario small-9 medium-5 large-6 columns left small-only-text-center title-project">
+							<a href="{$this->url(['module'=>'admin', 'controller'=>'index', 'action'=>'index'], 'default', TRUE)}" class="logo-usuario small-9 medium-5 large-6 columns left small-only-text-center title-project">
 								
 								{if $logged_usuario["avatar"]}
 									<img src="{$basePath}/common/uploads/usuarios/{$logged_usuario["avatar"]}" alt="Usuário"/>

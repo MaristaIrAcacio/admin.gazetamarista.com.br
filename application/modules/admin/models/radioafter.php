@@ -6,7 +6,7 @@
  * @name Admin_Model_Radio
  * @see Zend_Db_Table_Abstract
  */
-class Admin_Model_Radio extends gazetamarista_Db_Table {
+class Admin_Model_Radioafter extends gazetamarista_Db_Table {
     /**
      * Armazena o nome da tabela
      *

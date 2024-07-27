@@ -5,13 +5,13 @@
  *
  * @name Admin_RadioController
  */
-class Admin_RadioController extends gazetamarista_Controller_Action {
+class Admin_RadioafterController extends gazetamarista_Controller_Action {
 	/**
 	 * Armazena o model padrão da tela
 	 *
 	 * @access protected
 	 * @name $_model
-	 * @var Admin_Model_Radio
+	 * @var Admin_Model_Radioafter
 	 */
 	protected $_model = NULL;
 
@@ -22,7 +22,7 @@ class Admin_RadioController extends gazetamarista_Controller_Action {
 	 */
 	public function init() {
 		// Inicializa o model da tela
-		$this->_model = new Admin_Model_Radio();
+		$this->_model = new Admin_Model_Radioafter();
 		$this->session = new Zend_Session_Namespace("loginadmin");
 		
 		// Continua o carregamento do controlador
@@ -40,9 +40,7 @@ class Admin_RadioController extends gazetamarista_Controller_Action {
 
 		// Monta a query
 		$select
-			// Pega todas as pautas do dia atual a diante
-			// Adiante para que seja possivel planejar e criar pautas futuras
-			->where("DATE(data) >= CURDATE()");
+			->where("DATE(data) < CURDATE()");
 
 		return $select;
 	}

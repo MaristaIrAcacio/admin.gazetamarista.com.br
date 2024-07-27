@@ -14,7 +14,7 @@ class Admin_Model_Perfis extends gazetamarista_Db_Table {
 	 * @name $_name
 	 * @var string
 	 */
-	protected $_name = "perfis";
+	protected $_name = "gm_perfis";
 
 	/**
 	 * Armazena o nome do campo da tabela primaria

@@ -94,6 +94,24 @@ class Admin_IndexController extends gazetamarista_Controller_Action {
 		// $this->view->blogs 	= $blogs;
 		// $this->view->servicos 	= $servicos;
 
+		// Estrutura de fornecimento de dados para os gráficos do dashboard		
+
+		$data = [
+			'labels' => ['6 EF', '7 EF', '8 EF', '9 EF', '1 EM', '2 EM', '3 EM'],
+			'datasets' => [
+				[
+					'label' => 'Matérias Postadas',
+					'backgroundColor' => 'rgba(75, 192, 192, 0.2)',
+					'borderColor' => 'rgba(75, 192, 192, 1)',
+					'borderWidth' => 1,
+					'data' => [10, 20, 15, 25, 30, 35, 40]
+				]
+			]
+		];
+
+		// Assina na view os dados dos gráficos
+		$this->view->dados 	= json_encode($data);
+
 	}
 
 	/**
