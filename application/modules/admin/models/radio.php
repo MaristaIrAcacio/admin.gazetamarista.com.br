@@ -70,6 +70,8 @@ class Admin_Model_Radio extends gazetamarista_Db_Table {
         $this->setCampo("musica5", "Música 5");
         $this->setCampo("musica6", "Música 6");
 
+        $this->setCampo("pauta_escrita", "Pauta da Rádio Digitada", "Personalização Livre");
+
         // Seta o campo de descrição da tabela
         $this->setDescription("data");
 
@@ -93,6 +95,7 @@ class Admin_Model_Radio extends gazetamarista_Db_Table {
         $this->setVisibility("musica4", TRUE, TRUE, FALSE, FALSE);
         $this->setVisibility("musica5", TRUE, TRUE, FALSE, FALSE);
         $this->setVisibility("musica6", TRUE, TRUE, FALSE, FALSE);
+        $this->setVisibility("pauta_escrita", TRUE, TRUE, FALSE, FALSE, FALSE, array('data-ckeditor-big' => ''));
 
         // Seta autocomplete
         $this->setAutocomplete("locutor1", "Admin_Model_Usuarios");  

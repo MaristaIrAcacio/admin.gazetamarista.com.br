@@ -109,16 +109,37 @@ class Admin_RadioController extends gazetamarista_Controller_Action {
 
 		$registro = $this->_model->fetchRow($where);
 
-		dd($registro);
 
-		$dados = new stdClass();
+		$dados = [];
 
-		$dados = [
-			'Data' => $registro->data,
-			'Período' => $registro->periodo,
-			'Período' => ()->fetchRow($where), // Faz o sistema de busca das chaves estrangeiras
-		];
+		if (!empty($registro->data)) {$dados['Data'] = $registro->data;}
+		if (!empty($registro->periodo)) {$dados['Período'] = $registro->periodo;}
+		$locutor1 = (empty($registro->locutor1)) ? "Locutor 1" : ((new Admin_Model_Usuarios())->fetchRow(array('idusuario = ?' => $registro->locutor1)))->nome;
+		if (!empty($locutor1)) {$dados['Locutor1'] = $locutor1;}
+		$locutor2 = (empty($registro->locutor2)) ? "Locutor 2" : ((new Admin_Model_Usuarios())->fetchRow(array('idusuario = ?' => $registro->locutor2)))->nome;
+		if (!empty($locutor2)) {$dados['Locutor2'] = $locutor2;}
+		$locutor3 = (empty($registro->locutor3)) ? "Locutor 3" : ((new Admin_Model_Usuarios())->fetchRow(array('idusuario = ?' => $registro->locutor3)))->nome;
+		if (!empty($locutor3)) {$dados['Locutor3'] = $locutor3;}
+		if (!empty($registro->calendario_sazonal)) {$dados['Calendário Sazonal'] = $registro->calendario_sazonal;}
 
+		if (!empty($registro->pauta_escrita)) {$dados['pauta_escrita'] = $registro->pauta_escrita;}
+
+		foreach (range(1, 6) as $i) {
+			$musica = $registro->{'musica' . $i};
+			if (!empty($musica)) {
+				$dados["Música $i"] = $musica;
+			}
+		}
+		foreach (range(1, 3) as $i) {
+			$comentarioMusica = $registro->{'comentario_musica' . $i};
+			if (!empty($comentarioMusica)) {
+				$dados["Comentário música $i"] = $comentarioMusica;
+			}
+		}
+		if (!empty($registro->noticia1)) {$dados['Notícia'] = $registro->noticia1;}
+		if (!empty($registro->curiosidade_dia)) {$dados['Curiosidade do Dia'] = $registro->curiosidade_dia;}
+		if (!empty($registro->noticia_urgente)) {$dados['Notícia Urgente'] = $registro->noticia_urgente;}
+		if (!empty($registro->encerramento)) {$dados['Encerramento'] = $registro->encerramento;}
 
         // Busca o registro
         $data = $dados;
