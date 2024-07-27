@@ -10,6 +10,12 @@
     justify-content: space-between;
 }
 
+@media screen and (max-width: 1200px) {
+    .row-graphs {
+        flex-direction: column;
+    }
+}
+
 .graph-container {
     width: 100% !important;
     height: auto !important;
