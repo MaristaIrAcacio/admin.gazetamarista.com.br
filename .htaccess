@@ -23,6 +23,10 @@ RewriteRule ^.*$ - [NC,L]
 RewriteRule ^thumb/(.*)/(.*)/(.*)/(.*)/(.*)$ index.php?param=tbimage&tipo=$1&crop=$2&largura=$3&altura=$4&imagem=$5 [QSA,L]
 RewriteRule ^.*$ index.php [NC,L]
 
+# Aumenta o limite de upload de arquivos para permitir arquivos de videos de até 1024 MB
+php_value upload_max_filesize 1024M
+php_value post_max_size 1024M
+
 # Se não tiver rewrite
 <IfModule !mod_rewrite.c>
 	ErrorDocument 404 index.php
