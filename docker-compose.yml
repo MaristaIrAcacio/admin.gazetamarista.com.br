@@ -1,0 +1,13 @@
+services:
+  app:
+    build: .
+    volumes:
+      - ./:/var/www/html:rw
+    ports:
+      - 3017:80
+# rede
+networks:
+  zend:
+    driver: bridge
+    driver_opts:
+      com.docker.network.driver.mtu: 2500
