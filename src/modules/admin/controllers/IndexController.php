@@ -33,7 +33,6 @@ class Admin_IndexController extends gazetamarista_Controller_Action
 
 		$this->view->usuario 	= $usuario;
 
-		$this->view->teste 	= 'teste';
 	}
 
 	/**

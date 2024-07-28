@@ -60,6 +60,7 @@ class Admin_Model_Configuracoes extends gazetamarista_Db_Table {
 	public function init() {
         // Adiciona os campos ao model
         $this->setCampo("nome_site", "Nome site");
+        $this->setCampo("email_contato", "E-mails de Contato");
 		$this->setCampo("facebook", "Facebook");
 		$this->setCampo("instagram", "Instagram");
 		$this->setCampo("linkedin", "Linkedin");
@@ -79,6 +80,7 @@ class Admin_Model_Configuracoes extends gazetamarista_Db_Table {
 
         // Seta visibilidade dos campos
         $this->setVisibility("nome_site", TRUE, TRUE, FALSE, TRUE);
+        $this->setVisibility("email_contato", TRUE, TRUE, FALSE, TRUE);
 		$this->setVisibility("facebook", TRUE, TRUE, FALSE, FALSE);
 		$this->setVisibility("instagram", TRUE, TRUE, FALSE, FALSE);
 		$this->setVisibility("linkedin", TRUE, TRUE, FALSE, FALSE);
