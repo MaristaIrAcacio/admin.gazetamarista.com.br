@@ -3,7 +3,7 @@
 /**
  * Modelo
  *
- * @name Admin_Model_Materias
+ * @name Admin_Model_MateriasRascunho
  * @see Zend_Db_Table_Abstract
  */
 class Admin_Model_MateriasRascunho extends gazetamarista_Db_Table {

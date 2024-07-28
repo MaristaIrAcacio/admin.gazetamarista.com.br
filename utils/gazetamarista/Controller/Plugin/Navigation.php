@@ -112,7 +112,7 @@ class gazetamarista_Controller_Plugin_Navigation extends Zend_Controller_Plugin_
 						);
 
 					}
-					
+
 					// Verifica o começo da string de parametros
 					if($row['parametros'][0] == "/") {
 						$row['parametros'] = substr($row['parametros'], 1);
@@ -135,15 +135,6 @@ class gazetamarista_Controller_Plugin_Navigation extends Zend_Controller_Plugin_
 						'params'		=> $params
 					);
 					
-					// Adiciona o formulario (mesmo que não existir)
-					// $category['pages'][$i++] = array(
-					// 	'label'			=> $row['funcionalidade'],
-					// 	'controller'	=> $row['controlador'],
-					// 	'action'		=> "form",
-					// 	'module'		=> $row['modulo'],
-					// 	'params'		=> $params,
-					// 	'class'			=> 'hide'
-					// );
 				}
 
 				// Adiciona o ultimo laço

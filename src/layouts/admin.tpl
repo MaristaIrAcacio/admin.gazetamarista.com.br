@@ -118,6 +118,23 @@
 								{/if}
 							</a>
 
+							<ul class="off-canvas-list" style="padding-bottom: 0;">
+								<li>
+									<a href="#"> <div class="icone_menu_principal mdi mdi-bell-alert"></div>
+										Notificações
+										<span class="notify-categoria-add">+289</span>
+									</a>
+									<ul>
+										<li>
+											<a href="/admin.gazetamarista.com.br/admin/materiaspendente/list">
+												Nova Matérias
+												<span class="notify-span">+2</span>
+											</a>
+										</li>
+									</ul>
+								</li>
+							</ul>
+
 							{$this->navigation()->menu()}
 
 							<div class="btnsPrincipais">

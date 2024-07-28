@@ -362,6 +362,12 @@ ul.off-canvas-list > li ul li.active > a:before { content: ''; width:5px; height
 	transition: .33s;
 }
 
+.notify-categoria-add {
+	padding: 5px 10px;
+	background-color: #016090;
+	border-radius: 15px;
+}
+
 .container-tags .tag-item:hover {
 	background-color: #065e92;
 }

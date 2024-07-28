@@ -63,6 +63,8 @@ class Admin_MateriasrascunhosController extends gazetamarista_Controller_Action 
 	 */
 	protected function doBeforeInsert($data) {
 		
+		$this->_materias = new Admin_Model_MateriasRascunho();
+
 		// Verifica se está marcado como rascunho
 		$isRascunho = $data['isRascunho'];
 
@@ -75,7 +77,7 @@ class Admin_MateriasrascunhosController extends gazetamarista_Controller_Action 
 		// Resgata o id do usuário da session
 		$id = $this->session->logged_usuario['idusuario'];
 		$data['autorId'] = $id;
-		
+
 		// Retorna os dados para o framework
 		return $data;
 	}
