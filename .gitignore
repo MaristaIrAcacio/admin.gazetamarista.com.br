@@ -1,9 +1,0 @@
-# ------------------------------------------------------------------------------
-# | General                                                                     |
-# ------------------------------------------------------------------------------
-
-# Ignora a pasta node_modules onde ficam as dependências do npm
-/node_modules
-
-# Ignora todos os arquivos na pasta temporária do aplicativo
-/application/tmp/*
