@@ -67,8 +67,8 @@ class Admin_Model_MateriasRascunho extends gazetamarista_Db_Table {
 		$this->setCampo("status", "Status da Notícia");
 		$this->setCampo("apontamentos", "Apontamentos");
 		$this->setCampo("dataPublicacao", "Data de Publicação");
-		$this->setCampo("tags", "Tags", "Separadas por vírgula (,)");
 		$this->setCampo("tipo", "Tipo de Texto");
+		$this->setCampo("tags", "Tags", "Separadas por vírgula (,)");
 		$this->setCampo("criadoEm", "Texto Criado Em");
 		$this->setCampo("atualizadoEm", "Texto Atualizado Em");
 		$this->setCampo("ultimaAlteracao", "Última Alteração Em");
@@ -94,8 +94,8 @@ class Admin_Model_MateriasRascunho extends gazetamarista_Db_Table {
 		$this->setVisibility("status", FALSE, FALSE, FALSE, FALSE);
 		$this->setVisibility("apontamentos", FALSE, FALSE, FALSE, FALSE);
 		$this->setVisibility("dataPublicacao", FALSE, FALSE, FALSE, FALSE);
-		$this->setVisibility("tags", TRUE, TRUE, FALSE, FALSE);
 		$this->setVisibility("tipo", TRUE, TRUE, FALSE, TRUE);
+		$this->setVisibility("tags", TRUE, TRUE, FALSE, FALSE);
 		$this->setVisibility("criadoEm", FALSE, FALSE, FALSE, TRUE);
 		$this->setVisibility("atualizadoEm", FALSE, FALSE, FALSE, FALSE);
 		$this->setVisibility("ultimaAlteracao", FALSE, FALSE, FALSE, FALSE);

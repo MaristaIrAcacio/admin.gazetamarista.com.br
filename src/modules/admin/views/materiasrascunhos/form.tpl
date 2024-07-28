@@ -43,6 +43,7 @@
 			<div class="tabs-content">
 				<div class="content active" id="geral">
 					{$form}
+					<section class="container-tags"></section>
 				</div>
 			</div>
 		</div>

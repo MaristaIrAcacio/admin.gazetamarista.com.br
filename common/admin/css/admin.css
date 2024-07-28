@@ -344,6 +344,28 @@ ul.off-canvas-list > li ul li.active > a:before { content: ''; width:5px; height
 	margin-left: 1px;
 }
 
+.container-tags {
+	display: flex;
+	gap: 7px;
+	padding: 20px 0 0 10px;
+	flex-wrap: wrap;
+}
+
+.container-tags .tag-item {
+	padding: 3px 10px;
+	border-radius: 100px;
+	background-color: #034e78;
+	color: #fff;
+	font-size: 14px;
+	font-weight: 400;
+	cursor: pointer;
+	transition: .33s;
+}
+
+.container-tags .tag-item:hover {
+	background-color: #065e92;
+}
+
 .BtnLogout {
 	width: fit-content;
 	background-color: #e24a35;

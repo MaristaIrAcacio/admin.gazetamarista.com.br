@@ -105,7 +105,7 @@
 
 							<a href="{$this->url(['module'=>'admin', 'controller'=>'index', 'action'=>'index'], 'default', TRUE)}" class="logo-usuario small-9 medium-5 large-6 columns left small-only-text-center title-project">
 								
-								{if $logged_usuario["avatar"]}
+								{if $logged_usuario["avatar"] && file_exists({$basePath}/common/uploads/usuarios/{$logged_usuario["avatar"]}) }
 									<img src="{$basePath}/common/uploads/usuarios/{$logged_usuario["avatar"]}" alt="Usuário"/>
 								{else}
 									<img src="{$basePath}/common/uploads/usuarios/default.png" alt="Usuário"/>
