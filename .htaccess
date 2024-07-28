@@ -1,94 +1,107 @@
-# Seta as variaveis de ambiente
+# ------------------------------------------------------------------------------
+# | Set Environment Variables                                                   |
+# ------------------------------------------------------------------------------
+# Define as variáveis de ambiente para o aplicativo, incluindo o ambiente
+# de execução (development) e as configurações de debug e manutenção.
 SetEnv APPLICATION_ENV development
 SetEnv APPLICATION_DEBUG 0
 SetEnv APPLICATION_MAINTENANCE 0
 
-# Seta as configurações padrão
+# ------------------------------------------------------------------------------
+# | Default Settings                                                            |
+# ------------------------------------------------------------------------------
+# Desativa a listagem de diretórios e ativa o follow symbolic links.
 Options -Indexes
 Options +FollowSymLinks
 
-# Enable o rewrite
+# ------------------------------------------------------------------------------
+# | Enable URL Rewriting                                                        |
+# ------------------------------------------------------------------------------
 RewriteEngine On
 
-# Caminho base
+# Define o caminho base para a reescrita de URLs.
 RewriteBase /admin.gazetamarista.com.br
 
-# Condições
+# ------------------------------------------------------------------------------
+# | Rewrite Conditions                                                          |
+# ------------------------------------------------------------------------------
+# Condições para verificar se o arquivo solicitado existe como um arquivo,
+# link simbólico ou diretório.
 RewriteCond %{REQUEST_FILENAME} -s [OR]
 RewriteCond %{REQUEST_FILENAME} -l [OR]
 RewriteCond %{REQUEST_FILENAME} -d
 
-# Regras
+# ------------------------------------------------------------------------------
+# | Rewrite Rules                                                               |
+# ------------------------------------------------------------------------------
+# Se qualquer condição anterior for verdadeira, não reescreva a URL.
 RewriteRule ^.*$ - [NC,L]
+
+# Reescreve URLs para o serviço de miniaturas.
 RewriteRule ^thumb/(.*)/(.*)/(.*)/(.*)/(.*)$ index.php?param=tbimage&tipo=$1&crop=$2&largura=$3&altura=$4&imagem=$5 [QSA,L]
+
+# Reescreve todas as outras URLs para o index.php.
 RewriteRule ^.*$ index.php [NC,L]
 
-# Aumenta o limite de upload de arquivos para permitir arquivos de videos de até 1024 MB
+# ------------------------------------------------------------------------------
+# | File Upload Limits                                                          |
+# ------------------------------------------------------------------------------
+# Aumenta o limite de upload de arquivos para permitir uploads de até 1024 MB.
 php_value upload_max_filesize 1024M
 php_value post_max_size 1024M
 
-# Se não tiver rewrite
+# ------------------------------------------------------------------------------
+# | Fallback for Non-Rewrite Modules                                            |
+# ------------------------------------------------------------------------------
+# Se o módulo de reescrita não estiver disponível, define a página de erro 404.
 <IfModule !mod_rewrite.c>
-	ErrorDocument 404 index.php
+    ErrorDocument 404 index.php
 </IfModule>
 
-# Enable GZIP
-<ifmodule mod_deflate.c>
-
-    # Insert filter on all content
+# ------------------------------------------------------------------------------
+# | GZIP Compression (for faster page transfers)                                |
+# ------------------------------------------------------------------------------
+# Habilita a compressão GZIP para otimizar a transferência de dados.
+<IfModule mod_deflate.c>
+    # Aplica filtro de compressão em todo o conteúdo.
     SetOutputFilter DEFLATE
 
-    # Insert filter on selected content types only
+    # Aplica filtro de compressão apenas em tipos de conteúdo selecionados.
     AddOutputFilterByType DEFLATE text/html text/plain text/xml text/css text/javascript
 
-    # Netscape 4.x has some problems...
+    # Netscape 4.x tem alguns problemas com compressão...
     BrowserMatch ^Mozilla/4 gzip-only-text/html
 
-    # Netscape 4.06-4.08 have some more problems
+    # Netscape 4.06-4.08 tem mais problemas...
     BrowserMatch ^Mozilla/4\.0[678] no-gzip
 
-    # MSIE masquerades as Netscape, but it is fine
+    # MSIE se mascara como Netscape, mas funciona bem com compressão.
     BrowserMatch \bMSIE !no-gzip !gzip-only-text/html
 
-    # Don't compress images
+    # Não comprime imagens.
     SetEnvIfNoCase Request_URI \.(?:gif|jpe?g|png)$ no-gzip dont-vary
-
-</ifmodule>
-
-# ------------------------------------------------------------------------------
-# | GZip Compression (for faster page transfers)                               |
-# ------------------------------------------------------------------------------
-
-<IfModule mod_deflate.c>
-    AddOutputFilterByType DEFLATE text/plain
-    AddOutputFilterByType DEFLATE text/html
-    AddOutputFilterByType DEFLATE text/xml
-    AddOutputFilterByType DEFLATE text/css
-    AddOutputFilterByType DEFLATE application/xml
-    AddOutputFilterByType DEFLATE application/xhtml+xml
-    AddOutputFilterByType DEFLATE application/rss+xml
-    AddOutputFilterByType DEFLATE application/javascript
-    AddOutputFilterByType DEFLATE application/x-javascript
 </IfModule>
 
-#Força a utilizar Cache-Control e Expires header
+# ------------------------------------------------------------------------------
+# | Cache-Control and Expires Header                                            |
+# ------------------------------------------------------------------------------
+# Define headers para controlar o cache de diferentes tipos de arquivos.
 <IfModule mod_headers.c>
-	Header unset ETag
+    Header unset ETag
 
-	# 1 ANO
+    # Define cache para 1 ano.
     <FilesMatch "\.(ico|pdf|flv)$">
         Header set Cache-Control "max-age=29030400, public"
         Header append Vary: Accept-Encoding
     </FilesMatch>
 
-    # 1 SEMANA
+    # Define cache para 1 semana.
     <FilesMatch "\.(jpg|jpeg|png|gif|swf)$">
         Header set Cache-Control "max-age=604800, public"
         Header append Vary: Accept-Encoding
     </FilesMatch>
 
-
-    # 2 DIAS
+    # Define cache para 2 dias.
     <FilesMatch "\.(xml|txt|css|js)$">
         Header set Cache-Control "max-age=604800, public"
         Header append Vary: Accept-Encoding
@@ -97,65 +110,73 @@ php_value post_max_size 1024M
         Header unset Set-Cookie
     </FilesMatch>
 
-    # 1 MINUTO
+    # Define cache para 1 minuto.
     <FilesMatch "\.(html|htm|php)$">
         Header set Cache-Control "max-age=60, private, proxy-revalidate"
         Header append Vary: Accept-Encoding
     </FilesMatch>
 </IfModule>
 
- FileETag None
+# Desativa ETags.
+FileETag None
 
+# ------------------------------------------------------------------------------
+# | Expires Headers for Static Content                                          |
+# ------------------------------------------------------------------------------
+# Define a expiração de conteúdo estático para melhorar o cache do navegador.
 <IfModule mod_expires.c>
-	ExpiresActive on
-	ExpiresDefault "access plus 1 month"
-	ExpiresByType text/cache-manifest "access plus 0 seconds"
+    ExpiresActive on
+    ExpiresDefault "access plus 1 month"
+    ExpiresByType text/cache-manifest "access plus 0 seconds"
 
-	# Html
-	ExpiresByType text/html "access plus 0 seconds"
+    # Define expiração para HTML.
+    ExpiresByType text/html "access plus 0 seconds"
 
-	# Data
-	ExpiresByType text/xml "access plus 0 seconds"
-	ExpiresByType application/xml "access plus 0 seconds"
-	ExpiresByType application/json "access plus 0 seconds"
+    # Define expiração para dados.
+    ExpiresByType text/xml "access plus 0 seconds"
+    ExpiresByType application/xml "access plus 0 seconds"
+    ExpiresByType application/json "access plus 0 seconds"
 
-	# Feed
-	ExpiresByType application/rss+xml "access plus 1 hour"
-	ExpiresByType application/atom+xml "access plus 1 hour"
+    # Define expiração para feeds.
+    ExpiresByType application/rss+xml "access plus 1 hour"
+    ExpiresByType application/atom+xml "access plus 1 hour"
 
-	# Favicon
-	ExpiresByType image/x-icon "access plus 1 year"
+    # Define expiração para favicon.
+    ExpiresByType image/x-icon "access plus 1 year"
 
-	# Media: images, video, audio
-	ExpiresByType image/gif "access plus 1 year"
-	ExpiresByType image/png "access plus 1 year"
-	ExpiresByType image/jpg "access plus 1 year"
-	ExpiresByType image/jpeg "access plus 1 year"
-	ExpiresByType video/ogg "access plus 1 year"
-	ExpiresByType audio/ogg "access plus 1 year"
-	ExpiresByType video/mp4 "access plus 1 year"
-	ExpiresByType video/webm "access plus 1 year"
+    # Define expiração para mídia (imagens, vídeos, áudios).
+    ExpiresByType image/gif "access plus 1 year"
+    ExpiresByType image/png "access plus 1 year"
+    ExpiresByType image/jpg "access plus 1 year"
+    ExpiresByType image/jpeg "access plus 1 year"
+    ExpiresByType video/ogg "access plus 1 year"
+    ExpiresByType audio/ogg "access plus 1 year"
+    ExpiresByType video/mp4 "access plus 1 year"
+    ExpiresByType video/webm "access plus 1 year"
 
-	# HTC files
-	ExpiresByType text/x-component "access plus 1 month"
+    # Define expiração para arquivos HTC.
+    ExpiresByType text/x-component "access plus 1 month"
 
-	# Webfonts
-	ExpiresByType application/x-font-ttf "access plus 1 month"
-	ExpiresByType font/opentype "access plus 1 month"
-	ExpiresByType application/x-font-woff "access plus 1 month"
-	ExpiresByType image/svg+xml "access plus 1 month"
-	ExpiresByType application/vnd.ms-fontobject "access plus 1 month"
+    # Define expiração para fontes da web.
+    ExpiresByType application/x-font-ttf "access plus 1 month"
+    ExpiresByType font/opentype "access plus 1 month"
+    ExpiresByType application/x-font-woff "access plus 1 month"
+    ExpiresByType image/svg+xml "access plus 1 month"
+    ExpiresByType application/vnd.ms-fontobject "access plus 1 month"
 
-	# CSS / JS
-	ExpiresByType text/css "access plus 1 year"
-	ExpiresByType application/javascript "access plus 1 year"
-	ExpiresByType application/x-javascript "access plus 1 year"
+    # Define expiração para CSS e JS.
+    ExpiresByType text/css "access plus 1 year"
+    ExpiresByType application/javascript "access plus 1 year"
+    ExpiresByType application/x-javascript "access plus 1 year"
 </IfModule>
 
-#Força o IE a sempre carregar utilizando a última versão disponível
+# ------------------------------------------------------------------------------
+# | Force Internet Explorer to Use Latest Rendering Engine                      |
+# ------------------------------------------------------------------------------
+# Força o IE a sempre carregar utilizando a última versão disponível.
 <IfModule mod_headers.c>
-	Header set X-UA-Compatible "IE=Edge,chrome=1"
-	<FilesMatch "\.(js|css|gif|png|jpeg|pdf|xml|oga|ogg|m4a|ogv|mp4|m4v|webm|svg|svgz|eot|ttf|otf|woff|ico|webp|appcache|manifest|htc|crx|oex|xpi|safariextz|vcf)$" >
-		Header unset X-UA-Compatible
-	</FilesMatch>
+    Header set X-UA-Compatible "IE=Edge,chrome=1"
+    <FilesMatch "\.(js|css|gif|png|jpeg|pdf|xml|oga|ogg|m4a|ogv|mp4|m4v|webm|svg|svgz|eot|ttf|otf|woff|ico|webp|appcache|manifest|htc|crx|oex|xpi|safariextz|vcf)$">
+        Header unset X-UA-Compatible
+    </FilesMatch>
 </IfModule>

@@ -227,7 +227,7 @@ a:hover, a:focus { color:#4DA1FF; }
 
 /* Primeiro nivel */
 ul.off-canvas-list { text-transform:capitalize; }
-ul.off-canvas-list li a .icone_menu_principal { float: left; margin-right: 11px;	font-size: 1.2em; color: #b5bbc5; margin-top: -3px;}
+ul.off-canvas-list li a .icone_menu_principal { float: left; margin-right: 11px;	font-size: 1.2em; color: #ffffff; margin-top: -3px;}
 ul.off-canvas-list li a { -webkit-transition: all 300ms cubic-bezier(0.550, 0.055, 0.675, 0.190);
 	-moz-transition: all 100ms cubic-bezier(0.550, 0.055, 0.675, 0.190);
 	-o-transition: all 100ms cubic-bezier(0.550, 0.055, 0.675, 0.190);
@@ -256,8 +256,8 @@ ul.off-canvas-list > li ul li a.hide { display:none; }
 	}
 }
 
-ul.off-canvas-list > li ul li a:hover  { color: #8690a7; background: #003a62; border-left: 23px solid transparent; position: relative; }
-ul.off-canvas-list > li ul li a:hover::before { content: ''; width:5px; height:5px; background: #8690a7; position:absolute; left:0px; top:12px; -webkit-border-radius: 20px; -moz-border-radius: 20px; border-radius: 20px;}
+ul.off-canvas-list > li ul li a:hover  { color: #ffffff; background: #003a62; border-left: 23px solid transparent; position: relative; }
+ul.off-canvas-list > li ul li a:hover::before { content: ''; width:5px; height:5px; background: #ffffff; position:absolute; left:0px; top:12px; -webkit-border-radius: 20px; -moz-border-radius: 20px; border-radius: 20px;}
 
 ul.off-canvas-list > li ul li.active > a { color: #69a0f1; background: #003a62; border-left: 23px solid transparent; position: relative; }
 ul.off-canvas-list > li ul li.active > a:before { content: ''; width:5px; height:5px; background: #3978d4; position:absolute; left:0px; top:12px; -webkit-border-radius: 20px; -moz-border-radius: 20px; border-radius: 20px;}
@@ -270,9 +270,9 @@ ul.off-canvas-list > li ul li.active > a:before { content: ''; width:5px; height
 	}
 }
 /* Menu offcanvas principal */
-.menu-principal-off-wrap .menu-navegacao-off-left { position:fixed; background:#034e78; overflow:hidden; z-index:200; width: 240px; }
+.menu-principal-off-wrap .menu-navegacao-off-left { position:fixed; right: 0;; background:#034e78; overflow:hidden; z-index:200; width: 240px; }
 .menu-principal-off-wrap .icon-bar { background:#034e78; }
-.menu-principal-off-wrap .icon-bar.vertical { min-height:100vh; width: 100%; text-align:left; margin-bottom: -6px; }
+.menu-principal-off-wrap .icon-bar.vertical { min-height:100vh; width: 100%; text-align:right; margin-bottom: -6px; }
 
 .menu-principal-off-wrap .icon-bar ul.off-canvas-list{
 	width: 100%;
@@ -340,43 +340,29 @@ ul.off-canvas-list > li ul li.active > a:before { content: ''; width:5px; height
 
 .btnsPrincipais{
 	position: absolute;
-	bottom: 23px;
-	width: 100%;
-	height: 70px;
+	bottom: 10px;
+	margin-left: 1px;
 }
 
 .BtnLogout {
-	position: relative;
-	background: #e63e33;
-	border-radius: 3px;
-	height: 35px;
-	float: left;
-	font-size: 24px;
-	padding: 10px 20px;
-	line-height: 26px;
-	display: flex;
-	align-items: center;
-	gap: 10px;
+	width: fit-content;
+	background-color: #e24a35;
+	padding: 3px 20px;
+	border-radius: 2px;
 }
 
-.BtnLogout:hover{
-	background: #e83618 !important;
+.BtnLogout:hover {
+	background-color: #b73423;
 }
 
-.BtnLogout span {
-	color: #fff;
+.BtnLogout {
 	font-size: 18px;
-	line-height: 20px;
+	font-weight: 00;
+	color: #fff;
 }
 
-.BtnLogout:nth-child(2) {
-	margin-bottom: 10px;
-}
-
-.BtnLogout i{
-	float: left;
-	font-size: 14px;
-	line-height: 0px;
+.BtnLogout:hover {
+	color: #fff;
 }
 
 .BtnSettings{
@@ -524,7 +510,7 @@ input[type="text"][aria-invalid="true"], input[type="password"][aria-invalid="tr
 }
 
 input[type="text"][aria-invalid="false"], input[type="password"][aria-invalid="false"], input[type="date"][aria-invalid="false"], input[type="datetime"][aria-invalid="false"], input[type="datetime-local"][aria-invalid="false"], input[type="month"][aria-invalid="false"], input[type="week"][aria-invalid="false"], input[type="email"][aria-invalid="false"], input[type="number"][aria-invalid="false"], input[type="search"][aria-invalid="false"], input[type="tel"][aria-invalid="false"], input[type="time"][aria-invalid="false"], input[type="url"][aria-invalid="false"], input[type="color"][aria-invalid="false"], textarea[aria-invalid="false"]{
-	background-color:#f2fff6;
+	background-color:#7eccf920;
 	border-color: #a8b9af !important;
 }
 
