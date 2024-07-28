@@ -4,6 +4,11 @@
  * Copyright 2011-2019 Twitter, Inc.
  * Licensed under MIT (https://github.com/twbs/bootstrap/blob/master/LICENSE)
  */
+
+* {
+  user-select: none !important;
+}
+
 :root {
   --blue: #007bff;
   --indigo: #6610f2;
@@ -20144,3 +20149,11 @@ a.text-dark:hover {
   }
 }
 /*# sourceMappingURL=bootstrap.min.css.map */
+
+.error-message {
+  color: var(--red);
+}
+
+.error-message-hidden {
+  opacity: 0;
+}

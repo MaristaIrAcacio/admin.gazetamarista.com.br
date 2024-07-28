@@ -1,4 +1,5 @@
 <!doctype html>
+
 <html class="no-js" lang="pt">
 
 <head>
@@ -79,7 +80,7 @@
 											<img width="60px" height="60px"
 												src="{$basePath}/common/admin/images/logos/logo-marista.png" alt="">
 										</div>
-										<form enctype="application/x-www-form-urlencoded"
+										<form id="form-login" enctype="application/x-www-form-urlencoded"
 											action="{$this->CreateUrl('login', 'usuarios', 'admin', [], TRUE)}"
 											method="post" data-abide class="signin-form">
 											<div class="form-group mb-3">
@@ -93,8 +94,8 @@
 													placeholder="Password" required>
 											</div>
 											<div class="form-group mb-3">
-												<div class="g-recaptcha"
-													data-sitekey="6LeLQRkqAAAAAP0wmJ62mpvJfYZBAmaftc3Mvarj"></div>
+												<div class="g-recaptcha" data-sitekey="6LeLQRkqAAAAAP0wmJ62mpvJfYZBAmaftc3Mvarj"></div>
+												<p class="error-message error-message-hidden">Preencha o recaptcha!</p>
 											</div>
 											<div class="form-group">
 												<button type="submit"
