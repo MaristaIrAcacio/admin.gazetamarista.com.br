@@ -35,7 +35,6 @@ body {
 body {
 	color: #303030;
 	-webkit-tap-highlight-color: rgba(0, 0, 0, 0);
-	background: #f2f2f3;
 }
 
 *::-webkit-input-placeholder {
@@ -585,7 +584,7 @@ ul.off-canvas-list>li ul li.active>a:before {
 }
 
 .logo-letras {
-	fill: #3C4A9E;
+	fill: #003a62;
 }
 
 .menu-principal-off-wrap .icon-bar .logo-branca .logo-bolas {
@@ -603,7 +602,7 @@ ul.off-canvas-list>li ul li.active>a:before {
 }
 
 .menu-principal-off-wrap .icon-bar .Logo:hover .logo-letras {
-	fill: #3C4A9E;
+	fill: #003a62;
 }
 
 .menu-principal-off-wrap .icon-bar .Logo svg {
@@ -747,7 +746,7 @@ ul.off-canvas-list>li ul li.active>a:before {
 }
 
 .BtnSettings:hover {
-	background: #3c4a9e !important
+	background: #003a62 !important
 }
 
 .title-model {
@@ -819,7 +818,7 @@ ul.off-canvas-list>li ul li.active>a:before {
 .bodyFramework {
 	padding-left: 30px;
 	width: calc(100% - 240px);
-	background-color: #0160902a;
+	background-color: #01609010;
 }
 
 /*** Form ============================================= */
@@ -1052,8 +1051,8 @@ button,
 	line-height: 30px;
 	letter-spacing: 1px;
 	color: #fff;
-	background-color: #3C4A9E;
-	border-color: #3C4A9E;
+	background-color: #003a62;
+	border-color: #003a62;
 	-moz-border-radius: 3px;
 	-ms-border-radius: 3px;
 	-o-border-radius: 3px;
@@ -1092,7 +1091,7 @@ button:hover,
 button:focus,
 .button:hover,
 .button:focus {
-	background: #293582;
+	background: #034e78;
 }
 
 button.alert,
@@ -1657,7 +1656,7 @@ table.list tbody tr:hover {
 }
 
 table.list tbody tr:hover td {
-	color: #3c4a9e;
+	color: #003a62;
 }
 
 table.list tbody tr td {
@@ -2011,13 +2010,13 @@ table.list.destaque thead tr th {
 .ui-widget-content .ui-state-focus,
 .ui-widget-header .ui-state-focus {
 	background: #eceef9;
-	color: #3c4a9e !important;
+	color: #003a62 !important;
 	border: none;
 	border-bottom: 1px solid #cccccc4d;
 }
 
 input:focus {
-	border: 2px solid #3C4A9E !important;
+	border: 2px solid #003a62 !important;
 }
 
 /* File upload */
@@ -2033,13 +2032,13 @@ input:focus {
 
 .btn_save-continue button,
 .btn_save-continue .button {
-	background: #07a8f4;
+	background: #016090;
 	border: none !important;
 }
 
 .btn_save-continue button,
 .btn_save-continue .button {
-	background: #07a8f4;
+	background: #016090;
 	border: none !important;
 }
 
@@ -2245,7 +2244,7 @@ button.normal.secondary span,
 }
 
 .permissoesDiv>div:hover {
-	border: 1px solid #293582;
+	border: 1px solid #034e78;
 	background: #ebecf5;
 }
 
@@ -2304,8 +2303,8 @@ a.btn-add i {
 
 .btn-add-secondary {
 	background: transparent;
-	border: 1px solid #3C4A9E;
-	color: #3C4A9E;
+	border: 1px solid #003a62;
+	color: #003a62;
 }
 
 .btn-add-secondary:before {
@@ -2320,7 +2319,7 @@ a.btn-add i {
 	font-size: 1rem;
 	line-height: 2.3;
 	letter-spacing: 1px;
-	color: #3C4A9E;
+	color: #003a62;
 	padding-right: 7px;
 	padding-left: 0px;
 	margin-left: -6px;
@@ -2617,7 +2616,7 @@ a.btn-add i {
 	line-height: inherit;
 	-webkit-font-smoothing: antialiased;
 	font-weight: 400;
-	color: #3c4a9e;
+	color: #003a62;
 	font-size: 24px;
 	letter-spacing: 1px;
 	padding-right: 7px;
@@ -2856,7 +2855,7 @@ div.msg-error {
 
 .documentoCategoria h2 {
 	font-size: 15px;
-	color: #3c4a9e;
+	color: #003a62;
 	font-weight: bolder;
 	padding: 9px 12px;
 	width: 100%;
@@ -2910,7 +2909,7 @@ div.msg-error {
 	line-height: inherit;
 	-webkit-font-smoothing: antialiased;
 	font-weight: 400;
-	color: #3c4a9e;
+	color: #003a62;
 	font-size: 24px;
 	letter-spacing: 1px;
 	position: relative;
