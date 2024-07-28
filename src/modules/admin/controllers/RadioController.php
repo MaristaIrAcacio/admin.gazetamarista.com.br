@@ -44,6 +44,9 @@ class Admin_RadioController extends gazetamarista_Controller_Action {
 			// Adiante para que seja possivel planejar e criar pautas futuras
 			->where("DATE(data) >= CURDATE()");
 
+		// Lógica de Visualização das Notificações
+		(new Admin_Model_Notificacao())->delete("tipo = 'nova_pauta_pendente'");
+
 		return $select;
 	}
 
@@ -56,6 +59,17 @@ class Admin_RadioController extends gazetamarista_Controller_Action {
 	 * @return array
 	 */
 	protected function doBeforeInsert($data) {
+
+		// Seta o Model de Notificações
+		$this->_notificacao = new Admin_Model_Notificacao();
+
+		// Manda notificação para os administradores sobre a nova matéria de rascunho
+		$notif = array(
+			"tipo" => "nova_pauta_pendente"
+		);
+		
+		// Insere o registro da notificação
+		$this->_notificacao->insert($notif);
 
 		// Retorna os dados para o framework
 		return $data;

@@ -118,22 +118,53 @@
 								{/if}
 							</a>
 
+							{if $logged_usuario["idperfil"] > 2}
 							<ul class="off-canvas-list" style="padding-bottom: 0;">
 								<li>
 									<a href="#"> <div class="icone_menu_principal mdi mdi-bell-alert"></div>
 										Notificações
-										<span class="notify-categoria-add">+289</span>
+										<span class="notify-categoria-add">+{$_countNotif}</span>
 									</a>
 									<ul>
+									
+									{if $_NotifMateria|count < 1 && $_NotifCharge|count < 1 && $_NotifPauta|count < 1}
+									<li>
+										<a>
+											Não há notificações
+										</a>
+									</li>
+									{/if}
+
+									{if $_NotifMateria|count > 0}
 										<li>
-											<a href="/admin.gazetamarista.com.br/admin/materiaspendente/list">
-												Nova Matérias
-												<span class="notify-span">+2</span>
+											<a href="{$basePath}/admin/materiaspendente/list">
+												Nova{if $_NotifMateria|count > 1}s{/if} Matéria{if $_NotifMateria|count > 1}s{/if} |
+												<span class="notify-span">+{$_NotifMateria|count}</span>
 											</a>
 										</li>
+									{/if}
+
+									{if $_NotifCharge|count > 0}
+										<li>
+											<a href="{$basePath}/admin/chargespendente/list">
+												Nova{if $_NotifCharge|count > 1}s{/if} Charge{if $_NotifCharge|count > 1}s{/if} |
+												<span class="notify-span">+{$_NotifCharge|count}</span>
+											</a>
+										</li>
+									{/if}
+
+									{if $_NotifPauta|count > 0}
+										<li>
+											<a href="{$basePath}/admin/radio/list">
+												Nova{if $_NotifPauta|count > 1}s{/if} Pauta{if $_NotifPauta|count > 1}s{/if} |
+												<span class="notify-span">+{$_NotifPauta|count}</span>
+											</a>
+										</li>
+									{/if}
 									</ul>
 								</li>
 							</ul>
+							{/if}
 
 							{$this->navigation()->menu()}
 

@@ -63,7 +63,7 @@ class Admin_MateriasrascunhosController extends gazetamarista_Controller_Action 
 	 */
 	protected function doBeforeInsert($data) {
 		
-		$this->_materias = new Admin_Model_MateriasRascunho();
+		$this->_notificacao = new Admin_Model_Notificacao();
 
 		// Verifica se está marcado como rascunho
 		$isRascunho = $data['isRascunho'];
@@ -71,7 +71,17 @@ class Admin_MateriasrascunhosController extends gazetamarista_Controller_Action 
 		if ($isRascunho == 'Rascunho') {
 			$data['status'] = "rascunho";
 		} else if ($isRascunho == 'Aprovação'){
+
 			$data['status'] = "pendente";
+
+			// Manda notificação para os administradores sobre a nova matéria de rascunho
+			$notif = array(
+				"tipo" => "nova_materia_pendente"
+			);
+			
+			// Insere o registro da notificação
+			$this->_notificacao->insert($notif);
+
 		};
 
 		// Resgata o id do usuário da session
@@ -92,10 +102,20 @@ class Admin_MateriasrascunhosController extends gazetamarista_Controller_Action 
 		// Verifica se está marcado como rascunho
 		$isRascunho = $data['isRascunho'];
 
+		$this->_notificacao = new Admin_Model_Notificacao();
+
 		if ($isRascunho == 1) {
 			$data['status'] = "rascunho";
 		} else {
 			$data['status'] = "pendente";
+
+			// Manda notificação para os administradores sobre a nova matéria de rascunho
+			$notif = array(
+				"tipo" => "nova_materia_pendente"
+			);
+			
+			// Insere o registro da notificação
+			$this->_notificacao->insert($notif);
 		};
 
 		// Retorna os dados para o framework

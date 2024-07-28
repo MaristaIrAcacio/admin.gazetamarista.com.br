@@ -43,6 +43,9 @@ class Admin_MateriaspendenteController extends gazetamarista_Controller_Action {
 			->where("status = ?", "pendente")
 			->order("atualizadoEm DESC");
 
+		// Lógica de Visualização das Notificações
+		(new Admin_Model_Notificacao())->delete("tipo = 'nova_materia_pendente'");
+
 		// Continua a execução
 		return $select;
 	}

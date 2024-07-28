@@ -59,12 +59,22 @@ class Admin_ChargesController extends gazetamarista_Controller_Action {
 	 */
 	protected function doBeforeInsert($data) {
 
+		$this->_notificacao = new Admin_Model_Notificacao();
+
 		// Troca para Pendente o status
 		$data['status'] = "pendente";
 
 		// Resgata o id do usuário da session
 		$id = $this->session->logged_usuario['idusuario'];
 		$data['autorId'] = $id;
+
+		// Manda notificação para os administradores sobre a nova matéria de rascunho
+		$notif = array(
+			"tipo" => "nova_charge_pendente"
+		);
+		
+		// Insere o registro da notificação
+		$this->_notificacao->insert($notif);
 		
 		// Retorna os dados para o framework
 		return $data;

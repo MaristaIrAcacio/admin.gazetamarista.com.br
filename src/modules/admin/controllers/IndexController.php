@@ -32,6 +32,8 @@ class Admin_IndexController extends gazetamarista_Controller_Action
 		$usuario = (new Admin_Model_Usuarios())->fetchRow($select);
 
 		$this->view->usuario 	= $usuario;
+
+		$this->view->teste 	= 'teste';
 	}
 
 	/**

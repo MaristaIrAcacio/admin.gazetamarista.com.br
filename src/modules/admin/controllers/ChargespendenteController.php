@@ -43,6 +43,9 @@ class Admin_ChargespendenteController extends gazetamarista_Controller_Action {
 			->where('status = ?', "pendente")
 			->order("titulo ASC");
 
+		// Lógica de Visualização das Notificações
+		(new Admin_Model_Notificacao())->delete("tipo = 'nova_charge_pendente'");
+
 		return $select;
 	}
 

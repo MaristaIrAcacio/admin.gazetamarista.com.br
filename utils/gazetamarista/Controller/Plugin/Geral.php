@@ -96,15 +96,6 @@ class gazetamarista_Controller_Plugin_Geral extends Zend_Controller_Plugin_Abstr
 			// Sessão de usuário
 			$cliente = new Zend_Session_Namespace("cliente");
 
-            // // Páginas internas
-            // $paginas = (new Admin_Model_Internas())->fetchAll(NULL, "ordenacao ASC");
-            // $arr_paginas = array();
-        	// foreach($paginas as $pag) {
-        	// 	$arr_paginas[$pag->parametro] = $pag;
-			// }
-
-        	// Formas de pagamento
-            // $formas_pagto = (new Admin_Model_Formaspagto())->fetchAll(array('ativo = ?' => 1), "ordenacao ASC");
 
         	// Validar cadastro de usuário completo
 			$session_completed = new Zend_Session_Namespace("completed");
@@ -120,40 +111,49 @@ class gazetamarista_Controller_Plugin_Geral extends Zend_Controller_Plugin_Abstr
 				}
 			}
 
-//            // Mensagem bloqueio do projeto
-//            $msg_bloqueio = "ATENÇÃO! EM MANUTENÇÃO!!";
-//
-//            die('
-//                <html lang="en">
-//                <head>
-//                  <meta charset="UTF-8">
-//                  <title>' . $session_configuracao->dados->nome_site . '</title>
-//                  <style>
-//                    body{color: #666666;text-align: center;}
-//                    .box{background-color: #fff;width: 595px;margin: 15px auto;}
-//                    #title {font-size: 30px;margin-top: 25px;}
-//                    #descricao{font-size:20px;margin: 20px auto;}
-//                    #logo {margin-top: 25px;max-width: 500px;height: auto;}
-//                  </style>
-//                </head>
-//                <body>
-//                  <div class="box">
-//                    <img src="' . $config->gazetamarista->config->domain . '/common/email/images/logo-cliente.png" id="logo" alt="Logo">
-//                    <div id="title">' . $msg_bloqueio . '</div>
-//                    <div id="descricao"></div>
-//                  </div>
-//                </body>
-//                </html>
-//            ');
         }
 
-        // Assina na view
+        // -------------------------------------------------------------------------
+        // Lógica das notificação
+        // -------------------------------------------------------------------------
+
+        // Seta o Model das Notificações
+		$this->_notificacao = new Admin_Model_Notificacao();
+
+        // Busca por todas as notificações
+        $personalize = $this->_notificacao->fetchAll();
+ 
+        // Inicializando arrays separados por tipo
+        $nova_materia_pendente = [];
+        $nova_charge_pendente = [];
+        $nova_pauta_de_radio = [];
+
+        // Iterando pelo array de notificações
+        foreach ($personalize as $notificacao) {
+            switch ($notificacao['tipo']) {
+                case 'nova_materia_pendente':
+                    $nova_materia_pendente[] = $notificacao;
+                    break;
+                case 'nova_charge_pendente':
+                    $nova_charge_pendente[] = $notificacao;
+                    break;
+                case 'nova_pauta_pendente':
+                    $nova_pauta_de_radio[] = $notificacao;
+                    break;
+            }
+        }
+
+        // Notificações
+        $view->_countNotif          = count($personalize);
+        $view->_NotifMateria        = $nova_materia_pendente;
+        $view->_NotifCharge         = $nova_charge_pendente;
+        $view->_NotifPauta          = $nova_pauta_de_radio;
+
+        // Geral
         $view->_title               = $_title;
         $view->_versao              = $_versao;
         $view->application_env      = APPLICATION_ENV;
         $view->protocolo            = $protocol;
-        // $view->_paginas             = $arr_paginas;
-        // $view->_formas_pagto 		= $formas_pagto;
         $view->unique_session_id    = $unique_session_id;
         $view->_configuracao        = $session_configuracao->dados;
         $view->_cliente             = $cliente->dados;

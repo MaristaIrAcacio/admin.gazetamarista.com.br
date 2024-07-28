@@ -10,7 +10,7 @@
 				<button id="salvarComoRascunho" class="hidden" style="display: flex;gap: 10px; align-items: center;" form="form_admin" type="submit" name="submit" onclick="$('#'+this.getAttribute('form')).submit();">
 					<span class="mdi mdi-content-save"></span>Salvar como rascunho
 				</button>
-				<button id="enviarParaAprovacao" style="display: flex;gap: 10px; align-items: center;" form="form_admin" type="submit" name="submit" onclick="$('#'+this.getAttribute('form')).submit();">
+				<button id="enviarParaAprovacao" class="hidden" style="display: flex;gap: 10px; align-items: center;" form="form_admin" type="submit" name="submit" onclick="$('#'+this.getAttribute('form')).submit();">
 					<span class="mdi mdi-content-save"></span>Enviar Para Aprovação
 				</button>
 			</li>
