@@ -33,7 +33,20 @@
                 <canvas id="graph_colaboracoes_por_usuario" width="400" height="200"></canvas>
             </section>
         </div>
-        <hr>
+        <br><br><hr><br><br>
+        <div class="row-graphs">
+            <section class="graph-container">
+                <h1 class="titulo-graph">Média de Palavras de Matérias por Categoria</h1>
+                <canvas id="graph_media_palavras" width="400" height="200"></canvas>
+            </section>
+        </div>
+        <br><br><hr><br><br>
+        <div class="row-graphs">
+            <section class="graph-container">
+                <h1 class="titulo-graph">Matérias por Tipo (Notícia | Poesia)</h1>
+                <canvas id="graph_materias_por_tipo" width="400" height="200"></canvas>
+            </section>
+        </div>
 
     </div>
     {/if}
@@ -169,6 +182,73 @@
                                 let label = tooltipItem.label || '';
                                 let value = tooltipItem.raw || 0;
                                 return label + ': ' + value;
+                            }
+                        }
+                    }
+                }
+            }
+        });
+
+        // ========================================================================================
+
+        // Passa os dados do Smarty para o JavaScript
+        const dados_media_palavras = JSON.parse('{$graph_media_palavras|escape:"js"}');
+
+        // Cria o OBJETO 2d para renderização
+        const ctx_graph_media_palavras = document.getElementById('graph_media_palavras').getContext('2d');
+
+        // Define a Instância do Gráfico
+        new Chart(ctx_graph_media_palavras, {
+            type: 'bar',
+            data: dados_media_palavras,
+            options: {
+                indexAxis: 'y',
+                scales: {
+                    x: {
+                        beginAtZero: true
+                    }
+                },
+                responsive: true,
+                plugins: {
+                    legend: {
+                        position: 'top',
+                    },
+                    tooltip: {
+                        callbacks: {
+                            label: function(tooltipItem) {
+                                let label = tooltipItem.label || '';
+                                let value = tooltipItem.raw || 0;
+                                return label + ': ' + value.toFixed(2) + ' palavras';
+                            }
+                        }
+                    }
+                }
+            }
+        });
+
+        // ========================================================================================
+        // Passa os dados do Smarty para o JavaScript
+        const dados_materias_por_tipo = JSON.parse('{$graph_materias_por_tipo|escape:"js"}');
+
+        // Cria o OBJETO 2d para renderização
+        const ctx_graph_materias_por_tipo = document.getElementById('graph_materias_por_tipo').getContext('2d');
+
+        // Define a Instância do Gráfico
+        new Chart(ctx_graph_materias_por_tipo, {
+            type: 'pie',  // Tipo de gráfico de pizza
+            data: dados_materias_por_tipo,
+            options: {
+                responsive: true,
+                plugins: {
+                    legend: {
+                        position: 'top',
+                    },
+                    tooltip: {
+                        callbacks: {
+                            label: function(tooltipItem) {
+                                let label = tooltipItem.label || '';
+                                let value = tooltipItem.raw || 0;
+                                return label + ': ' + value + ' itens';
                             }
                         }
                     }

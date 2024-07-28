@@ -272,6 +272,101 @@ class Admin_IndexController extends gazetamarista_Controller_Action
 		];
 
 
+				// ---------------------------------------------------------------------------
+		// |
+		// | Lógica do gráfico de média de palavras por matérias
+		// |
+		// ---------------------------------------------------------------------------
+		// Consultar a média de palavras por matéria em cada categoria
+		$select_media_palavras = $model->select()
+		->from(
+			array('m' => 'gm_materias'),
+			array(
+				'categoriaId',
+				'media_palavras' => new Zend_Db_Expr('AVG(LENGTH(m.texto) - LENGTH(REPLACE(m.texto, " ", "")) + 1)')
+			)
+		)
+		->joinLeft(
+			array('c' => 'gm_categorias'),
+			'm.categoriaId = c.idCategorias',
+			array('categoria_nome' => 'c.nome')
+		)
+		->group('m.categoriaId')
+		->order('c.nome')
+		->setIntegrityCheck(false);
+
+		$result_media_palavras = $model->fetchAll($select_media_palavras);
+
+		// Inicialize arrays para labels e dados
+		$labels_media_palavras = [];
+		$data_media_palavras = [];
+
+		// Itere sobre os resultados da consulta
+		foreach ($result_media_palavras as $row) {
+		$labels_media_palavras[] = $row->categoria_nome;
+		$data_media_palavras[] = (int) $row->media_palavras;
+		}
+
+		// Prepare os dados do gráfico
+		$chartData_media_palavras = [
+		'labels' => $labels_media_palavras,
+		'datasets' => [
+			[
+				'label' => 'Média de Palavras por Matéria',
+				'backgroundColor' => '#016090',
+				'borderColor' => '#016090',
+				'borderWidth' => 1,
+				'data' => $data_media_palavras
+			]
+		]
+		];
+
+
+
+				// ---------------------------------------------------------------------------
+		// |
+		// | Lógica do gráfico de matéria por tipo
+		// |
+		// ---------------------------------------------------------------------------
+		// Consultar a quantidade de matérias por tipo
+		$select_materias_por_tipo = $model->select()
+		->from(
+			array('m' => 'gm_materias'),
+			array(
+				'tipo',
+				'quantidade' => new Zend_Db_Expr('COUNT(m.idNoticia)')
+			)
+		)
+		->group('m.tipo')
+		->order('m.tipo')
+		->setIntegrityCheck(false);
+
+		$result_materias_por_tipo = $model->fetchAll($select_materias_por_tipo);
+
+		// Inicialize arrays para labels e dados
+		$labels_materias_por_tipo = [];
+		$data_materias_por_tipo = [];
+
+		// Itere sobre os resultados da consulta
+		foreach ($result_materias_por_tipo as $row) {
+		$labels_materias_por_tipo[] = $row->tipo;
+		$data_materias_por_tipo[] = (int) $row->quantidade;  // Certifique-se de que é um número inteiro
+		}
+
+		// Prepare os dados do gráfico
+		$chartData_materias_por_tipo = [
+		'labels' => $labels_materias_por_tipo,
+		'datasets' => [
+			[
+				'label' => 'Matérias por Tipo',
+				'backgroundColor' => ['#034e78', '#013964'],  // Ajuste as cores conforme necessário
+				'borderColor' => ['#034e78', '#013964'],  // Ajuste as cores conforme necessário
+				'borderWidth' => 1,
+				'data' => $data_materias_por_tipo
+			]
+		]
+		];
+
 
 		// Assina na view os dados dos gráficos
 		$this->view->grapf_materias_por_turma 	        = json_encode($chartData_materias_por_turma);
@@ -279,6 +374,8 @@ class Admin_IndexController extends gazetamarista_Controller_Action
 		$this->view->graph_categorias_materias          = json_encode($chartData_categorias_materias);
 		$this->view->graph_colaboracoes_por_usuario     = json_encode($chartData_colaboracoes_por_usuario);
 		$this->view->graph_status_materias              = json_encode($chartData_status_materias);
+		$this->view->graph_media_palavras               = json_encode($chartData_media_palavras);
+		$this->view->graph_materias_por_tipo = json_encode($chartData_materias_por_tipo);
 
 	}
 
