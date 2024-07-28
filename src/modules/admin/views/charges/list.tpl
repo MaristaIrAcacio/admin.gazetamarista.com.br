@@ -6,7 +6,7 @@
 				{if $esconderBtnNovo != true}
 					<li>
 						<a href="{$url}" class="button btn-new">
-							<i class="mdi mdi-plus-circle-outline"></i> Nova Charge
+							<i class="mdi mdi mdi-plus"></i> Nova Charge
 						</a>
 					</li>
 				{/if}

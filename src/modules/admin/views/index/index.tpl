@@ -46,6 +46,7 @@
                 <h1 class="titulo-graph">Matérias por Tipo (Notícia | Poesia)</h1>
                 <canvas id="graph_materias_por_tipo" width="400" height="200"></canvas>
             </section>
+            <section class="graph-container"></section>
         </div>
 
     </div>

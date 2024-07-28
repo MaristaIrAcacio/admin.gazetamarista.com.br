@@ -32,6 +32,6 @@
 
 {if !empty($page_name)}
 	<h2 style="text-transform: capitalize;">
-		{$page_name} {if $paginator}<span style="font-size:13px;">(Total itens: {$paginator->getTotalItemCount()})</span>{/if} {if $qtd_registros}<span style="font-size:13px;">(Total itens: {$qtd_registros})</span>{/if}
+		{$page_name}
 	</h2>
 {/if}

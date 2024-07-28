@@ -20,7 +20,7 @@ Options +FollowSymLinks
 RewriteEngine On
 
 # Define o caminho base para a reescrita de URLs.
-RewriteBase /
+RewriteBase /admin.gazetamarista.com.br
 
 # ------------------------------------------------------------------------------
 # | Rewrite Conditions                                                          |

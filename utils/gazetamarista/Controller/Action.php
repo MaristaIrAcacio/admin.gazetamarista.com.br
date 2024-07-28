@@ -641,12 +641,6 @@ class gazetamarista_Controller_Action extends Zend_Controller_Action {
                     // Hook antes da inserção
                     $data = $this->doBeforeInsert($data);
 
-                    // //
-                    // foreach($data as $key => $value) {
-                    // 	unset($data[$key]);
-                    // 	$data[strtoupper($key)] = $value;
-                    // }
-
                     // Salva os dados
                     $this->_model->insert($data);
 
