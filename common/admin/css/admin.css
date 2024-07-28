@@ -985,7 +985,7 @@ table.list tbody tr td.coluna-acoes ul a i{
     background-color: #F4F4F4;
 }
 ::-webkit-scrollbar {
-    width: 12px;
+    width: 5px;
     background: #F4F4F4;
 }
 ::-webkit-scrollbar-thumb {

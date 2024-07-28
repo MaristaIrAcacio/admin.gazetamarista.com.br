@@ -15,7 +15,26 @@
                 <canvas id="graph_charges_por_turma" width="400" height="200"></canvas>
             </section>
         </div>
+        <br><br><hr><br><br>
+        <div class="row-graphs">
+            <section class="graph-container">
+                <h1 class="titulo-graph">Matérias por Categoria</h1>
+                <canvas id="graph_categorias_materias" width="400" height="200"></canvas>
+            </section>
+            <section class="graph-container">
+                <h1 class="titulo-graph">Status das Matérias</h1>
+                <canvas id="graph_status_materias" width="400" height="200"></canvas>
+            </section>
+        </div>
+        <br><br><hr><br><br>
+        <div class="row-graphs">
+            <section class="graph-container">
+                <h1 class="titulo-graph">Colaborações por Usuário (Top #10)</h1>
+                <canvas id="graph_colaboracoes_por_usuario" width="400" height="200"></canvas>
+            </section>
+        </div>
         <hr>
+
     </div>
     {/if}
 
@@ -62,5 +81,100 @@
 
         // =================================================================================
 
-        
+        // Passa os dados do Smarty para o JavaScript
+        const dados_categorias_materias = JSON.parse('{$graph_categorias_materias|escape:"js"}');
+
+        // Cria o OBJETO 2d para renderização
+        const ctx_graph_categorias = document.getElementById('graph_categorias_materias').getContext('2d');
+
+        // Define a Instância do Gráfico
+        new Chart(ctx_graph_categorias, {
+            type: 'pie',
+            data: dados_categorias_materias,
+            options: {
+                responsive: true,
+                plugins: {
+                    legend: {
+                        position: 'top',
+                    },
+                    tooltip: {
+                        callbacks: {
+                            label: function(tooltipItem) {
+                                let label = tooltipItem.label || '';
+                                let value = tooltipItem.raw || 0;
+                                return label + ': ' + value;
+                            }
+                        }
+                    }
+                }
+            }
+        });
+
+        // ====================================================================================================
+        // Passa os dados do Smarty para o JavaScript
+        const dados_colaboracoes_por_usuario = JSON.parse('{$graph_colaboracoes_por_usuario|escape:"js"}');
+
+        // Cria o OBJETO 2d para renderização
+        const ctx_graph_colaboracoes = document.getElementById('graph_colaboracoes_por_usuario').getContext('2d');
+
+        // Define a Instância do Gráfico
+        new Chart(ctx_graph_colaboracoes, {
+            type: 'bar',
+            data: dados_colaboracoes_por_usuario,
+            options: {
+                scales: {
+                    y: {
+                        beginAtZero: true
+                    }
+                },
+                responsive: true,
+                plugins: {
+                    legend: {
+                        position: 'top'
+                    },
+                    tooltip: {
+                        callbacks: {
+                            label: function(tooltipItem) {
+                                let label = tooltipItem.label || '';
+                                let value = tooltipItem.raw || 0;
+                                return label + ': ' + value;
+                            }
+                        }
+                    }
+                }
+            }
+        });
+
+
+        // =========================================================================================================
+        // Passa os dados do Smarty para o JavaScript
+        const dados_status_materias = JSON.parse('{$graph_status_materias|escape:"js"}');
+
+        // Cria o OBJETO 2d para renderização
+        const ctx_graph_status = document.getElementById('graph_status_materias').getContext('2d');
+
+        // Define a Instância do Gráfico
+        new Chart(ctx_graph_status, {
+            type: 'doughnut',
+            data: dados_status_materias,
+            options: {
+                responsive: true,
+                plugins: {
+                    legend: {
+                        position: 'top',
+                    },
+                    tooltip: {
+                        callbacks: {
+                            label: function(tooltipItem) {
+                                let label = tooltipItem.label || '';
+                                let value = tooltipItem.raw || 0;
+                                return label + ': ' + value;
+                            }
+                        }
+                    }
+                }
+            }
+        });
+
+
     </script>
