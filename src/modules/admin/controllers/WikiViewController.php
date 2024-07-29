@@ -77,7 +77,61 @@ class Admin_WikiViewController extends gazetamarista_Controller_Action {
 	 * @name wiki
 	 */
 	protected function wikiAction () {
-		
+
+		$model_wiki = new Admin_Model_Wiki();
+		$model_wiki_categorias = new Admin_Model_Wikicategoria();
+
+		$select_Categorias = $model_wiki_categorias->select()
+		->order('id ASC')
+		->setIntegrityCheck(false);
+		$result_categorias = $model_wiki_categorias->fetchAll($select_Categorias);
+
+
+
+
+		$select_wikis = $model_wiki->select()
+		->setIntegrityCheck(false);
+
+		// Executa a consulta e obtém os resultados
+		$result_wikis = $model_wiki->fetchAll($select_wikis);
+
+		$config = Zend_Registry::get("config");
+        $path = $config->clickweb->config->basepath;
+
+        $this->view->path               = $path;
+		$this->view->categorias         = $result_categorias;
+		$this->view->wikis              = $result_wikis;
+
+	}
+
+	/**
+	 * Hook para ser executado antes do insert
+	 *
+	 * @access protected
+	 * @name wiki
+	 */
+	protected function wikidetalheAction () {
+
+		$model_wiki = new Admin_Model_Wiki();
+		$model_wiki_categorias = new Admin_Model_Wikicategoria();
+
+		$select_Categorias = $model_wiki_categorias->select()
+		->order('id ASC')
+		->setIntegrityCheck(false);
+		$result_categorias = $model_wiki_categorias->fetchAll($select_Categorias);
+
+
+
+
+		$select_wikis = $model_wiki->select()
+		->setIntegrityCheck(false);
+
+		// Executa a consulta e obtém os resultados
+		$result_wikis = $model_wiki->fetchAll($select_wikis);
+
+		$this->view->categorias              = $result_categorias;
+		$this->view->wikis              = $result_wikis;
+
 	}
 
 }

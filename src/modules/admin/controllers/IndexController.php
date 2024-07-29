@@ -375,7 +375,7 @@ class Admin_IndexController extends gazetamarista_Controller_Action
 		$this->view->graph_colaboracoes_por_usuario     = json_encode($chartData_colaboracoes_por_usuario);
 		$this->view->graph_status_materias              = json_encode($chartData_status_materias);
 		$this->view->graph_media_palavras               = json_encode($chartData_media_palavras);
-		$this->view->graph_materias_por_tipo = json_encode($chartData_materias_por_tipo);
+		$this->view->graph_materias_por_tipo            = json_encode($chartData_materias_por_tipo);
 
 	}
 

@@ -1,3 +1,66 @@
 .wiki-view {
+    display: flex;
+    flex-direction: column;
+    row-gap: 20px;
+}
+
+.header-wiki {
+    display: flex;
+    flex-direction: column;
+    row-gap: 5px;
+}
+
+.header-wiki .titulo-header {
+    margin: 0;
+    font-size: 32px;
+    font-weight: 600;
+}
+
+.header-wiki .descricao-header {
+    margin: 0;
+    font-size: 16px;
+    font-weight: 400;
+}
+
+.content-wiki {
+    margin-top: 50px;
+}
+
+.letter-box {
+    display: flex;
+    flex-direction: column;
+    row-gap: 10px;
+    margin-bottom: 50px;
+}
+
+.letter {
+    font-size: 28px;
+    font-weight: 600;
+    color: #003a62;
+}
+
+.row-content {
+    display: flex;
+    flex-direction: column;
+    row-gap: 5px;
+}
+
+.link {
+    padding: 10px;
+    border-radius: 3px;
+    color: #003a62;
+    font-size: 16px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    text-decoration: underline;
+}
+
+.link > svg {
     
+}
+
+.link:hover {
+    background:#01426c;
+    color: #fff;
 }
