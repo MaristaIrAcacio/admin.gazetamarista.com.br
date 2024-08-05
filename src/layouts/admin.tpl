@@ -41,6 +41,9 @@
 				permitidoVisulizar: "{$_permitidoVisulizar}"
 			};
 		</script>
+
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/MaterialDesign-Webfont/7.4.47/css/materialdesignicons.min.css" integrity="sha512-/k658G6UsCvbkGRB3vPXpsPHgWeduJwiWGPCGS14IQw3xpr63AEMdA8nMYG2gmYkXitQxDTn6iiK/2fD4T87qA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+	
 	</head>
 
 	<body>
@@ -119,59 +122,62 @@
 							</a>
 
 							{if $logged_usuario["idperfil"] > 2}
-							<ul class="off-canvas-list" style="padding-bottom: 0;">
-								<li>
-									<a href="#"> <div class="icone_menu_principal mdi mdi-bell-alert"></div>
-										Notificações
-										<span class="notify-categoria-add">+{$_countNotif}</span>
-									</a>
-									<ul>
-									
-									{if $_NotifMateria|count < 1 && $_NotifCharge|count < 1 && $_NotifPauta|count < 1}
+								<ul class="off-canvas-list" style="padding-bottom: 0;">
 									<li>
-										<a>
-											Não há notificações
+										<a href="#"> <div class="icone_menu_principal mdi mdi-bell-alert"></div>
+											Notificações
+											<span class="notify-categoria-add">+{$_countNotif}</span>
 										</a>
+										<ul>
+										
+										{if $_NotifMateria|count < 1 && $_NotifCharge|count < 1 && $_NotifPauta|count < 1}
+										<li>
+											<a>
+												Não há notificações
+											</a>
+										</li>
+										{/if}
+
+										{if $_NotifMateria|count > 0}
+											<li>
+												<a href="{$basePath}/admin/materiaspendente/list">
+													Nova{if $_NotifMateria|count > 1}s{/if} Matéria{if $_NotifMateria|count > 1}s{/if} |
+													<span class="notify-span">+{$_NotifMateria|count}</span>
+												</a>
+											</li>
+										{/if}
+
+										{if $_NotifCharge|count > 0}
+											<li>
+												<a href="{$basePath}/admin/chargespendente/list">
+													Nova{if $_NotifCharge|count > 1}s{/if} Charge{if $_NotifCharge|count > 1}s{/if} |
+													<span class="notify-span">+{$_NotifCharge|count}</span>
+												</a>
+											</li>
+										{/if}
+
+										{if $_NotifPauta|count > 0}
+											<li>
+												<a href="{$basePath}/admin/radio/list">
+													Nova{if $_NotifPauta|count > 1}s{/if} Pauta{if $_NotifPauta|count > 1}s{/if} |
+													<span class="notify-span">+{$_NotifPauta|count}</span>
+												</a>
+											</li>
+										{/if}
+										</ul>
 									</li>
-									{/if}
-
-									{if $_NotifMateria|count > 0}
-										<li>
-											<a href="{$basePath}/admin/materiaspendente/list">
-												Nova{if $_NotifMateria|count > 1}s{/if} Matéria{if $_NotifMateria|count > 1}s{/if} |
-												<span class="notify-span">+{$_NotifMateria|count}</span>
-											</a>
-										</li>
-									{/if}
-
-									{if $_NotifCharge|count > 0}
-										<li>
-											<a href="{$basePath}/admin/chargespendente/list">
-												Nova{if $_NotifCharge|count > 1}s{/if} Charge{if $_NotifCharge|count > 1}s{/if} |
-												<span class="notify-span">+{$_NotifCharge|count}</span>
-											</a>
-										</li>
-									{/if}
-
-									{if $_NotifPauta|count > 0}
-										<li>
-											<a href="{$basePath}/admin/radio/list">
-												Nova{if $_NotifPauta|count > 1}s{/if} Pauta{if $_NotifPauta|count > 1}s{/if} |
-												<span class="notify-span">+{$_NotifPauta|count}</span>
-											</a>
-										</li>
-									{/if}
-									</ul>
-								</li>
-							</ul>
+								</ul>
 							{/if}
 
 							{$this->navigation()->menu()}
 
-							<div class="btnsPrincipais">
-								<a class="BtnLogout" href="{$this->url(['module'=>'admin', 'controller'=>'usuarios', 'action'=>'logout'], 'default', TRUE)}">Sair</a>
-							</div>
-
+							<ul class="off-canvas-list off-canva-log" style="padding-bottom: 0;">
+								<li>
+									<a href="{$this->url(['module'=>'admin', 'controller'=>'usuarios', 'action'=>'logout'], 'default', TRUE)}"> <div class="icone_menu_principal mdi mdi-logout"></div>
+										Sair
+									</a>
+								</li>
+							</ul>
 						</div>
 					</div>
 				</div>
