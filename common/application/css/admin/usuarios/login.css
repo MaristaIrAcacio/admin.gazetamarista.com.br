@@ -10759,7 +10759,6 @@ h5,
 .login-wrap {
   position: relative;
   background: #fff h3;
-  background-font-weight: 300;
 }
 
 .form-group {
@@ -10775,7 +10774,6 @@ h5,
 .form-group a {
   color: gray;
 }
-
 .form-control {
   height: 48px;
   background: #fff;

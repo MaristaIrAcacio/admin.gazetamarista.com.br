@@ -1,46 +1,66 @@
 <!doctype html>
 <html class="no-js" lang="pt">
-	<head>
-		<meta charset="utf-8">
-		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-		<meta name="viewport" content="width=device-width, initial-scale=1.0">
-		<meta name="apple-mobile-web-app-capable" content="yes">
-		<meta name="mobile-web-app-capable" content="yes">
-		<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-		<meta name="format-detection" content="telephone=no">
-		<meta name="msapplication-tap-highlight" content="no">
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="apple-mobile-web-app-capable" content="yes">
+	<meta name="mobile-web-app-capable" content="yes">
+	<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+	<meta name="format-detection" content="telephone=no">
+	<meta name="msapplication-tap-highlight" content="no">
 
-		<!-- Favicon Principal -->
-		<link rel="shortcut icon" type="image/png" href="{$imagePath}/favicon/32x32.png">
+	<!-- Favicon Principal -->
+	<link rel="shortcut icon" type="image/png" href="{$imagePath}/favicon/32x32.png">
 
-		<meta name="apple-mobile-web-app-title" content="CW Panel">
-		<meta name="application-name" content="CW Panel">
-		<meta name="msapplication-TileColor" content="#ffffff">
-		<meta name="theme-color" content="#ffffff">
+	<meta name="apple-mobile-web-app-title" content="CW Panel">
+	<meta name="application-name" content="CW Panel">
+	<meta name="msapplication-TileColor" content="#ffffff">
+	<meta name="theme-color" content="#ffffff">
+	<meta name="robots" content="noindex, nofollow">	
 
-		{$this->headTitle()}
-		{$this->headMeta()}
-		{$this->headLink()}
+	{$this->headTitle()}
+	{$this->headMeta()}
+	{$this->headLink()}
 
-		<link type="text/css" rel="stylesheet" media="print" href="{$basePath}/common/admin/css/impressaogeral.css">
+	<link type="text/css" rel="stylesheet" media="print" href="{$basePath}/common/admin/css/impressaogeral.css">
 
-		<script>
-			document.basePath = '{$basePath}';
-			document.openedController = '{$openedController}';
-			document.nomeUser = '{$logged_usuario["nome"]}';
+	<script>
+		document.basePath = '{$basePath}';
+		document.openedController = '{$openedController}';
+		document.nomeUser = '{$logged_usuario["nome"]}';
 
-			var _GLOBALS = window._GLOBALS = {
-				basePath: '{$basePath}',
-				imagePath: '{$imagePath}',
-				currentModule: '{$currentModule}',
-				currentController: '{$currentController}',
-				currentAction: '{$currentAction}',
-				permitidoAdicionar: "{$_permitidoAdicionar}",
-				permitidoEditar: "{$_permitidoEditar}",
-				permitidoExcluir: "{$_permitidoExcluir}",
-				permitidoVisulizar: "{$_permitidoVisulizar}"
-			};
-		</script>
+		var _GLOBALS = window._GLOBALS = {
+			basePath: '{$basePath}',
+			imagePath: '{$imagePath}',
+			currentModule: '{$currentModule}',
+			currentController: '{$currentController}',
+			currentAction: '{$currentAction}',
+			permitidoAdicionar: "{$_permitidoAdicionar}",
+			permitidoEditar: "{$_permitidoEditar}",
+			permitidoExcluir: "{$_permitidoExcluir}",
+			permitidoVisulizar: "{$_permitidoVisulizar}"
+		};
+	</script>
+
+	<script type="application/ld+json">
+		{
+		"@context": "https://schema.org",
+		"@type": "WebApplication",
+		"name": "Painel Admin do Projeto Gazeta Marista",
+		"description": "Painel administrativo para gerenciamento do web jornal Gazeta Marista do Marista Escola Social Irmão Acácio.",
+		"applicationCategory": "BusinessApplication",
+		"operatingSystem": "All",
+		"url": "{$basePath}",
+		"author": {
+			"@type": "Person",
+			"name": "Vitor Gabriel de Oliveira"
+		}
+		"version": "1.0.0",
+		"datePublished": "2024-08-07"
+		}
+	</script>
+	
 
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/MaterialDesign-Webfont/7.4.47/css/materialdesignicons.min.css" integrity="sha512-/k658G6UsCvbkGRB3vPXpsPHgWeduJwiWGPCGS14IQw3xpr63AEMdA8nMYG2gmYkXitQxDTn6iiK/2fD4T87qA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 	

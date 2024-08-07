@@ -60,25 +60,50 @@
 	<!-- Configura o Recaptcha no Formulário -->
 	<script src="https://www.google.com/recaptcha/api.js" async defer></script>
 
+	<script type="application/ld+json">
+		{
+		"@context": "https://schema.org",
+		"@type": "WebApplication",
+		"name": "Painel Admin do Projeto Gazeta Marista",
+		"description": "Painel administrativo para gerenciamento do web jornal Gazeta Marista do Marista Escola Social Irmão Acácio.",
+		"applicationCategory": "BusinessApplication",
+		"operatingSystem": "All",
+		"url": "{$basePath}",
+		"author": {
+			"@type": "Person",
+			"name": "Vitor Gabriel de Oliveira"
+		}
+		"version": "1.0.0",
+		"datePublished": "2024-08-07"
+		}
+	</script>	
+
 </head>
 
 <body>
+
+	<section class="background-login">
+		<img src="{$basePath}/common/admin/images/background-login-usuarios-1.jpg" alt="Imagem de fundo da tela de login dos usuários">
+		<img class="visible" src="{$basePath}/common/admin/images/background-login-usuarios-2.jpg" alt="Imagem de fundo da tela de login dos usuários">
+		<img class="visible" src="{$basePath}/common/admin/images/background-login-usuarios-3.jpg" alt="Imagem de fundo da tela de login dos usuários">
+		<img class="visible" src="{$basePath}/common/admin/images/background-login-usuarios-4.jpg" alt="Imagem de fundo da tela de login dos usuários">
+	</section>
+
 	<main id="site-corpo" class="pagina-{$currentAction}">
 		<section class="ftco-section">
 			<div class="container">
 				<div class="row justify-content-center">
 					<div class="col-md-12 col-lg-10">
 						<div class="wrap d-md-flex">
-							{assign var="path"
-							value="{$basePath}/common/admin/images/tres-coisas-que-para-ser-redator-voce-tem-que-gostar.png"}
+							{assign var="path" value="{$basePath}/common/admin/images/tres-coisas-que-para-ser-redator-voce-tem-que-gostar.png"}
 							<div class="img" style="background-image: url({$path});">
 							</div>
 							<div class="login-wrap p-4 p-md-5">
 								<div class="d-flex">
 									<div class="w-100">
-										<div class="image">
-											<img width="60px" height="60px"
-												src="{$basePath}/common/admin/images/logos/logo-marista.png" alt="">
+										<div aria-hidden="true" class="image">
+											<img fetchpriority="high" alt="Imagem de logo do Marista" loading="lazy" width="60px" height="60px"
+												src="{$basePath}/common/admin/images/logos/logo-marista.png">
 										</div>
 										<form id="form-login" enctype="application/x-www-form-urlencoded"
 											action="{$this->CreateUrl('login', 'usuarios', 'admin', [], TRUE)}"
@@ -86,12 +111,12 @@
 											<div class="form-group mb-3">
 												<label class="label" for="name">Usuário</label>
 												<input type="text" name="login" id="login" class="form-control"
-													placeholder="Username" required>
+													placeholder="Digite seu nome de usuário" required>
 											</div>
 											<div class="form-group mb-3">
-												<label class="label" for="password">Senha</label>
+												<label class="label" for="password">Senha de Acesso</label>
 												<input type="password" name="senha" id="senha" class="form-control"
-													placeholder="Password" required>
+													placeholder="Digite sua senha" required>
 											</div>
 											<div class="form-group mb-3">
 												<div class="g-recaptcha" data-sitekey="6LeLQRkqAAAAAP0wmJ62mpvJfYZBAmaftc3Mvarj"></div>
@@ -99,11 +124,10 @@
 											</div>
 											<div class="form-group">
 												<button type="submit"
-													class="form-control btn btn-primary rounded submit px-3">Acessar
-													Painel</button>
+													class="form-control btn btn-primary rounded submit px-3">Iniciar Sessão</button>
 											</div>
 										</form>
-										<p class="text-center">Não é um membro do Projeto Conexão? <a href="#">Conheça nosso Jornal</a></p>
+										<p class="text-center">Quer saber mais sobre o Projeto Conexão? <a rel="noopener noreferrer" href="#">Confira nosso Jornal!</a></p>
 									</div>
 								</div>
 							</div>
