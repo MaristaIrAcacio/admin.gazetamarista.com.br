@@ -78,7 +78,7 @@ require_once("utils/gazetamarista/_helpers.php");
 // -----------------------------------------------------------------------------
 $application = new gazetamarista_Application(
     APPLICATION_ENV,
-    APPLICATION_PATH . "/configs/custom_config.ini"
+    APPLICATION_PATH . "/configs/configs.ini"
 );
 
 $application->bootstrap()->run();
