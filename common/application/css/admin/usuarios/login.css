@@ -71,7 +71,8 @@ html, body {
   padding: 0;
   box-sizing: border-box;
   width: 100%;
-  background-color: #005cbf !important;
+  /* background-color: #005cbf !important; */
+  background: linear-gradient(90deg, #067eff, #034e78 ,#1dd9c0)!important;
 }
 
 
