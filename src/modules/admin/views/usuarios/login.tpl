@@ -84,9 +84,6 @@
 
 	<section class="background-login">
 		<img src="{$basePath}/common/admin/images/background-login-usuarios-1.jpg" alt="Imagem de fundo da tela de login dos usuários">
-		<img class="visible" src="{$basePath}/common/admin/images/background-login-usuarios-2.jpg" alt="Imagem de fundo da tela de login dos usuários">
-		<img class="visible" src="{$basePath}/common/admin/images/background-login-usuarios-3.jpg" alt="Imagem de fundo da tela de login dos usuários">
-		<img class="visible" src="{$basePath}/common/admin/images/background-login-usuarios-4.jpg" alt="Imagem de fundo da tela de login dos usuários">
 	</section>
 
 	<main id="site-corpo" class="pagina-{$currentAction}">
