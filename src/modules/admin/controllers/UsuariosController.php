@@ -11,7 +11,7 @@ class Admin_UsuariosController extends gazetamarista_Controller_Action {
 	 *
 	 * @access protected
 	 * @name $_model
-	 * @var Default_Model_Usuarios
+	 * @var Admin_Model_Usuarios
 	 */
 	protected $_model = NULL;
 

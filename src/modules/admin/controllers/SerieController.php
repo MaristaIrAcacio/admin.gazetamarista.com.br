@@ -11,7 +11,7 @@ class Admin_SerieController extends gazetamarista_Controller_Action {
 	 *
 	 * @access protected
 	 * @name $_model
-	 * @var Admin_Model_serie
+	 * @var Admin_Model_Serie
 	 */
 	protected $_model = NULL;
 
@@ -22,7 +22,7 @@ class Admin_SerieController extends gazetamarista_Controller_Action {
 	 */
 	public function init() {
 		// Inicializa o model da tela
-		$this->_model = new Admin_Model_serie();
+		$this->_model = new Admin_Model_Serie();
 		
 		// Continua o carregamento do controlador
 		parent::init();
