@@ -124,7 +124,7 @@
 													class="form-control btn btn-primary rounded submit px-3">Iniciar Sessão</button>
 											</div>
 										</form>
-										<p class="text-center">Quer saber mais sobre o Projeto Conexão tsteee? <a rel="noopener noreferrer" href="#">Confira nosso Jornal!</a></p>
+										<p class="text-center">Quer saber mais sobre o Projeto Conexão? <a rel="noopener noreferrer" href="#">Confira nosso Jornal!</a></p>
 									</div>
 								</div>
 							</div>
