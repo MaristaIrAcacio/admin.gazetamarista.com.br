@@ -20,7 +20,11 @@ Options +FollowSymLinks
 RewriteEngine On
 
 # Define o caminho base para a reescrita de URLs.
-RewriteBase /admin.gazetamarista.com.br
+if ($_SERVER['HTTP_HOST'] == 'localhost') {
+    $base = '/admin.gazetamarista.com.br';
+} else {
+    $base = '/';
+}
 
 # ------------------------------------------------------------------------------
 # | Rewrite Conditions                                                          |

@@ -12,7 +12,7 @@ class IndexController extends Zend_Controller_Action
      */
     public function init()
     {
-        header('location: admin');
+        header('location: https://admin.gazetamarista.blog/admin/usuarios/login');
 	}
 
 }
