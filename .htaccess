@@ -3,7 +3,7 @@
 # ------------------------------------------------------------------------------
 # Define as variáveis de ambiente para o aplicativo, incluindo o ambiente
 # de execução (development) e as configurações de debug e manutenção.
-SetEnv APPLICATION_ENV development
+SetEnv APPLICATION_ENV production
 SetEnv APPLICATION_DEBUG 0
 SetEnv APPLICATION_MAINTENANCE 0
 
