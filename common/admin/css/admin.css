@@ -820,7 +820,6 @@ ul.off-canvas-list>li ul li.active>a:before {
 .bodyFramework {
 	padding-left: 30px;
 	width: calc(100% - 240px);
-	background-color: #01609010;
 }
 
 /*** Form ============================================= */
